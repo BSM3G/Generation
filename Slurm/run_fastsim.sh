@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 run_num=$1
 filename=AODSIM.${run_num}.root
 n_events=$2
@@ -15,5 +14,3 @@ touch log.${run_num}.log
 cd ..
 
 cmsRun logfiles/fastsimc_${run_num}_cfg.py >> logfiles/log.${run_num}.log
-
-
