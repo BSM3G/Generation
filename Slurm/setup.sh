@@ -43,7 +43,76 @@ sed -i -e 's/"LHESource",/"LHESource",skipEvents = cms\.untracked\.uint32(SKIPPE
 ##### CREATING DEFAULT CONDOR FILE #######
 ##########################################
 
+touch condor_default.cmd
 
+printf "\
+Universe   = vanilla
+Executable = run_EXECUTING.sh
+Log        = EXECUTING.log
+Output     = EXECUTING.\$(Process).out
+Error      = EXECUTING.\$(Process).error
+Initialdir = logfiles
+
+Arguments  = \$(Process) START EVENTS_PROCESSED
+Queue NUMBER_QUEUED\n" >> condor_default.cmd
+
+#############################################
+############ CREATING EOS AREAS #############
+#############################################
+
+Generate_exist=false
+
+for dir in $(xrdfs root://cmseos.fnal.gov/ ls /store/user/${username}/)
+do
+    newdir=$(basename $dir)
+    if [ "Generate" = $newdir ] 
+    then
+	Generate_exist=true
+    fi
+done
+
+if [ $Generate_exist = "false" ] 
+then
+    xrdfs root://cmseos.fnal.gov/ mkdir /store/user/${username}/Generate
+fi
+
+AOD_exist=false
+miniAOD_exist=false
+nTuple_exist=false
+
+for dir in $(xrdfs root://cmseos.fnal.gov/ ls /store/user/${username}/Generate)
+do
+    newdir=$(basename $dir)
+    if [ $newdir = "AODSIM" ] 
+    then
+	AOD_exist=true
+    fi
+    if [ $newdir = "miniAOD" ] 
+    then
+	miniAOD_exist=true
+    fi
+    if [ $newdir = "TNT" ] 
+    then
+	nTuple_exist=true
+    fi
+done
+
+if [ AOD_exist = "false" ] 
+then
+    xrdfs root://cmseos.fnal.gov/ mkdir /store/user/${username}/Generate/AODSIM/
+fi
+
+if [ miniAOD_exist = "false" ] 
+then
+    xrdfs root://cmseos.fnal.gov/ mkdir /store/user/${username}/Generate/miniAOD/
+fi
+
+if [ nTuple_exist = "false" ] 
+then
+    xrdfs root://cmseos.fnal.gov/ mkdir /store/user/${username}/Generate/TNT/
+fi
+    
+mkdir logfile
 
 ############################################
 ############# FIXING RUN FILES #############

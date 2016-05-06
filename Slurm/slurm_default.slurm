@@ -9,7 +9,6 @@
 Number_Events=NUM_EVENT
 
 
-
 echo "SLURM_JOBID: " $SLURM_JOBID
 echo "SLURM_ARRAY_TASK_ID: " $SLURM_ARRAY_TASK_ID
 echo "SLURM_ARRAY_JOB_ID: " $SLURM_ARRAY_JOB_ID
@@ -19,4 +18,4 @@ export slc6_amd64_gcc491
 eval `scramv1 runtime -sh`
 
 
-. run_fastsim.sh $SLURM_ARRAY_TASK_ID $Number_Events
+. RUNNING_FILE $SLURM_ARRAY_TASK_ID $Number_Events
