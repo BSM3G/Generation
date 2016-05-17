@@ -1,0 +1,1 @@
+root\://cmseos.fnal.gov//store/user/ra2tau/gurrola/LQToBTau_M-1300_BetaOne_TuneCUETP8M1_13TeV-pythia8/LQToBTau_M-1300_Asympt25ns_TNTMaker_December2015/151208_153505/0000/OutTree_1.root
