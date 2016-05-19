@@ -6,5 +6,5 @@ Output = condor_out_$(Process)_$(Cluster).stdout
 Error  = condor_out_$(Process)_$(Cluster).stderr
 Log    = condor_out_$(Process)_$(Cluster).log
 Notification    = Error
-Arguments = FNAME OUTPUTFILE OUTPUTDIR $(Process) $(Cluster)
-Queue 1
+Arguments = $(Process) INPUT_SAMPLE 
+Queue NUMBER_QUEUED
