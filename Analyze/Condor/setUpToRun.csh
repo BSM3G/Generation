@@ -1,5 +1,9 @@
 #!/bin/bash
 
+source /cvmfs/cms.cern.ch/cmsset_default.sh
+export slc6_amd64_gcc491
+eval `scramv1 runtime -sh`
+
 echo
 echo We will modify the default analyzer configuration file to run. Which analysis configuration do you want to use from the options below?
 echo

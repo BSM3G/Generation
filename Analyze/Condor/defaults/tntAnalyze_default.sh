@@ -9,7 +9,7 @@ eval `scramv1 runtime -sh`
 
 run_num=$1
 input_sample=$2
-infilename=$(sed "${run_num}q;d" list_Samples/${input_sample}.txt}
+infilename=$(sed "${run_num}q;d" list_Samples/${input_sample}.txt)
 outfilename=Output.${run_num}.root
 
 

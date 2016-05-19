@@ -9,14 +9,15 @@ eval `scramv1 runtime -sh
 
 echo
 printf $command "Hello. What is your username?"
-printf "\n"
+echo
 
 read varname
+
+echo
 
 while [ true ] 
 do
     string=$(xrdfs root://cmseos.fnal.gov/ ls /store/user/$varname/)
-    echo $?
     if [ $? -eq 0 ]
     then
 	break
@@ -24,11 +25,6 @@ do
     echo Not valid Username, try again!
     read varname
 done
-
-
-printf "\n"
-echo It\'s nice to meet you $varname, please enter the number of the choices to come
-printf "\n"
 
 printf $command "What is the name of your eos analysis directory? Below are your options"
 
@@ -49,7 +45,7 @@ do
     done
 done
 
-echo $fl1
+echo
 
 select filename in $fl1 NEW_FILE
 do 
@@ -104,24 +100,20 @@ done
 
 printf "\n"
 
-rm tntAnalyze.sh
+location=$(pwd -P)
+
 cp defaults/tntAnalyze_default.sh tntAnalyze.sh
 sed -i -e s/DUMMY/"$varname"/g tntAnalyze.sh
 sed -i -e s/TEMPDIRECTORY/"$dirname"/g tntAnalyze.sh
 sed -i -e s/ANALYSISDIRECTORY/"$analysisname"/g tntAnalyze.sh
-thesubstring=d3
-echo $CMSSW_BASE | grep $thesubstring  1>/dev/null
-if [ `echo $?` -eq 0 ]
-then
-    sed -i -e s/d2/d3/g tntAnalyze.sh
-fi
+sed -i -e s@WORK_AREA@"$location"@g tntAnalyze.sh
 
-rm deleteEOSAnalysisRootFiles.csh
+
+
 cp defaults/deleteEOSAnalysisRootFiles_default.csh deleteEOSAnalysisRootFiles.csh
 sed -i -e s/DUMMY/"$varname"/g deleteEOSAnalysisRootFiles.csh
 sed -i -e s/TEMPDIRECTORY/"$dirname"/g deleteEOSAnalysisRootFiles.csh
 
-rm addingRoot.sh
 cp defaults/addingRoot.sh .
 sed -i -e s/DUMMY/"$varname"/g addingRoot.sh
 sed -i -e s/TEMPDIRECTORY/"$dirname"/g addingRoot.sh
@@ -140,20 +132,16 @@ do
     fi
 done
 
-rm SAMPLES_LIST_MC.txt
 cp defaults/SAMPLES_LIST_MC_default.txt SAMPLES_LIST_MC.txt
 
 if [ "$whichqcd" = "mu" ]
 then
-    sed -i '17,23d' addMCRootFiles.csh
     sed -i '17,23d' SAMPLES_LIST_MC.txt
 elif [ "$whichqcd" = "em" ]
 then
-    sed -i '16d' addMCRootFiles.csh
     sed -i '16d' SAMPLES_LIST_MC.txt
 elif [ "$whichqcd" = "none" ]
 then
-    sed -i '16,23d' addMCRootFiles.csh
     sed -i '16,23d' SAMPLES_LIST_MC.txt
 fi
 
