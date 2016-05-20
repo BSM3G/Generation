@@ -28,6 +28,9 @@ done
 
 printf $command "What is the name of your eos analysis directory? Below are your options"
 
+temp_dir=$(ls list_Samples | head -n1)
+top_dir=${temp_dir/.txt/}
+
 fl1=""
 for files in $(ls -d /eos/uscms/store/user/$varname/*/ | xargs -n 1 basename)
 do
@@ -38,7 +41,7 @@ do
 	then
 	    tmp=$(basename $files2)
 	fi
-	if [ $tmp == "ZZ_Asympt25ns" ]
+	if [ $tmp == $top_dir ]
 	then
 	    fl1="$fl1 $files"
 	fi
