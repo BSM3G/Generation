@@ -1,11 +1,20 @@
 #!/bin/bash
 
+### variable for picking out if fastsim or pat is being run
 patORfast=$1
 
-n_proc=300
+### n_proc    -> number of processes to be run OR in other words, number of AOD files to be made
+### n_evnt    -> number of events in each process
+### start     -> starting point for process.  If you have made AOD0-100, set start to 101 to make AOD101
+### End_Proc  -> made variable to find what the last process number is
+### num_cores -> number of cores used, or number of process that can be run at once
+n_proc=10
 n_evnt=500
 start=0
 End_Proc=$[$n_proc + $start - 1]
+num_cores=10
+
+
 
 if [[ -z $patORfast && ( $patORfast != 'pat' || $patORfast != 'fastsim' ) ]] 
 then 
@@ -57,9 +66,13 @@ fi
 
 cp slurm_default.slurm run_slurm.slurm
 
-sed -i -e s/START_NUM/$Start/g run_slurm.slurm
+position=$(pwd -P)
+
+sed -i -e s/START_NUM/$start/g run_slurm.slurm
 sed -i -e s/END_NUM/$End_Proc/g run_slurm.slurm
-sed -i -e s/NUM_EVENT/$Number_Events/g run_slurm.slurm
+sed -i -e s/NUM_EVENT/$n_evnt/g run_slurm.slurm
+sed -i -e s/NUM_CORES/$num_cores/g run_slurm.slurm
+sed -i -e s@POSITION@$position@g run_slurm.slurm
 sed -i -e s/RUNNING_FILE/run_${patORfast}.sh/g run_slurm.slurm
 
 
