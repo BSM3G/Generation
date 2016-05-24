@@ -41,7 +41,7 @@ sed -i -e s/OutTree.root/OUTFILE/g tnt_default_cfg.py
 ##### CREATING DEFAULT CONDOR FILE #######
 ##########################################
 
-mkdir logfile
+mkdir logfiles
 
 ############################################
 ############# FIXING RUN FILES #############
