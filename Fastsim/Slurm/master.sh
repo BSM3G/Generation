@@ -39,7 +39,10 @@ then
 	echo "Please run ./setup.sh to get the files"
 	exit
     fi
-
+    if [ ! -d AODSIM ] 
+    then
+	mkdir AODSIM
+    fi
 fi    
 
 
@@ -50,7 +53,11 @@ then
 	echo "Need a cfg file to run the task!!"
 	echo "Please run ./setup.sh to get the files"
 	exit
-    fi    
+    fi
+    if [ ! -d miniAOD ]
+    then
+	mkdir miniAOD
+    fi
 fi
 
 source /cvmfs/cms.cern.ch/cmsset_default.sh

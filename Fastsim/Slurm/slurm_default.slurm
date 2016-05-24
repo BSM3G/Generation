@@ -4,7 +4,7 @@
 #SBATCH --time=1:00:00
 #SBATCH --mem=4G
 #SBATCH --array=START_NUM-END_NUM%NUM_CORES
-#SBATCH --output=output_%A_%a.out
+#SBATCH --output=logfiles/output_%A_%a.out
 
 Number_Events=NUM_EVENT
 
