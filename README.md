@@ -31,10 +31,9 @@ FASTSIM:
 4. cmsenv
 5. source /cvmfs/cms.cern.ch/crab3/crab.sh
 6. git clone https://github.com/dteague/Generation
-7. mkdir Fastsim_Grid
-8. cp -r Generation/Fastsim/Slurm/* Fastsim_Grid
-9. cd Fastsim_Grid
-10. ./setup.sh
+7. cp -r Generation/Slurm/Fastsim_Grid/ .
+8. cd Fastsim_Grid
+9. ./setup.sh
 
 After this, the files are ready to run.  Just change the necessary parameters in master.sh
 logfiles will have output of slurm, pythia, and the used cfg files for running each event
@@ -56,6 +55,6 @@ nTuple:
 12. mv NtupleMaker_740 NtupleMaker
 13. scram b -j 10
 14. git clone https://github.com/dteague/Generation
-15. mkdir nTuple_Grid
-15. cp -r Generation/nTuple/Slurm/* nTuple_Grid
-16. ./setup.sh
+15. cp -r Generation/Slurm/nTuple_Grid/ .
+16. cd nTuple_Grid
+17. ./setup.sh

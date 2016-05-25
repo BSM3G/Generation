@@ -13,6 +13,8 @@ WORK_AREA=$(pwd)
 ######## CREATING CONFIG FILES ###########
 ##########################################
 
+cp miniAOD_works.py ${CMSSW_BASE}/src/NtupleMaker/BSM3G_TNT_Maker/python/
+
 PS3="choice: "
 aodfile=''
 echo
