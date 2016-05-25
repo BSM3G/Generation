@@ -16,7 +16,13 @@ fi
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 export slc6_amd64_gcc491
 eval `scramv1 runtime -sh`
-voms-proxy-init --voms cms
+
+need_init=$(voms-proxy-info | grep "timeleft" | awk 'BEGIN{FS=":"}{if($2==" 0" && $3=="00" && $4=="00"){print "true"}}')
+if [ $need_init == "true" ]
+then
+    voms-proxy-init --voms cms
+fi
+
 
 if [ ! -d ${CMSSW_BASE}/src/Files ]
 then
