@@ -1,0 +1,9 @@
+root\://cmseos.fnal.gov//store/user/ra2tau/amkalsi/QCD_Pt-300toInf_EMEnriched_TuneCUETP8M1_13TeV_pythia8/QCD_Pt-300toInf_EMEnriched_Asympt25ns_TNTMaker_MiniAODv2/151202_062419/0000/OutTree_1.root
+root\://cmseos.fnal.gov//store/user/ra2tau/amkalsi/QCD_Pt-300toInf_EMEnriched_TuneCUETP8M1_13TeV_pythia8/QCD_Pt-300toInf_EMEnriched_Asympt25ns_TNTMaker_MiniAODv2/151202_062419/0000/OutTree_2.root
+root\://cmseos.fnal.gov//store/user/ra2tau/amkalsi/QCD_Pt-300toInf_EMEnriched_TuneCUETP8M1_13TeV_pythia8/QCD_Pt-300toInf_EMEnriched_Asympt25ns_TNTMaker_MiniAODv2/151202_062419/0000/OutTree_3.root
+root\://cmseos.fnal.gov//store/user/ra2tau/amkalsi/QCD_Pt-300toInf_EMEnriched_TuneCUETP8M1_13TeV_pythia8/QCD_Pt-300toInf_EMEnriched_Asympt25ns_TNTMaker_MiniAODv2/151202_062419/0000/OutTree_4.root
+root\://cmseos.fnal.gov//store/user/ra2tau/amkalsi/QCD_Pt-300toInf_EMEnriched_TuneCUETP8M1_13TeV_pythia8/QCD_Pt-300toInf_EMEnriched_Asympt25ns_TNTMaker_MiniAODv2/151202_062419/0000/OutTree_5.root
+root\://cmseos.fnal.gov//store/user/ra2tau/amkalsi/QCD_Pt-300toInf_EMEnriched_TuneCUETP8M1_13TeV_pythia8/QCD_Pt-300toInf_EMEnriched_Asympt25ns_TNTMaker_MiniAODv2/151202_062419/0000/OutTree_6.root
+root\://cmseos.fnal.gov//store/user/ra2tau/amkalsi/QCD_Pt-300toInf_EMEnriched_TuneCUETP8M1_13TeV_pythia8/QCD_Pt-300toInf_EMEnriched_Asympt25ns_TNTMaker_MiniAODv2/151202_062419/0000/OutTree_7.root
+root\://cmseos.fnal.gov//store/user/ra2tau/amkalsi/QCD_Pt-300toInf_EMEnriched_TuneCUETP8M1_13TeV_pythia8/QCD_Pt-300toInf_EMEnriched_Asympt25ns_TNTMaker_MiniAODv2/151202_062419/0000/OutTree_8.root
+root\://cmseos.fnal.gov//store/user/ra2tau/amkalsi/QCD_Pt-300toInf_EMEnriched_TuneCUETP8M1_13TeV_pythia8/QCD_Pt-300toInf_EMEnriched_Asympt25ns_TNTMaker_MiniAODv2/151202_062419/0000/OutTree_9.root
