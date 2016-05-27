@@ -111,7 +111,7 @@ sed -i -e s@WORK_AREA@"$location"@g tntAnalyze.sh
 
 
 
-cp defaults/deleteRootfiles_default.csh deleteRootfiles.sh
+cp defaults/deleteRootfiles_default.sh deleteRootfiles.sh
 sed -i -e s/WORK_DIRECTORY/"$dirname"/g deleteRootfiles.sh
 
 cp defaults/addingRoot.sh .
