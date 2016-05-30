@@ -47,14 +47,38 @@ nTuple:
 4. cmsenv
 5. source /cvmfs/cms.cern.ch/crab3/crab.sh
 6. git cms-merge-topic ikrav:egm_id_7.4.12_v1
-7. scram b -j 10
-8. git clone https://github.com/florez/NtupleMaker_740
+7. scramv1 b -j 10
+8. git clone https://github.com/dteague/NtupleMaker_740
 9. cd NtupleMaker_740
-10. git checkout miniAODv2_ForHiggsDalitz
-11. cd ./..
+11. cd ..
 12. mv NtupleMaker_740 NtupleMaker
-13. scram b -j 10
+13. scramv1 b -j 10
 14. git clone https://github.com/dteague/Generation
 15. cp -r Generation/Slurm/nTuple_Grid/ .
 16. cd nTuple_Grid
 17. ./setup.sh
+
+For This, use miniAOD_works.py and make sure you put your files into $CMSSW_BASE/src/Files/miniAOD 
+for the program to find and use the files for making the nTuples.
+
+ANALYZER
+
+1. export SCRAM_ARCH=slc6_amd64_gcc491 (or setenv SCRAM_ARCH slc6_amd64_gcc491)
+2. cmsrel CMSSW_7_4_15
+3. cd CMSSW_7_4_15/src
+4. cmsenv
+5. source /cvmfs/cms.cern.ch/crab3/crab.sh
+6. git cms-merge-topic ikrav:egm_id_7.4.12_v1
+7. scram b -j 10
+8. git cms-addpkg RecoMET/METProducer
+9. scramv1 b -j 10
+11. git clone https://github.com/gurrola/Analyzer
+12. cd Analyzer
+13. git checkout forMiniAODv2_11062015_v1 
+14. cd ..
+15. scramv1 b -j 10
+16. git clone https://github.com/dteague/Generation
+17. cp -r Generation/Slurm/Analyze_Grid/ .
+18. cd Analyze_Grid
+19. ./NormalSetup.sh
+

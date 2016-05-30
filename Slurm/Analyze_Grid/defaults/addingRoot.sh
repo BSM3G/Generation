@@ -6,11 +6,13 @@ eval $(scramv1 runtime -sh)
 
 for dir in $(ls -d ${CMSSW_BASE}/src/Files/Analysis/WORK_DIRECTORY/*/)
 do	    
-    rootfiles=$(ls $dir)
+    rootfiles=$(ls $dir | head -n1)
     if [ ! -z $rootfiles ]
     then
-	rm $dir/*
-	echo $dirname
+	allroot=$(find $dir*)
+	echo $(basename $dir)
+	hadd $(basename $dir).root $allroot
+
     fi
 done
 
