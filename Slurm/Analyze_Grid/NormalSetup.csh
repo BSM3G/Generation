@@ -105,7 +105,7 @@ location=$(pwd -P)
 
 cp defaults/tntAnalyze_default.sh tntAnalyze.sh
 sed -i -e s/DUMMY/"$varname"/g tntAnalyze.sh
-sed -i -e s/TEMPDIRECTORY/"$dirname"/g tntAnalyze.sh
+sed -i -e s/WORK_DIRECTORY/"$dirname"/g tntAnalyze.sh
 sed -i -e s/ANALYSISDIRECTORY/"$analysisname"/g tntAnalyze.sh
 sed -i -e s@WORK_AREA@"$location"@g tntAnalyze.sh
 

@@ -4,7 +4,7 @@
 #SBATCH --time=1:00:00
 #SBATCH --mem=4G
 #SBATCH --array=START_NUM-END_NUM%4
-#SBATCH --output=logfiles/output_%A_%a.out
+#SBATCH --output=output_%A_%a.out
 
 
 echo "SLURM_JOBID: " $SLURM_JOBID
@@ -16,4 +16,8 @@ export slc6_amd64_gcc491
 eval `scramv1 runtime -sh`
 
 
-. run_ntuple.sh $SLURM_ARRAY_TASK_ID INPUT_SAMPLE
+grid=$(grid-proxy-info | grep "path" | awk '{print $3}')
+export X509_USER_PROXY=$grid
+
+
+. tntAnalyze.sh $SLURM_ARRAY_TASK_ID INPUT_SAMPLE

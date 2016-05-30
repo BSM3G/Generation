@@ -17,8 +17,11 @@ source /cvmfs/cms.cern.ch/cmsset_default.sh
 export slc6_amd64_gcc491
 eval `scramv1 runtime -sh`
 
+voms-proxy-info 2> /dev/null
+find_proxy=$?
+
 need_init=$(voms-proxy-info | grep "timeleft" | awk 'BEGIN{FS=":"}{if($2==" 0" && $3=="00" && $4=="00"){print "true"} else{print "false"}}')
-if [ $need_init == "true" ]
+if [[ $find_proxy != 0 || $need_init == "true" ]]
 then
     voms-proxy-init --voms cms
 fi
@@ -106,7 +109,7 @@ do
     sed -i -e s/NUM_CORES/$num_cores/g run_slurm.slurm
     sed -i -e s@POSITION@$position@g run_slurm.slurm
     sed -i -e s/INPUT_SAMPLE/${inputList}/g run_slurm.slurm
-    sed -i -e s/START_NUM/0/g run_slurm.slurm
+    sed -i -e s/START_NUM/1/g run_slurm.slurm
     sed -i -e s/END_NUM/${n_proc}/g run_slurm.slurm
     
     sbatch run_slurm.slurm
