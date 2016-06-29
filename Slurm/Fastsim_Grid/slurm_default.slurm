@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --ntasks=1
-#SBATCH --time=1:00:00
+#SBATCH --time=10:00:00
 #SBATCH --mem=4G
 #SBATCH --array=START_NUM-END_NUM%NUM_CORES
 #SBATCH --output=logfiles/output_%A_%a.out
