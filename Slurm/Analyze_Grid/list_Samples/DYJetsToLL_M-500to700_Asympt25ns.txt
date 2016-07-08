@@ -1,1 +1,0 @@
-root\://cmseos.fnal.gov//store/user/ra2tau/gurrola/DYJetsToLL_M-500to700_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/DYJetsToLL_M-500to700_amcatnloFXFX_Asympt25ns_TNTMaker_MiniAODv2_December2015/151204_185159/0000/OutTree_1.root
