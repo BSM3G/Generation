@@ -11,7 +11,7 @@ source /cvmfs/cms.cern.ch/cmsset_default.sh
 export slc6_amd64_gcc491
 eval `scramv1 runtime -sh`
 
-if [ ! -f Analyzer ] 
+if [ ! -f $CMSSW_BASE/src/Analyzer/Analyzer ] 
 then
     echo "Making Analyzer:"
     make Analyzer
@@ -19,39 +19,22 @@ fi
  
 
 
-need_init=$(voms-proxy-info | grep "timeleft" | awk 'BEGIN{FS=":"}{if($2==" 0" && $3=="00" && $4=="00"){print "true"}}')
+need_init=$(voms-proxy-info | grep "timeleft" | awk 'BEGIN{FS=":"}{if($2==" 0" && $3=="00" && $4=="00"){print "true"} else{print "false"}}')
 if [ $need_init == "true" ]
 then
     voms-proxy-init --voms cms
 fi
 
-
-echo
-echo We will modify the default analyzer configuration file to run. Which analysis configuration do you want to use from the options below?
-echo
-
-base=$CMSSW_BASE/src/Analyzer/BSM3G_TNT_MainAnalyzer/
 PS3="Your Choice: "
-
-fl=$(ls -d ${base}/*/ | xargs -n 1 basename)
-select filename in $fl
-do 
-    if [ -z $filename ]
-    then
-	echo "Not valid choice, enter valid number"
-    else
-	analysisname=$base$filename
-	break
-    fi
-done
-
 
 echo
 echo Is this analysis being run for MC or for Data?
 echo
 
-isData=$(awk '/isData/{ print NR; exit }' PartDet/Run_info.in)
-CalcPU=$(awk '/CalculatePUSystematics/{ print NR; exit }' PartDet/Run_info.in)
+runfile=$CMSSW_BASE/src/Analyzer/PartDet/Run_info.in
+
+isData=$(awk '/isData/{ print NR; exit }' $runfile)
+CalcPU=$(awk '/CalculatePUSystematics/{ print NR; exit }' $runfile)
 
 select filename in Data MC
 do 
@@ -62,8 +45,8 @@ do
 
     elif [ $REPLY -eq 1 ]
     then
-	sed -i "${isData}s/\(0\|false\)/true/" PartDet/Run_info.in
-	sed -i "${CalcPU}s/\(1\|true\)/false/" PartDet/Run_info.in
+	sed -i "${isData}s/\(0\|false\)/true/" $runfile
+	sed -i "${CalcPU}s/\(1\|true\)/false/" $runfile
 	
 	list=$(ls defaults/SAMPLES_LIST_data*)
 
@@ -83,8 +66,8 @@ do
 
     elif [ $REPLY -eq 2 ]
     then
-	sed -i "${CalcPU}s/\(0\|false\)/true/" PartDet/Run_info.in
-	sed -i "${isData}s/\(1\|true\)/false/" PartDet/Run_info.in
+	sed -i "${CalcPU}s/\(0\|false\)/true/" $runfile
+	sed -i "${isData}s/\(1\|true\)/false/" $runfile
 
 	cp SAMPLES_LIST_MC.txt SAMPLES_LIST.txt
     fi

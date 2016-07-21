@@ -123,7 +123,7 @@ sed -i -e s/TEMPDIRECTORY/"$dirname"/g addingRoot.sh
 
 
 printf "\n"
-printf  "Which QCD MC sample do you want to analyze?"
+printf  "Which QCD MC sample do you want to analyze?\n"
 select type in mu em none;
 do
     if [ -z $type ]
