@@ -1,8 +1,6 @@
 # Setting up
 
 ## Fastsim
-
-FASTSIM:
 ```
 1. export SCRAM_ARCH=slc6_amd64_gcc530 
 2. cmsrel CMSSW_8_0_10
@@ -15,7 +13,6 @@ FASTSIM:
 9. ./setup.sh
 ```
 ## NtupleMaker
-
 ### Can follow instructions also [here](https://github.com/florez/NtupleMaker_740/tree/for_CMSSW_8X/BSM3G_TNT_Maker)
 ```
 1. export SCRAM_ARCH=slc6_amd64_gcc530 
@@ -39,7 +36,6 @@ FASTSIM:
 19. ./setup.sh
 ```
 ## Analyzer
-
 ```
 1. export SCRAM_ARCH=slc6_amd64_gcc530 
 2. cmsrel CMSSW_8_0_10
