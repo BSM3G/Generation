@@ -4,7 +4,7 @@ date
 
 cd WORK_AREA
 source /cvmfs/cms.cern.ch/cmsset_default.sh
-export slc6_amd64_gcc491
+export slc6_amd64_gcc530
 eval `scramv1 runtime -sh`
 
 run_num=$[ $1 + 1 ]
@@ -17,14 +17,14 @@ infilename=${infilename/\\/}
 
 cd ${_CONDOR_SCRATCH_DIR}
 
-cp -r $CMSSW_BASE/src/Analyzer/BSM3G_TNT_MainAnalyzer/ANALYSISDIRECTORY .
-cd ANALYSISDIRECTORY
-./BSM3GAnalyzer $infilename $outfilename
+cp -r $CMSSW_BASE/src/Analyzer/PartDet/ .
+cp -r $CMSSW_BASE/src/Analyzer/Pileup/ .
+cp -r $CMSSW_BASE/src/Analyzer/Analyzer .
+./Analyzer $infilename $outfilename
 
-xrdcp -sf $_CONDOR_SCRATCH_DIR/ANALYSISDIRECTORY/$outfilename root://cmseos.fnal.gov//store/user/DUMMY/TEMPDIRECTORY/$input_sample
+xrdcp -sf $_CONDOR_SCRATCH_DIR/$outfilename root://cmseos.fnal.gov//store/user/DUMMY/TEMPDIRECTORY/$input_sample
 
 cd ${_CONDOR_SCRATCH_DIR}
-rm -rf ANALYSISDIRECTORY
 
 
 

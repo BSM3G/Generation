@@ -6,11 +6,18 @@ then
     echo "Get a run file from running NormalSetup.csh"
     exit
 fi   
- 
 
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 export slc6_amd64_gcc491
 eval `scramv1 runtime -sh`
+
+if [ ! -f Analyzer ] 
+then
+    echo "Making Analyzer:"
+    make Analyzer
+fi
+ 
+
 
 need_init=$(voms-proxy-info | grep "timeleft" | awk 'BEGIN{FS=":"}{if($2==" 0" && $3=="00" && $4=="00"){print "true"}}')
 if [ $need_init == "true" ]
@@ -38,9 +45,13 @@ do
     fi
 done
 
+
 echo
 echo Is this analysis being run for MC or for Data?
 echo
+
+isData=$(awk '/isData/{ print NR; exit }' PartDet/Run_info.in)
+CalcPU=$(awk '/CalculatePUSystematics/{ print NR; exit }' PartDet/Run_info.in)
 
 select filename in Data MC
 do 
@@ -51,8 +62,8 @@ do
 
     elif [ $REPLY -eq 1 ]
     then
-	sed -i '643s/.*/CalculatePUSystematics 0/' ${analysisname}/BSM3GAnalyzer_CutParameters.in
-	sed -i '646s/.*/isData 1/' ${analysisname}/BSM3GAnalyzer_CutParameters.in
+	sed -i "${isData}s/\(0\|false\)/true/" PartDet/Run_info.in
+	sed -i "${CalcPU}s/\(1\|true\)/false/" PartDet/Run_info.in
 	
 	list=$(ls defaults/SAMPLES_LIST_data*)
 
@@ -72,8 +83,8 @@ do
 
     elif [ $REPLY -eq 2 ]
     then
-	sed -i '643s/.*/CalculatePUSystematics 1/' ${analysisname}/BSM3GAnalyzer_CutParameters.in
-	sed -i '646s/.*/isData 0/' ${analysisname}/BSM3GAnalyzer_CutParameters.in
+	sed -i "${CalcPU}s/\(0\|false\)/true/" PartDet/Run_info.in
+	sed -i "${isData}s/\(1\|true\)/false/" PartDet/Run_info.in
 
 	cp SAMPLES_LIST_MC.txt SAMPLES_LIST.txt
     fi

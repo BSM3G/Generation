@@ -1,6 +1,5 @@
 #!/bin/bash
 
-command='\e[1m%s\e[0m\n'
 PS3="Your choice:  "
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 export slc6_amd64_gcc491
@@ -8,7 +7,7 @@ eval `scramv1 runtime -sh
 `
 
 echo
-printf $command "Hello. What is your username?"
+printf  "Hello. What is your username?"
 echo
 
 read varname
@@ -26,7 +25,7 @@ do
     read varname
 done
 
-printf $command "What is the name of your eos analysis directory? Below are your options"
+printf  "What is the name of your eos analysis directory? Below are your options"
 
 temp_dir=$(ls list_Samples | head -n1)
 top_dir=${temp_dir/.txt/}
@@ -85,18 +84,21 @@ done
 printf "\n"
 
 
-printf $command "We will now setup the analyses scripts needed to submit jobs to CONDOR. Which analysis configuration do you want to use from the options below?"
+printf  "We will now setup the analyses scripts needed to submit jobs to CONDOR. Which analysis configuration do you want to use from the options below? (Default is uses the Config files already set up)"
 printf "\n"
 
-fl2=$(ls -d $CMSSW_BASE/src/Analyzer/BSM3G_TNT_MainAnalyzer/*/ | xargs -n 1 basename)
+fl2=$(ls -p $CMSSW_BASE/src/Analyzer/Analyses/ | grep / )
 
-select filename in $fl2
+select analyzename in $fl2 "Default"
 do 
-    if [ -z $filename ]
+    if [ -z $analyzename ]
     then
 	echo "Not valid choice, enter valid number"
+    elif [ $analyzename != "Default" ]
+    then
+	cp $CMSSW_BASE/src/Analyzer/Analyses/$analyzename/* $CMSSW_BASE/src/Analyzer/PartDet/
+	break
     else
-	analysisname=$filename
 	break
     fi
 done
@@ -108,9 +110,7 @@ location=$(pwd -P)
 cp defaults/tntAnalyze_default.sh tntAnalyze.sh
 sed -i -e s/DUMMY/"$varname"/g tntAnalyze.sh
 sed -i -e s/TEMPDIRECTORY/"$dirname"/g tntAnalyze.sh
-sed -i -e s/ANALYSISDIRECTORY/"$analysisname"/g tntAnalyze.sh
 sed -i -e s@WORK_AREA@"$location"@g tntAnalyze.sh
-
 
 
 cp defaults/deleteEOSAnalysisRootFiles_default.csh deleteEOSAnalysisRootFiles.csh
@@ -123,7 +123,7 @@ sed -i -e s/TEMPDIRECTORY/"$dirname"/g addingRoot.sh
 
 
 printf "\n"
-printf $command "Which QCD MC sample do you want to analyze?"
+printf  "Which QCD MC sample do you want to analyze?"
 select type in mu em none;
 do
     if [ -z $type ]
