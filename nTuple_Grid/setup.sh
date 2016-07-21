@@ -4,8 +4,7 @@ source /cvmfs/cms.cern.ch/cmsset_default.sh
 export slc6_amd64_gcc491
 eval `scramv1 runtime -sh`
 
-CMS_BASE=$(pwd)
-
+echo
 echo "Please type Username"
 read username
 
@@ -16,7 +15,7 @@ read username
 aodfile=''
 echo
 echo "Pick a file to run with"
-select name in $(ls ${CMS_BASE}/NtupleMaker/BSM3G_TNT_Maker/python/miniAOD*)
+select name in $(ls ${CMSSW_BASE}/src/NtupleMaker/BSM3G_TNT_Maker/python/miniAOD*py | xargs -n1 basename)
 do
     if [ -z $filename ] 
     then
