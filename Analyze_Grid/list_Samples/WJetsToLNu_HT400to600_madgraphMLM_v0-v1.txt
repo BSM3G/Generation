@@ -1,0 +1,5 @@
+root\://cmseos.fnal.gov//store/user/ra2tau/gurrola/WJetsToLNu_HT-400To600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT400to600_madgraphMLM_Asympt25ns_TNTMaker_noHLT_MiniAODv2_v0-v1/160714_144750/0000/OutTree_1.root
+root\://cmseos.fnal.gov//store/user/ra2tau/gurrola/WJetsToLNu_HT-400To600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT400to600_madgraphMLM_Asympt25ns_TNTMaker_noHLT_MiniAODv2_v0-v1/160714_144750/0000/OutTree_2.root
+root\://cmseos.fnal.gov//store/user/ra2tau/gurrola/WJetsToLNu_HT-400To600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT400to600_madgraphMLM_Asympt25ns_TNTMaker_noHLT_MiniAODv2_v0-v1/160714_144750/0000/OutTree_3.root
+root\://cmseos.fnal.gov//store/user/ra2tau/gurrola/WJetsToLNu_HT-400To600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT400to600_madgraphMLM_Asympt25ns_TNTMaker_noHLT_MiniAODv2_v0-v1/160714_144750/0000/OutTree_4.root
+root\://cmseos.fnal.gov//store/user/ra2tau/gurrola/WJetsToLNu_HT-400To600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT400to600_madgraphMLM_Asympt25ns_TNTMaker_noHLT_MiniAODv2_v0-v1/160714_144750/0000/OutTree_5.root

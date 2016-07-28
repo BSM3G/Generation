@@ -1,5 +1,4 @@
 #!/bin/bash
-
 date
 
 cd WORK_AREA
@@ -7,10 +6,10 @@ source /cvmfs/cms.cern.ch/cmsset_default.sh
 export slc6_amd64_gcc530
 eval `scramv1 runtime -sh`
 
-run_num=$[ $1 + 1 ]
-input_sample=$2
+run_num=$[ $1 + $2 + 1 ]
+input_sample=$3
 
-infilename=$(tail -n+${run_num} list_Samples/${input_sample}.txt | head -n1)
+infilename=$(sed -n ${run_num}p WORK_AREA/list_Samples/${input_sample}.txt)
 outfilename=Output.${run_num}.root
 
 infilename=${infilename/\\/}

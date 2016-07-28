@@ -25,6 +25,11 @@ do
     read varname
 done
 
+if [ $(grep USER_NAME master.sh | wc -l) -ne 0 ] 
+then 
+    sed -i -e s/USER_NAME/$varname/g master.sh
+fi
+
 printf  "What is the name of your eos analysis directory? Below are your options"
 
 temp_dir=$(ls list_Samples | head -n1)
@@ -122,31 +127,31 @@ sed -i -e s/DUMMY/"$varname"/g addingRoot.sh
 sed -i -e s/TEMPDIRECTORY/"$dirname"/g addingRoot.sh
 
 
-printf "\n"
-printf  "Which QCD MC sample do you want to analyze?\n"
-select type in mu em none;
-do
-    if [ -z $type ]
-    then
-	echo "Not valid choice, enter valid number"
-    else
-	whichqcd=$type
-	break
-    fi
-done
+# printf "\n"
+# printf  "Which QCD MC sample do you want to analyze?\n"
+# select type in mu em none;
+# do
+#     if [ -z $type ]
+#     then
+# 	echo "Not valid choice, enter valid number"
+#     else
+# 	whichqcd=$type
+# 	break
+#     fi
+# done
 
 cp defaults/SAMPLES_LIST_MC_default.txt SAMPLES_LIST_MC.txt
 
-if [ "$whichqcd" = "mu" ]
-then
-    sed -i '17,23d' SAMPLES_LIST_MC.txt
-elif [ "$whichqcd" = "em" ]
-then
-    sed -i '16d' SAMPLES_LIST_MC.txt
-elif [ "$whichqcd" = "none" ]
-then
-    sed -i '16,23d' SAMPLES_LIST_MC.txt
-fi
+# if [ "$whichqcd" = "mu" ]
+# then
+#     sed -i '17,23d' SAMPLES_LIST_MC.txt
+# elif [ "$whichqcd" = "em" ]
+# then
+#     sed -i '16d' SAMPLES_LIST_MC.txt
+# elif [ "$whichqcd" = "none" ]
+# then
+#     sed -i '16,23d' SAMPLES_LIST_MC.txt
+# fi
 
 printf "\n"
 echo The analysis scripts have been configured.

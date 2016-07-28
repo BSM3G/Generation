@@ -1,6 +1,24 @@
 #!/bin/bash
 
-if [ ! -f tntAnalyze.sh ]
+#####################
+##### Variables #####
+#####################
+
+limit=200 # Make it an increment of 100
+stepsize=100   #Size of each packet of jobs to be sent
+runfile=tntAnalyze.sh
+#####################
+#####################
+
+
+limit=$[$limit/$stepsize*$stepsize]  ### makes limit a multiple of stepsize
+if [ $limit -lt 0 ] 
+then
+    echo "Limit too small (limit < $stepsize)"
+    exit 1
+fi
+
+if [ ! -f $runfile ]
 then 
     echo "Need the TNT Analyze file!!"
     echo "Get a run file from running NormalSetup.csh"
@@ -76,6 +94,10 @@ do
 done
 
 
+touch kill_process.sh
+echo "/usr/sbin/lsof | grep -e 'USER_NAME.*master.sh' | awk '{print \$2}' | xargs kill" > kill_process.sh 
+echo "condor_rm USER_NAME" >> kill_process.sh
+
 for inputList in $(cat SAMPLES_LIST.txt)
 do
     echo $inputList
@@ -83,19 +105,39 @@ do
     then
 	mkdir $inputList
     fi
-    tmp=( $(wc list_Samples/${inputList}.txt) )
-    n_proc=${tmp[1]}
-
+    total=$(cat list_Samples/${inputList}.txt | wc -l)
+    left=$total
+    start=0
     cp condor_default.cmd ${inputList}/run_condor.cmd
     cp tntAnalyze.sh $inputList
 
     cd ${inputList}
-    sed -i -e s/INPUT_SAMPLE/${inputList}/g run_condor.cmd
-    sed -i -e s/NUMBER_QUEUED/${n_proc}/g run_condor.cmd
-    
-    condor_submit run_condor.cmd
+    while [ $left -gt 0 ] 
+    do
+	running=$(condor_q USER_NAME | grep $runfile | wc -l)
+	if [ $running -ge $limit ]
+	then
+	    sleep 1m
+	else
+	    send=$stepsize
+	    if [ $[$limit-$running] -lt $stepsize ] 
+	    then
+		send=$[$limit-$running]
+	    fi
+	    if [ $left -lt $send ] 
+	    then
+		send=$left
+	    fi
+	    left=$[$left-$send]
+	    condor_submit -append "args = \$(Process) $start $inputList"  run_condor.cmd -queue $send
+	    start=$[$start+$send]
+	fi
+    done
     cd ..
 done
+
+rm kill_process.sh
+
 
 
 
