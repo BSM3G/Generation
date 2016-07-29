@@ -1,8 +1,11 @@
 # Table of Contents
-1. Setup
-2. Run Fastsim
+1. [Setup](#setup)
+2. [Run Fastsim]
 3. Run NtupleMaker
-4. Run Analyzer
+4. [Run Analyzer](#run-analyzer)
+   - [Basic Run](#basic-run)
+   - [Deleting Files](#deleting-files)
+   - [Adding Files](#adding-files)
 
 # Setup
 
@@ -13,7 +16,48 @@
 
 ## Basic Run
 
+To set up the script, simply go into your Analyze_Grid directory and do a setup:
+```
+cd /path/to/Analyze_Grid
+./NormalSetup
+```
+This will prompt you with some choices.  Simply enter the number of your choice and it will set up your eos area to put files and running files.  You will notice the file makes 4 new files:
+```
+ls -t | head -n4
+> addingRoot.sh
+> tntAnalyze.sh
+> deleteEOSAnalysisRootFiles.sh
+> SAMPLES_LIST_MC.txt
+```
+Before you send your tasks, if you are running Monte Carlo Simulations, check SAMPLES_LIST_MC.txt as it will have a list of all the samples that will be analyzed on the gird.  Remove any that are unnecessary as all MC samples available are in this list
+
+To send the task to the Grid, simply type
+```
+./master.sh
+```
+In the master.sh file you will see some configurable items:
+```
+limit=200 
+stepsize=100   ###CONDOR ONLY
+runfile=tntAnalyze.sh   ###CONDOR ONLY
+```
+Limit    - the number of allowed tasks allowed to run on the grid
+stepsize - max number of tasks sent to CONDOR
+runfile  - variable with the runfile used by the grid
+
 ## Deleting Files
 
-## Adding Files
+After making a run, you will now have many log directories and root files in you eos area.  To clear each respectively, you have two scipts that take care of deletion for you:
+```
+./deleteEOSAnalysisRootFile.sh
+./deleteLocalLogFileDirectories.csh
+```
+After that is done, your system is clear and can run another set of files.
 
+## Adding Files
+Once a task has been run, you will need to check that the root files have no error, add the root files, and then get the cut flow efficiency from the output.  This can be taken care of with 2 commands
+```
+./finish.sh > <YOUR OUTPUT FILE>  #puts cut flow efficiency in the output file.  Crashes if error in a run.
+./addingRoot.sh
+```
+After that is done, you will have an output file with the cutflow and a root file for each task in SAMPLES_LIST.txt.
