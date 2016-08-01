@@ -1,7 +1,7 @@
 # Table of Contents
 1. [Setup](#setup)
-2. [Run Fastsim]
-3. Run NtupleMaker
+2. [Run Fastsim](#run-fastsim)
+3. [Run NtupleMaker](#run-ntuplemaker)
 4. [Run Analyzer](#run-analyzer)
    - [Basic Run](#basic-run)
    - [Deleting Files](#deleting-files)
@@ -9,8 +9,18 @@
 
 # Setup
 
-- for Vanderbilt Accre: CMSSW version 74x or version 80x
-- for LPC at FNAL: CMSSW version 74 or version 80x
+- for Vanderbilt Accre: CMSSW [version 74x](https://github.com/dteague/Generation/tree/Slurm74x) or [version 80x](https://github.com/dteague/Generation/tree/Slurm80x)
+- for LPC at FNAL: CMSSW [version 74](https://github.com/dteague/Generation/tree/Condor74x) or [version 80x](https://github.com/dteague/Generation/tree/Condor80x)
+
+# Run Fastsim
+
+_Coming Soon!_
+This works on the basic idea of setup with ```./setup.sh```, configure the run in master.sh and run it by ```./master.sh``` But full instructions will come soon.
+
+# Run NtupleMaker
+
+_Coming Soon!_
+This works on the basic idea of setup with ```./setup.sh```, configure the run in master.sh and run it by ```./master.sh``` But full instructions will come soon.
 
 # Run Analyzer
 
