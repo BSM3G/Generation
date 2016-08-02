@@ -5,16 +5,14 @@
 #####################
 
 limit=200 # Make it an increment of 100
-stepsize=100   #Size of each packet of jobs to be sent
 runfile=tntAnalyze.sh
 #####################
 #####################
 
 
-limit=$[$limit/$stepsize*$stepsize]  ### makes limit a multiple of stepsize
-if [ $limit -lt 0 ] 
+if [ $limit -le 0 ] 
 then
-    echo "Limit too small (limit < $stepsize)"
+    echo "Limit too small (limit <= 0)"
     exit 1
 fi
 
@@ -49,10 +47,10 @@ echo
 echo Is this analysis being run for MC or for Data?
 echo
 
-runfile=$CMSSW_BASE/src/Analyzer/PartDet/Run_info.in
+infofile=$CMSSW_BASE/src/Analyzer/PartDet/Run_info.in
 
-isData=$(awk '/isData/{ print NR; exit }' $runfile)
-CalcPU=$(awk '/CalculatePUSystematics/{ print NR; exit }' $runfile)
+isData=$(awk '/isData/{ print NR; exit }' $infofile)
+CalcPU=$(awk '/CalculatePUSystematics/{ print NR; exit }' $infofile)
 
 select filename in Data MC
 do 
@@ -63,8 +61,8 @@ do
 
     elif [ $REPLY -eq 1 ]
     then
-	sed -i "${isData}s/\(0\|false\)/true/" $runfile
-	sed -i "${CalcPU}s/\(1\|true\)/false/" $runfile
+	sed -i "${isData}s/\(0\|false\)/true/" $infofile
+	sed -i "${CalcPU}s/\(1\|true\)/false/" $infofile
 	
 	list=$(ls defaults/SAMPLES_LIST_data*)
 
@@ -84,8 +82,8 @@ do
 
     elif [ $REPLY -eq 2 ]
     then
-	sed -i "${CalcPU}s/\(0\|false\)/true/" $runfile
-	sed -i "${isData}s/\(1\|true\)/false/" $runfile
+	sed -i "${CalcPU}s/\(0\|false\)/true/" $infofile
+	sed -i "${isData}s/\(1\|true\)/false/" $infofile
 
 	cp SAMPLES_LIST_MC.txt SAMPLES_LIST.txt
     fi
@@ -119,11 +117,8 @@ do
 	then
 	    sleep 1m
 	else
-	    send=$stepsize
-	    if [ $[$limit-$running] -lt $stepsize ] 
-	    then
-		send=$[$limit-$running]
-	    fi
+	    send=$[$limit-$running]
+
 	    if [ $left -lt $send ] 
 	    then
 		send=$left
