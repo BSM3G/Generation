@@ -30,7 +30,7 @@ then
     sed -i -e s/USER_NAME/$varname/g master.sh
 fi
 
-printf  "What is the name of your eos analysis directory? Below are your options"
+printf  "What is the name of your eos analysis directory? Below are your options (enter number)"
 
 temp_dir=$(ls list_Samples | head -n1)
 top_dir=${temp_dir/.txt/}
@@ -72,9 +72,9 @@ do
 	done
 
 	xrdfs root://cmseos.fnal.gov/ mkdir /store/user/$varname/$dirname
-	cp defaults/makeEOSdirectories_default.csh makeEOSdirectories.csh
-	sed -i -e s/DUMMY/"$varname"/g makeEOSdirectories.csh
-	sed -i -e s/TEMPDIRECTORY/"$dirname"/g makeEOSdirectories.csh
+	sed -e "s/DUMMY/$varname/g" -e "s/TEMPDIRECTORY/$dirname/g" \
+	    <defaults/makeEOSdirectories_default.csh >makeEOSdirectories.csh
+	chmod 700 makeEOSdirectories.csh
 	./makeEOSdirectories.csh
 	rm makeEOSdirectories.csh
 	echo Your eos analysis directories have been created
@@ -112,46 +112,21 @@ printf "\n"
 
 location=$(pwd -P)
 
-cp defaults/tntAnalyze_default.sh tntAnalyze.sh
-sed -i -e s/DUMMY/"$varname"/g tntAnalyze.sh
-sed -i -e s/TEMPDIRECTORY/"$dirname"/g tntAnalyze.sh
-sed -i -e s@WORK_AREA@"$location"@g tntAnalyze.sh
+sed -e s/DUMMY/"$varname"/g -e "s/TEMPDIRECTORY/$dirname/g" -e "s@WORK_AREA@$location@g" \
+    <defaults/tntAnalyze_default.sh >tntAnalyze.sh
+chmod 700 tntAnalyze.sh
+
+sed -e "s/DUMMY/$varname/g" -e "s/TEMPDIRECTORY/$dirname/g" \
+    <defaults/deleteEOSAnalysisRootFiles_default.csh >deleteEOSAnalysisRootFiles.csh
+chmod 700 deleteEOSAnalysisRootFiles.csh
+
+sed -e "s/DUMMY/$varname/g" -e "s/TEMPDIRECTORY/$dirname/g" \
+    <defaults/addingRoot.sh >addingRoot.sh
+chmod 700 addingRoot.sh
 
 
-cp defaults/deleteEOSAnalysisRootFiles_default.csh deleteEOSAnalysisRootFiles.csh
-sed -i -e s/DUMMY/"$varname"/g deleteEOSAnalysisRootFiles.csh
-sed -i -e s/TEMPDIRECTORY/"$dirname"/g deleteEOSAnalysisRootFiles.csh
-
-cp defaults/addingRoot.sh .
-sed -i -e s/DUMMY/"$varname"/g addingRoot.sh
-sed -i -e s/TEMPDIRECTORY/"$dirname"/g addingRoot.sh
-
-
-# printf "\n"
-# printf  "Which QCD MC sample do you want to analyze?\n"
-# select type in mu em none;
-# do
-#     if [ -z $type ]
-#     then
-# 	echo "Not valid choice, enter valid number"
-#     else
-# 	whichqcd=$type
-# 	break
-#     fi
-# done
-
-cp defaults/SAMPLES_LIST_MC_default.txt SAMPLES_LIST_MC.txt
-
-# if [ "$whichqcd" = "mu" ]
-# then
-#     sed -i '17,23d' SAMPLES_LIST_MC.txt
-# elif [ "$whichqcd" = "em" ]
-# then
-#     sed -i '16d' SAMPLES_LIST_MC.txt
-# elif [ "$whichqcd" = "none" ]
-# then
-#     sed -i '16,23d' SAMPLES_LIST_MC.txt
-# fi
+####NNNNNEEEEDDDD CHANGE!!!#######
+cp defaults/SAMPLES_LIST_MC_default.txt SAMPLES_LIST.txt
 
 printf "\n"
 echo The analysis scripts have been configured.
