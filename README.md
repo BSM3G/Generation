@@ -8,9 +8,11 @@
 4. cmsenv
 5. source /cvmfs/cms.cern.ch/crab3/crab.sh
 6. git clone https://github.com/dteague/Generation
-7. cp -r Generation/Fastsim_Grid/ .
-8. cd Fastsim_Grid
-9. ./setup.sh
+7. cd Generation
+8. git checkout Condor80x
+9. cp -r Fastsim_Grid/ ..
+10. cd ../Fastsim_Grid
+11. ./setup.sh
 ```
 ## NtupleMaker
 ### Can follow instructions also [here](https://github.com/florez/NtupleMaker_740/tree/for_CMSSW_8X/BSM3G_TNT_Maker)
@@ -31,9 +33,11 @@
 14. cd ../
 15. scram b -j 10
 16. git clone https://github.com/dteague/Generation
-17. cp -r Generation/nTuple_Grid/ .
-18. cd Analyze_Grid
-19. ./setup.sh
+17. cd Generation
+18. git checkout Condor80x
+19. cp -r nTuple_Grid/ ..
+20. cd ../nTuple_Grid
+21. ./setup.sh
 ```
 ## Analyzer
 ```
@@ -47,9 +51,11 @@
 8. git checkout TNT80x
 9. make
 10. git clone https://github.com/dteague/Generation
-11. cp -r Generation/Analyze_Grid/ .
-12. cd Analyze_Grid
-13. ./NormalSetup.sh
+11. cd Generation
+12. git checkout Condor80x
+13. cp -r Analyze_Grid/ ..
+14. cd ../Analyze_Grid
+15. ./NormalSetup.sh
 ```
 
 # Running Grid
