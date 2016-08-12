@@ -19,11 +19,26 @@ cd ${_CONDOR_SCRATCH_DIR}
 cp -r $CMSSW_BASE/src/Analyzer/PartDet/ .
 cp -r $CMSSW_BASE/src/Analyzer/Pileup/ .
 cp -r $CMSSW_BASE/src/Analyzer/Analyzer .
+
+isData=$(echo $input_sample | grep "Run")
+if [ ! -z $isData ]
+then
+    sed -r -i -e 's/(isData\s+)(0|false)/\1true/' -e 's/(CalculatePUS[a-z]+\s+)(1|true)/\1false/' \
+	PartDet/Run_info.in
+else
+    sed -r -i -e 's/(isData\s+)(1|true)/\1false/' -e 's/(CalculatePUS[a-z]+\s+)(0|false)/\1true/' \
+	PartDet/Run_info.in
+fi
+
 ./Analyzer $infilename $outfilename
 
 xrdcp -sf $_CONDOR_SCRATCH_DIR/$outfilename root://cmseos.fnal.gov//store/user/DUMMY/TEMPDIRECTORY/$input_sample
 
-cd ${_CONDOR_SCRATCH_DIR}
+rm Analyzer
+rm -r PartDet
+rm -r Pileup
+rm *root
+
 
 
 
