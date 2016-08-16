@@ -124,9 +124,5 @@ sed -e "s/DUMMY/$varname/g" -e "s/TEMPDIRECTORY/$dirname/g" \
     <defaults/addingRoot.sh >addingRoot.sh
 chmod 700 addingRoot.sh
 
-
-####NNNNNEEEEDDDD CHANGE!!!#######
-cp defaults/SAMPLES_LIST_MC_default.txt SAMPLES_LIST.txt
-
 printf "\n"
 echo The analysis scripts have been configured.

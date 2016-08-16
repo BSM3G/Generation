@@ -30,6 +30,16 @@ else
 	PartDet/Run_info.in
 fi
 
+needGenWgt=$(echo $input_sample | grep -E 'powheg|amcatnlo')
+if [ ! -z $needGenWgt ]
+then
+    sed -r -i 's/(ApplyGenWeight\s+)(0|false)/\1true/' PartDet/Run_info.in
+else
+    sed -r -i 's/(ApplyGenWeight\s+)(1|true)/\1false/' PartDet/Run_info.in
+fi
+
+cat PartDet/Run_info.in
+
 ./Analyzer $infilename $outfilename
 
 xrdcp -sf $_CONDOR_SCRATCH_DIR/$outfilename root://cmseos.fnal.gov//store/user/DUMMY/TEMPDIRECTORY/$input_sample
