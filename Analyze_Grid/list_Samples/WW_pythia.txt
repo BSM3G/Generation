@@ -1,0 +1,2 @@
+root\://cmseos.fnal.gov//store/user/ra2tau/gurrola/WW_TuneCUETP8M1_13TeV-pythia8/WW_pythia8_Asympt25ns_TNTMaker_noHLT_MiniAODv2/160721_191202/0000/OutTree_2.root
+root\://cmseos.fnal.gov//store/user/ra2tau/gurrola/WW_TuneCUETP8M1_13TeV-pythia8/WW_pythia8_Asympt25ns_TNTMaker_noHLT_MiniAODv2/160721_191202/0000/OutTree_3.root
