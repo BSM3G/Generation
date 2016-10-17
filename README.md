@@ -10,7 +10,7 @@
 # Setup
 
 - for Vanderbilt Accre: CMSSW [version 74x](https://github.com/BSM3G/Generation/tree/Slurm74x) or [version 80x](https://github.com/BSM3G/Generation/tree/Slurm80x)
-- for LPC at FNAL: CMSSW [version 74](https://github.com/BSM3G/Generation/tree/Condor74x) or [version 80x](https://github.com/dteague/BSM3G/tree/Condor80x)
+- for LPC at FNAL: CMSSW [version 74](https://github.com/BSM3G/Generation/tree/Condor74x) or [version 80x](https://github.com/BSM3G/Generation/tree/Condor80x)
 
 # Run Fastsim
 
