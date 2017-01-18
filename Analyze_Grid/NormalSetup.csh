@@ -124,5 +124,13 @@ sed -e "s/DUMMY/$varname/g" -e "s/TEMPDIRECTORY/$dirname/g" \
     <defaults/addingRoot.sh >addingRoot.sh
 chmod 700 addingRoot.sh
 
+sed -e "s/DUMMY/$varname/g" -e "s/TEMPDIRECTORY/$dirname/g" \
+    <defaults/addingRoot_condor.sh >addingRoot_condor.sh
+chmod 700 addingRoot_condor.sh
+
+sed -e "s/DUMMY/$varname/g" -e "s/TEMPDIRECTORY/$dirname/g" \
+    <defaults/addingRoot_perdir.sh >addingRoot_perdir.sh
+chmod 700 addingRoot_perdir.sh
+
 printf "\n"
 echo The analysis scripts have been configured.
