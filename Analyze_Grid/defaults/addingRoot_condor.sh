@@ -23,7 +23,7 @@ mkdir Merging_Results
 cd Merging_Results
 
 for dir in $(xrdfs root://cmseos.fnal.gov/ ls /store/user/DUMMY/TEMPDIRECTORY/ | xargs -n 1 basename)
-dir
+do
     cp ../defaults/condor_default_add.cmd run_condor_add_${dir}.cmd
     cp ../addingRoot_perdir.sh addingRoot_perdir_${dir}.sh
     sed -i -- "s/DIRE/$dir/g" addingRoot_perdir_${dir}.sh
