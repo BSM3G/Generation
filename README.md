@@ -1,73 +1,86 @@
-# Table of Contents
-1. [Setup](#setup)
-2. [Run Fastsim](#run-fastsim)
-3. [Run NtupleMaker](#run-ntuplemaker)
-4. [Run Analyzer](#run-analyzer)
-   - [Basic Run](#basic-run)
-   - [Deleting Files](#deleting-files)
-   - [Adding Files](#adding-files)
+# Setting up
 
-# Setup
-
-- for Vanderbilt Accre: CMSSW [version 74x](https://github.com/BSM3G/Generation/tree/Slurm74x) or [version 80x](https://github.com/BSM3G/Generation/tree/Slurm80x)
-- for LPC at FNAL: CMSSW [version 74](https://github.com/BSM3G/Generation/tree/Condor74x) or [version 80x](https://github.com/BSM3G/Generation/tree/Condor80x)
-
-# Run Fastsim
-
-_Coming Soon!_
-This works on the basic idea of setup with ```./setup.sh```, configure the run in master.sh and run it by ```./master.sh``` But full instructions will come soon.
-
-# Run NtupleMaker
-
-_Coming Soon!_
-This works on the basic idea of setup with ```./setup.sh```, configure the run in master.sh and run it by ```./master.sh``` But full instructions will come soon.
-
-# Run Analyzer
-
-## Basic Run
-
-To set up the script, simply go into your Analyze_Grid directory and do a setup:
+## Fastsim
 ```
-cd /path/to/Analyze_Grid
-./NormalSetup
+1. export SCRAM_ARCH=slc6_amd64_gcc530 
+2. cmsrel CMSSW_8_0_10
+3. cd CMSSW_8_0_10/src
+4. cmsenv
+5. source /cvmfs/cms.cern.ch/crab3/crab.sh
+6. git clone https://github.com/dteague/Generation
+7. cd Generation
+8. git checkout Condor80x
+9. cp -r Fastsim_Grid/ ..
+10. cd ../Fastsim_Grid
+11. ./setup.sh
 ```
-This will prompt you with some choices.  Simply enter the number of your choice and it will set up your eos area to put files and running files.  You will notice the file makes 4 new files:
+## NtupleMaker
+### Can follow instructions also [here](https://github.com/florez/NtupleMaker_740/tree/for_CMSSW_8X/BSM3G_TNT_Maker)
 ```
-ls -t | head -n4
-> addingRoot.sh
-> tntAnalyze.sh
-> deleteEOSAnalysisRootFiles.sh
-> SAMPLES_LIST_MC.txt
+1. export SCRAM_ARCH=slc6_amd64_gcc530 
+2. cmsrel CMSSW_8_0_10
+3. cd CMSSW_8_0_10/src
+4. cmsenv
+5. source /cvmfs/cms.cern.ch/crab3/crab.sh
+6. git cms-init
+7. git cms-addpkg RecoMET/METProducers
+8 scram b -j 10
+9. git cms-merge-topic -u cms-met:CMSSW_8_0_X-METFilterUpdate
+10. scram b -j 10
+11. git clone https://github.com/florez/NtupleMaker_740 ./NtupleMaker
+12. cd NtupleMaker
+13. git checkout for_CMSSW_8X 
+14. cd ../
+15. scram b -j 10
+16. git clone https://github.com/dteague/Generation
+17. cd Generation
+18. git checkout Condor80x
+19. cp -r nTuple_Grid/ ..
+20. cd ../nTuple_Grid
+21. ./setup.sh
 ```
-Before you send your tasks, if you are running Monte Carlo Simulations, check SAMPLES_LIST_MC.txt as it will have a list of all the samples that will be analyzed on the gird.  Remove any that are unnecessary as all MC samples available are in this list
+## Analyzer
+```
+1. export SCRAM_ARCH=slc6_amd64_gcc530 
+2. cmsrel CMSSW_8_0_10
+3. cd CMSSW_8_0_10/src
+4. cmsenv
+5. source /cvmfs/cms.cern.ch/crab3/crab.sh
+6. git clone https://github.com/dteague/Analyzer
+7. cd Analyzer
+8. git checkout TNT80x
+9. make
+10. git clone https://github.com/dteague/Generation
+11. cd Generation
+12. git checkout Condor80x
+13. cp -r Analyze_Grid/ ..
+14. cd ../Analyze_Grid
+15. ./NormalSetup.sh
+```
 
-To send the task to the Grid, simply type
+# Running Grid
+
+Configure values (start values, number of processes, number of events in each process, number of cores) in the master.sh file
+
+To send a task to Condor, simply type:
 ```
 ./master.sh
 ```
-In the master.sh file you will see some configurable items:
-```
-limit=200 
-stepsize=100   ###CONDOR ONLY
-runfile=tntAnalyze.sh   ###CONDOR ONLY
-```
-Limit    - the number of allowed tasks allowed to run on the grid
-stepsize - max number of tasks sent to CONDOR
-runfile  - variable with the runfile used by the grid
 
-## Deleting Files
+# Extra Notes
 
-After making a run, you will now have many log directories and root files in you eos area.  To clear each respectively, you have two scipts that take care of deletion for you:
-```
-./deleteEOSAnalysisRootFile.sh
-./deleteLocalLogFileDirectories.csh
-```
-After that is done, your system is clear and can run another set of files.
+This is a guide to setting up grid generation using Condor or Slurm.  The process for setting up is the same for both and the running process is the same for both as well
 
-## Adding Files
-Once a task has been run, you will need to check that the root files have no error, add the root files, and then get the cut flow efficiency from the output.  This can be taken care of with 2 commands
+For running any step, the program uses a master file that controls the output.  The master file makes no assumptions about the area one is using besides the necessary items (config files to run, storage spaces are set up, etc.).  The master file then makes necessary changes to the grid file (cmd file for Condor and slurm file for slurm) and then runs this grid file.  The grid file then invokes a runfile that does the actual work.  By this system, of master file, grid file, run file, any grid system can be inserted easily.  
+
+Work to extending this process to CRAB3 will be done later.
+
+But to run any step, first run the set up file or 
 ```
-./finish.sh > <YOUR OUTPUT FILE>  #puts cut flow efficiency in the output file.  Crashes if error in a run.
-./addingRoot.sh
+./setup.sh
 ```
-After that is done, you will have an output file with the cutflow and a root file for each task in SAMPLES_LIST.txt.
+This will set up any necessary conditions and files that will later be used.  Any changes in parameters such as number of events and processes can be changed in the master.sh file.  To send events to the cluster, just do
+```
+./master.sh
+```
+This will ask you for input such as grid password and possible configurations for the run.  

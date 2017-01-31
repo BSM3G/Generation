@@ -1,0 +1,1 @@
+root\://cmseos.fnal.gov//store/user/ra2tau/gurrola/WJetsToLNu_HT-2500ToInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT2500toInf_madgraphMLM_Asympt25ns_TNTMaker_noHLT_MiniAODv2_v0-v1/160715_020811/0000/OutTree_1.root
