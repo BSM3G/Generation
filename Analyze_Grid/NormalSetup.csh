@@ -108,7 +108,7 @@ do
     fi
 done
 
-printf "\n"
+echo
 
 location=$(pwd -P)
 
@@ -132,5 +132,8 @@ sed -e "s/DUMMY/$varname/g" -e "s/TEMPDIRECTORY/$dirname/g" \
     <defaults/addingRoot_perdir.sh >addingRoot_perdir.sh
 chmod 700 addingRoot_perdir.sh
 
-printf "\n"
+sed -e "s/EOS_DIR/$varname\/$dirname/g" < defaults/run_adding_default.sh >run_adding.sh
+chmod +x run_adding.sh
+
+echo
 echo The analysis scripts have been configured.

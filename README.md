@@ -1,43 +1,4 @@
 # Setting up
-
-## Fastsim
-```
-1. export SCRAM_ARCH=slc6_amd64_gcc530 
-2. cmsrel CMSSW_8_0_10
-3. cd CMSSW_8_0_10/src
-4. cmsenv
-5. source /cvmfs/cms.cern.ch/crab3/crab.sh
-6. git clone https://github.com/dteague/Generation
-7. cd Generation
-8. git checkout Condor80x
-9. cp -r Fastsim_Grid/ ..
-10. cd ../Fastsim_Grid
-11. ./setup.sh
-```
-## NtupleMaker
-### Can follow instructions also [here](https://github.com/florez/NtupleMaker_740/tree/for_CMSSW_8X/BSM3G_TNT_Maker)
-```
-1. export SCRAM_ARCH=slc6_amd64_gcc530 
-2. cmsrel CMSSW_8_0_10
-3. cd CMSSW_8_0_10/src
-4. cmsenv
-5. source /cvmfs/cms.cern.ch/crab3/crab.sh
-6. git cms-init
-7. git cms-addpkg RecoMET/METProducers
-8 scram b -j 10
-9. git cms-merge-topic -u cms-met:CMSSW_8_0_X-METFilterUpdate
-10. scram b -j 10
-11. git clone https://github.com/florez/NtupleMaker_740 ./NtupleMaker
-12. cd NtupleMaker
-13. git checkout for_CMSSW_8X 
-14. cd ../
-15. scram b -j 10
-16. git clone https://github.com/dteague/Generation
-17. cd Generation
-18. git checkout Condor80x
-19. cp -r nTuple_Grid/ ..
-20. cd ../nTuple_Grid
-21. ./setup.sh
 ```
 ## Analyzer
 ```

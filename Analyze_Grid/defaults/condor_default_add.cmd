@@ -1,5 +1,5 @@
 universe = vanilla
-Executable=EXEC
+Executable=addingRoot_perdir.sh
 Should_Transfer_Files = YES
 WhenToTransferOutput = ON_EXIT
 Output = condor_out_$(Process)_$(Cluster).stdout
