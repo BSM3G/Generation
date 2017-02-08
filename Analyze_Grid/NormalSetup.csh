@@ -124,14 +124,6 @@ sed -e "s/DUMMY/$varname/g" -e "s/TEMPDIRECTORY/$dirname/g" \
     <defaults/addingRoot.sh >addingRoot.sh
 chmod 700 addingRoot.sh
 
-sed -e "s/DUMMY/$varname/g" -e "s/TEMPDIRECTORY/$dirname/g" \
-    <defaults/addingRoot_condor.sh >addingRoot_condor.sh
-chmod 700 addingRoot_condor.sh
-
-sed -e "s/DUMMY/$varname/g" -e "s/TEMPDIRECTORY/$dirname/g" \
-    <defaults/addingRoot_perdir.sh >addingRoot_perdir.sh
-chmod 700 addingRoot_perdir.sh
-
 sed -e "s/EOS_DIR/$varname\/$dirname/g" < defaults/run_adding_default.sh >run_adding.sh
 chmod +x run_adding.sh
 
