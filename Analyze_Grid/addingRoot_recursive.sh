@@ -58,7 +58,7 @@ setup_event() {
 }
 
 IFS=$'\n'
-for inputList in $(cat ../SAMPLES_LIST.txt)
+for inputList in $(cat $work_area/SAMPLES_LIST.txt)
 do
     if [[ ! -z $(echo $inputList | grep '^//.*') || ! -z $(echo $inputList | grep '^#.*') ]]
     then
