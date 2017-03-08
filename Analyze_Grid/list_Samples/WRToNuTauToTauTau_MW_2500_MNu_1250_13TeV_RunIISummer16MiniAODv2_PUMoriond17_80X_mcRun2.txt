@@ -1,0 +1,2 @@
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/WRToNuTauToTauTau_MW-2500_MNu-1250_TuneCUETP8M1_13TeV-pythia8-tauola/WRToNuTauToTauTau_MW_2500_MNu_1250_13TeV_RunIISummer16MiniAODv2_PUMoriond17_80X_mcRun2/170126_185211/0000/OutTree_1.root
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/WRToNuTauToTauTau_MW-2500_MNu-1250_TuneCUETP8M1_13TeV-pythia8-tauola/WRToNuTauToTauTau_MW_2500_MNu_1250_13TeV_RunIISummer16MiniAODv2_PUMoriond17_80X_mcRun2/170126_185211/0000/OutTree_2.root

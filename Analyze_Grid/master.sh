@@ -9,6 +9,12 @@ runfile=tntAnalyze.sh
 #####################
 #####################
 
+if [[ -z ${X509_USER_PROXY} ]] || [[ ! -f ${X509_USER_PROXY} ]]
+then
+    voms-proxy-init -voms cms
+fi
+sed -ri "s|(509userproxy =).*|\1${X509_USER_PROXY}|g" condor_default.cmd
+
 
 if [ $limit -le 0 ] 
 then

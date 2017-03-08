@@ -1,0 +1,4 @@
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/LQToBTau_M-750_BetaOne_TuneCUETP8M1_13TeV-pythia8/LQToBTau_M-750_BetaOne_TuneCUETP8M1_13TeV_RunIISummer16MiniAODv2_PUMoriond17_80X_mcRun2/170126_203006/0000/OutTree_1.root
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/LQToBTau_M-750_BetaOne_TuneCUETP8M1_13TeV-pythia8/LQToBTau_M-750_BetaOne_TuneCUETP8M1_13TeV_RunIISummer16MiniAODv2_PUMoriond17_80X_mcRun2/170126_203006/0000/OutTree_2.root
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/LQToBTau_M-750_BetaOne_TuneCUETP8M1_13TeV-pythia8/LQToBTau_M-750_BetaOne_TuneCUETP8M1_13TeV_RunIISummer16MiniAODv2_PUMoriond17_80X_mcRun2/170126_203006/0000/OutTree_3.root
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/LQToBTau_M-750_BetaOne_TuneCUETP8M1_13TeV-pythia8/LQToBTau_M-750_BetaOne_TuneCUETP8M1_13TeV_RunIISummer16MiniAODv2_PUMoriond17_80X_mcRun2/170126_203006/0000/OutTree_4.root

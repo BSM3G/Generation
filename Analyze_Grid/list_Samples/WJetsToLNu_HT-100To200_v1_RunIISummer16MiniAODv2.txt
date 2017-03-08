@@ -1,0 +1,14 @@
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/WJetsToLNu_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT-100To200_v1_RunIISummer16MiniAODv2/170125_214946/0000/OutTree_1.root
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/WJetsToLNu_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT-100To200_v1_RunIISummer16MiniAODv2/170125_214946/0000/OutTree_10.root
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/WJetsToLNu_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT-100To200_v1_RunIISummer16MiniAODv2/170125_214946/0000/OutTree_11.root
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/WJetsToLNu_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT-100To200_v1_RunIISummer16MiniAODv2/170125_214946/0000/OutTree_12.root
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/WJetsToLNu_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT-100To200_v1_RunIISummer16MiniAODv2/170125_214946/0000/OutTree_13.root
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/WJetsToLNu_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT-100To200_v1_RunIISummer16MiniAODv2/170125_214946/0000/OutTree_14.root
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/WJetsToLNu_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT-100To200_v1_RunIISummer16MiniAODv2/170125_214946/0000/OutTree_2.root
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/WJetsToLNu_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT-100To200_v1_RunIISummer16MiniAODv2/170125_214946/0000/OutTree_3.root
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/WJetsToLNu_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT-100To200_v1_RunIISummer16MiniAODv2/170125_214946/0000/OutTree_4.root
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/WJetsToLNu_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT-100To200_v1_RunIISummer16MiniAODv2/170125_214946/0000/OutTree_5.root
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/WJetsToLNu_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT-100To200_v1_RunIISummer16MiniAODv2/170125_214946/0000/OutTree_6.root
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/WJetsToLNu_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT-100To200_v1_RunIISummer16MiniAODv2/170125_214946/0000/OutTree_7.root
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/WJetsToLNu_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT-100To200_v1_RunIISummer16MiniAODv2/170125_214946/0000/OutTree_8.root
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/WJetsToLNu_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/WJetsToLNu_HT-100To200_v1_RunIISummer16MiniAODv2/170125_214946/0000/OutTree_9.root

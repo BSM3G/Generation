@@ -1,0 +1,2 @@
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/DYJetsToLL_M-200to400_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/DYJetsToLL_M-200To400_ext2-v2_RunIISummer16MiniAODv2/170207_160143/0000/OutTree_1.root
+root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/DYJetsToLL_M-200to400_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/DYJetsToLL_M-200To400_ext2-v2_RunIISummer16MiniAODv2/170207_160143/0000/OutTree_2.root
