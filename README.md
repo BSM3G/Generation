@@ -1,5 +1,5 @@
 # Setting up
-```
+
 ## Analyzer
 ```
 1. export SCRAM_ARCH=slc6_amd64_gcc530 
