@@ -1,5 +1,0 @@
-root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/SingleMuon/SingleMuon_Run2016B_23Sep2016_v3_fix/170215_182953/0000/OutTree_127.root
-root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/SingleMuon/SingleMuon_Run2016B_23Sep2016_v3_fix/170215_182953/0000/OutTree_18.root
-root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/SingleMuon/SingleMuon_Run2016B_23Sep2016_v3_fix/170215_182953/0000/OutTree_322.root
-root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/SingleMuon/SingleMuon_Run2016B_23Sep2016_v3_fix/170215_182953/0000/OutTree_481.root
-root://cmseos.fnal.gov//store/user/ra2tau/jan2017tuple/SingleMuon/SingleMuon_Run2016B_23Sep2016_v3_fix/170215_182953/0000/OutTree_494.root

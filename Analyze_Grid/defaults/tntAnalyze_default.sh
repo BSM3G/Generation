@@ -16,9 +16,9 @@ infilename=${infilename/\\/}
 
 cd ${_CONDOR_SCRATCH_DIR}
 
-cp -r $CMSSW_BASE/src/Analyzer/PartDet/ .
-cp -r $CMSSW_BASE/src/Analyzer/Pileup/ .
-cp -r $CMSSW_BASE/src/Analyzer/Analyzer .
+cp -r ANALYZERDIRAnalyzer/PartDet/ .
+cp -r ANALYZERDIRAnalyzer/Pileup/ .
+cp -r ANALYZERDIRAnalyzer/Analyzer .
 
 isData=$(echo $input_sample | grep "Run")
 if [ ! -z $isData ]

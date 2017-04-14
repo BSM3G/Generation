@@ -33,14 +33,6 @@ source /cvmfs/cms.cern.ch/cmsset_default.sh
 export slc6_amd64_gcc491
 eval `scramv1 runtime -sh`
 
-if [ ! -f $CMSSW_BASE/src/Analyzer/Analyzer ] 
-then
-    cd $CMSSW_BASE/src/Analyzer/Analyzer
-    echo "Making Analyzer:"
-    make Analyzer
-    cd -
-fi
-
 echo "Do you want to delete the old files? (y or n)"
 read -t 5 answer
 
@@ -56,8 +48,8 @@ then
 fi
  
 touch kill_process.sh
-echo "/usr/sbin/lsof | grep -e 'dteague.*master.sh' | awk '{print \$2}' | xargs kill" > kill_process.sh 
-echo "condor_rm dteague" >> kill_process.sh
+echo "/usr/sbin/lsof | grep -e 'USER_NAME.*master.sh' | awk '{print \$2}' | xargs kill" > kill_process.sh 
+echo "condor_rm USER_NAME" >> kill_process.sh
 
 IFS=$'\n'
 for inputList in $(cat SAMPLES_LIST.txt)
@@ -82,7 +74,7 @@ do
     cd ${inputList}
     while [ $left -gt 0 ] 
     do
-    	running=$(condor_q dteague | grep $runfile | wc -l)
+    	running=$(condor_q USER_NAME | grep $runfile | wc -l)
     	if [ $running -ge $limit ]
     	then
     	    sleep 1m
@@ -102,6 +94,46 @@ do
 done
 
 rm kill_process.sh
+
+running=$(condor_q USER_NAME | grep $runfile | wc -l)
+echo
+while [ $running -ne 0 ]
+do
+    echo .
+    sleep 1m
+    running=$(condor_q USER_NAME | grep $runfile | wc -l)
+done
+
+error=0
+for dir in $(cat SAMPLES_LIST.txt)
+do
+    if [[ ! -z $(echo $dir | grep '^//.*') || ! -z $(echo $dir | grep '^#.*') ]]
+    then
+	continue
+    fi
+    
+    $(ls -l $dir/*.stderr &> /dev/null)
+    
+    if [ $? != "0" ] 
+    then
+	echo "No files in ${dir}!"
+	error=$[$error+1]
+    fi
+    
+    $(ls -l $dir/*.stderr | awk '{if ($5 > 0) exit 1}')
+    
+    if [ $? -ne 0 ] 
+    then
+	echo "ERROR: stderr is not 0 length in directory $dir"
+	echo "       This means a problem occurred and was recorded in a stderr file"
+	error=$[$error+1]
+    fi
+done
+
+if [ $error -eq 0 ]
+then
+    ./addingRoot_recursive.sh
+fi
 
 
 
