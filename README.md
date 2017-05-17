@@ -6,7 +6,7 @@ export SCRAM_ARCH=slc6_amd64_gcc530
 cmsrel CMSSW_8_0_10
 cd CMSSW_8_0_10/src
 cmsenv
-git clone https://github.com/dteague/Generation
+git clone https://github.com/BSM3G/Generation
 cd Generation
 cp -r Analyze_Grid/ ..
 cd ../Analyze_Grid
