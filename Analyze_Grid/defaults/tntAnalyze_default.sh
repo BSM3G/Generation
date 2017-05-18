@@ -21,6 +21,7 @@ cp -r ANALYZERDIRAnalyzer/Pileup/ .
 cp -r ANALYZERDIRAnalyzer/Analyzer .
 
 isData=$(echo $input_sample | grep "Run201")
+
 if [ ! -z $isData ]
 then
     sed -r -i -e 's/(isData\s+)(0|false)/\1true/' -e 's/(CalculatePUS[a-z]+\s+)(1|true)/\1false/' \
