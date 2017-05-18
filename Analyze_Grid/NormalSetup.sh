@@ -116,8 +116,6 @@ do
     fi
 done
 
-exit 0
-
 echo
 
 echo "Which analyzer do you want to use?"
