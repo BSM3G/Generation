@@ -65,7 +65,7 @@ do
 	continue
     fi
     
-    isData=$(echo $inputList | sed -rn 's/^(.+)_Run.*$/\1/gp')    
+    isData=$(echo $inputList | sed -rn 's/^(.+)_Run201.*$/\1/gp')    
     num=$(xrdfs root://cmseos.fnal.gov/ ls /store/user/DUMMY/TEMPDIRECTORY/$inputList | grep root | wc -l)
 
     if [ -z $isData ] 

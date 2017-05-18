@@ -72,29 +72,17 @@ then
     sed -i -e s/USER_NAME/$varname/g master.sh
 fi
 
-printf  "What is the name of your eos analysis directory? Below are your options (enter number)"
-
-temp_dir=$(ls list_Samples | head -n1)
-top_dir=${temp_dir/.txt/}
-
 fl1=""
-for files in $(ls -d /eos/uscms/store/user/$varname/*/ | xargs -n 1 basename)
+for files in $(ls /eos/uscms/store/user/$varname/)
 do
-    for files2 in $(xrdfs root://cmseos.fnal.gov/ ls /store/user/$varname/$files)
-    do
-	tmp=""
-	if [ ! -z $files2 ]
-	then
-	    tmp=$(basename $files2)
-	fi
-	if [ $tmp == $top_dir ]
-	then
-	    fl1="$fl1 $files"
-	fi
-    done
+    diff <(ls list_Samples | xargs -n1 basename | sed 's/.txt//g') <(ls /eos/uscms/store/user/$varname/$files) &>/dev/null
+    if [ $? -eq 0 ]
+    then
+	fl1="$fl1 $files"
+    fi
 done
 
-echo
+echo  "What is the name of your eos analysis directory? Below are your options (enter number)"
 
 select filename in $fl1 NEW_FILE
 do 
@@ -113,12 +101,12 @@ do
 	    read dirname
 	done
 
-	xrdfs root://cmseos.fnal.gov/ mkdir /store/user/$varname/$dirname
-	sed -e "s/DUMMY/$varname/g" -e "s/TEMPDIRECTORY/$dirname/g" \
-	    <defaults/makeEOSdirectories_default.csh >makeEOSdirectories.csh
-	chmod 700 makeEOSdirectories.csh
-	./makeEOSdirectories.csh
-	rm makeEOSdirectories.csh
+        mkdir /eos/uscms/store/user/$varname/$dirname
+        for file in $(ls ./list_Samples)
+        do
+            file=${file/.txt/}
+            mkdir /eos/uscms/store/user/$varname/$dirname/$file
+        done
 	echo Your eos analysis directories have been created
 	break
 	
@@ -128,7 +116,9 @@ do
     fi
 done
 
-printf "\n"
+exit 0
+
+echo
 
 echo "Which analyzer do you want to use?"
 analyzer_dir=$(get_Analyzer_dir)

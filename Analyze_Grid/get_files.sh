@@ -19,7 +19,10 @@ do
 	  echo "Can't find output files in this directory"
 	  continue
 	fi
-	ls $store/$first/$name/*/*/OutTree*root | awk '{print "root://cmseos.fnal.gov//"$0}' > $start/list_Samples/$name.txt
+	
+	generator=$(echo $first | sed -rn 's/^.*_13TeV(-|_)(.*)$/-\2/p')
+
+	ls $store/$first/$name/*/*/OutTree*root | awk '{print "root://cmseos.fnal.gov//"$0}' > $start/list_Samples/$name$generator.txt
     done
     
 done

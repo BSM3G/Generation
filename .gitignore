@@ -1,4 +1,14 @@
 Analyze_Grid/*~
+Analyze_Grid/#*#
+Analyze_Grid/*/*stderr
+Analyze_Grid/*/*stdout
+Analyze_Grid/*/*log
+Analyze_Grid/*.root
+Analyze_Grid/addingRoot_recursive.sh
+Analyze_Grid/addingRoot.sh
+Analyze_Grid/deleteEOSAnalysisRootFiles.csh
+Analyze_Grid/run_adding.sh
+Analyze_Grid/tntAnalyze.sh
+Analyze_Grid/list_Samples/*txt
 Fastsim_Grid/*~
 nTuple_Grid/*~
-tester
