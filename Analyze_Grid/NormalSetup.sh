@@ -150,8 +150,8 @@ sed -e s/DUMMY/"$varname"/g -e "s/TEMPDIRECTORY/$dirname/g" -e "s@WORK_AREA@$loc
 chmod 700 tntAnalyze.sh
 
 sed -e "s/DUMMY/$varname/g" -e "s/TEMPDIRECTORY/$dirname/g" \
-    <defaults/deleteEOSAnalysisRootFiles_default.csh >deleteEOSAnalysisRootFiles.csh
-chmod 700 deleteEOSAnalysisRootFiles.csh
+    <defaults/deleteEOSAnalysisRootFiles_default.sh >deleteEOSAnalysisRootFiles.sh
+chmod 700 deleteEOSAnalysisRootFiles.sh
 
 sed -e "s/DUMMY/$varname/g" -e "s/TEMPDIRECTORY/$dirname/g" \
     <defaults/addingRoot.sh >addingRoot.sh

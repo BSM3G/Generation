@@ -25,7 +25,7 @@ fi
 if [ ! -f $runfile ]
 then 
     echo "Need the TNT Analyze file!!"
-    echo "Get a run file from running NormalSetup.csh"
+    echo "Get a run file from running NormalSetup.sh"
     exit
 fi   
 
@@ -43,8 +43,8 @@ fi
 
 if [ ${answer:0:1} == "y" ] 
 then
-    ./deleteLocalLogFileDirectories.csh
-    ./deleteEOSAnalysisRootFiles.csh
+    ./deleteLocalLogFileDirectories.sh
+    ./deleteEOSAnalysisRootFiles.sh
 fi
  
 touch kill_process.sh
