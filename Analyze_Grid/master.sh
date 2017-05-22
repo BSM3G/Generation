@@ -48,8 +48,8 @@ then
 fi
  
 touch kill_process.sh
-echo "/usr/sbin/lsof | grep -e 'dteague.*master.sh' | awk '{print \$2}' | xargs kill" > kill_process.sh 
-echo "condor_rm dteague" >> kill_process.sh
+echo "/usr/sbin/lsof | grep -e 'USER_NAME.*master.sh' | awk '{print \$2}' | xargs kill" > kill_process.sh 
+echo "condor_rm USER_NAME" >> kill_process.sh
 
 IFS=$'\n'
 for inputList in $(cat SAMPLES_LIST.txt)
@@ -74,7 +74,7 @@ do
     cd ${inputList}
     while [ $left -gt 0 ] 
     do
-    	running=$(condor_q dteague | grep $runfile | wc -l)
+    	running=$(condor_q USER_NAME | grep $runfile | wc -l)
     	if [ $running -ge $limit ]
     	then
     	    sleep 1m
@@ -95,13 +95,13 @@ done
 
 rm kill_process.sh
 
-running=$(condor_q dteague | grep $runfile | wc -l)
+running=$(condor_q USER_NAME | grep $runfile | wc -l)
 echo
 while [ $running -ne 0 ]
 do
     echo .
     sleep 1m
-    running=$(condor_q dteague | grep $runfile | wc -l)
+    running=$(condor_q USER_NAME | grep $runfile | wc -l)
 done
 
 error=0
