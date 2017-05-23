@@ -17,10 +17,10 @@ do
 	continue
     fi
 
-    if [ $(ls ${tag}* | wc -l) -ne 1 ]
+    if [ $(ls ${tag}*root | wc -l) -ne 1 ]
     then
-	hadd tmp_dir/${tag}.root $(ls ${tag}*) 
-	rm $(ls ${tag}*)
+	hadd tmp_dir/${tag}.root $(ls ${tag}*root) 
+	rm $(ls ${tag}*root)
     else
 	mv $file $tag.root
 	continue
