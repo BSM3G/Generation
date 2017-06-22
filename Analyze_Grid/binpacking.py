@@ -155,8 +155,8 @@ if __name__ == "__main__":
     # print total
     # print "$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
 
-    lc.luigid(["--background", "--pidfile", "PID", "--logdir", "LOG"])
-
+    # lc.luigid(["--background", "--pidfile", "PID", "--logdir", "LOG"])
+    luigi.run()
                
 
 
