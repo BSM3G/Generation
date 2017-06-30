@@ -25,15 +25,15 @@ class AnalyzerTask(luigi.Task):
             if p.match(i) != None:
                 self.condor_id = p.match(i).group(1)
                 break
-        # done = False
-        # while not done:
-        #     try:
-        #         print subprocess.check_output("condor_q dteague | grep " + condor_id, shell=True)
-        #         time.sleep(5)
-        #     except subprocess.CalledProcessError as grepexc:
-        #         print "DONE"
-        #         done = True
-        # found_file = False
+        done = False
+        while not done:
+            try:
+                print subprocess.check_output("condor_q dteague | grep " + self.condor_id, shell=True)
+                time.sleep(5)
+            except subprocess.CalledProcessError as grepexc:
+                print "DONE"
+                done = True
+#        found_file = False
         # while no found_file:
         #     try:
         #         print subprocess.check_output("ls | grep " + condor_id, shell=True)
@@ -123,7 +123,7 @@ class FileTask(luigi.Task):
 
 class MainTask(luigi.Task):
     sample_list = luigi.Parameter(default="SAMPLES_LIST.txt")
-    condor_jobs = luigi.IntParameter(default=2)
+    condor_jobs = luigi.IntParameter(default=10)
 
     def requires(self):
         input_files = []
@@ -135,7 +135,7 @@ class MainTask(luigi.Task):
                 continue
             input_files.append(filename)
             total += int(subprocess.check_output("cat new_list/"+filename+".txt | awk '{i+=$1}END{print i}'", shell=True))
-        split = 1.0*total/(self.condor_jobs-0.9)
+        split = 1.0*total/(self.condor_jobs-0.1)
         return [ FileTask(input_file=filename, bin_size=split) for filename in input_files ]
 
 

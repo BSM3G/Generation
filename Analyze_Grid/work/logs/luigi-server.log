@@ -1,0 +1,42 @@
+2017-06-30 08:00:09,899 luigi.server[3325783] INFO: Checking pid file
+2017-06-30 08:00:09,899 luigi.server[3325783] INFO: Writing pid file
+2017-06-30 08:00:09,903 luigi-interface[3325783] INFO: Loaded ['luigi.cfg']
+2017-06-30 08:00:09,910 luigi.scheduler[3325783] INFO: No prior state file exists at /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle. Starting with empty state
+2017-06-30 08:00:09,918 luigi.server[3325783] INFO: Scheduler starting up
+2017-06-30 08:01:09,977 luigi.scheduler[3325783] INFO: Starting pruning of task graph
+2017-06-30 08:01:10,010 luigi.scheduler[3325783] INFO: Done pruning task graph
+2017-06-30 08:02:09,978 luigi.scheduler[3325783] INFO: Starting pruning of task graph
+2017-06-30 08:02:09,978 luigi.scheduler[3325783] INFO: Done pruning task graph
+2017-06-30 08:03:09,978 luigi.scheduler[3325783] INFO: Starting pruning of task graph
+2017-06-30 08:03:09,978 luigi.scheduler[3325783] INFO: Done pruning task graph
+2017-06-30 08:03:49,779 luigi.server[3325783] INFO: Scheduler instance shutting down
+2017-06-30 08:03:49,786 luigi.scheduler[3325783] INFO: Saved state in /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
+2017-06-30 08:03:49,786 luigi.server[3325783] INFO: Scheduler instance shutting down
+2017-06-30 08:03:49,789 luigi.scheduler[3325783] INFO: Saved state in /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
+2017-06-30 08:06:10,529 luigi.server[3326969] INFO: Checking pid file
+2017-06-30 08:06:10,529 luigi.server[3326969] INFO: Writing pid file
+2017-06-30 08:06:10,550 luigi-interface[3326969] INFO: Loaded ['luigi.cfg']
+2017-06-30 08:06:10,558 luigi.scheduler[3326969] INFO: Attempting to load state from /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
+2017-06-30 08:06:10,621 luigi.server[3326969] INFO: Scheduler starting up
+2017-06-30 08:06:50,254 luigi.server[3326969] INFO: Scheduler instance shutting down
+2017-06-30 08:06:50,257 luigi.scheduler[3326969] INFO: Saved state in /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
+2017-06-30 08:06:50,257 luigi.server[3326969] INFO: Scheduler instance shutting down
+2017-06-30 08:06:50,260 luigi.scheduler[3326969] INFO: Saved state in /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
+2017-06-30 08:11:46,580 luigi.server[3327833] INFO: Checking pid file
+2017-06-30 08:11:46,580 luigi.server[3327833] INFO: Writing pid file
+2017-06-30 08:11:46,584 luigi-interface[3327833] INFO: Loaded ['luigi.cfg']
+2017-06-30 08:11:46,592 luigi.scheduler[3327833] INFO: Attempting to load state from /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
+2017-06-30 08:11:46,598 luigi.server[3327833] INFO: Scheduler starting up
+2017-06-30 08:12:17,025 luigi.server[3327833] INFO: Scheduler instance shutting down
+2017-06-30 08:12:17,027 luigi.scheduler[3327833] INFO: Saved state in /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
+2017-06-30 08:12:17,028 luigi.server[3327833] INFO: Scheduler instance shutting down
+2017-06-30 08:12:17,030 luigi.scheduler[3327833] INFO: Saved state in /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
+2017-06-30 08:21:15,409 luigi.server[3332200] INFO: Checking pid file
+2017-06-30 08:21:15,410 luigi.server[3332200] INFO: Writing pid file
+2017-06-30 08:21:15,414 luigi-interface[3332200] INFO: Loaded ['luigi.cfg']
+2017-06-30 08:21:15,421 luigi.scheduler[3332200] INFO: Attempting to load state from /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
+2017-06-30 08:21:15,427 luigi.server[3332200] INFO: Scheduler starting up
+2017-06-30 08:21:55,032 luigi.server[3332200] INFO: Scheduler instance shutting down
+2017-06-30 08:21:55,035 luigi.scheduler[3332200] INFO: Saved state in /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
+2017-06-30 08:21:55,036 luigi.server[3332200] INFO: Scheduler instance shutting down
+2017-06-30 08:21:55,038 luigi.scheduler[3332200] INFO: Saved state in /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
