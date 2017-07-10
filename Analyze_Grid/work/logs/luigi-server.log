@@ -1,42 +1,1258 @@
-2017-06-30 08:00:09,899 luigi.server[3325783] INFO: Checking pid file
-2017-06-30 08:00:09,899 luigi.server[3325783] INFO: Writing pid file
-2017-06-30 08:00:09,903 luigi-interface[3325783] INFO: Loaded ['luigi.cfg']
-2017-06-30 08:00:09,910 luigi.scheduler[3325783] INFO: No prior state file exists at /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle. Starting with empty state
-2017-06-30 08:00:09,918 luigi.server[3325783] INFO: Scheduler starting up
-2017-06-30 08:01:09,977 luigi.scheduler[3325783] INFO: Starting pruning of task graph
-2017-06-30 08:01:10,010 luigi.scheduler[3325783] INFO: Done pruning task graph
-2017-06-30 08:02:09,978 luigi.scheduler[3325783] INFO: Starting pruning of task graph
-2017-06-30 08:02:09,978 luigi.scheduler[3325783] INFO: Done pruning task graph
-2017-06-30 08:03:09,978 luigi.scheduler[3325783] INFO: Starting pruning of task graph
-2017-06-30 08:03:09,978 luigi.scheduler[3325783] INFO: Done pruning task graph
-2017-06-30 08:03:49,779 luigi.server[3325783] INFO: Scheduler instance shutting down
-2017-06-30 08:03:49,786 luigi.scheduler[3325783] INFO: Saved state in /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
-2017-06-30 08:03:49,786 luigi.server[3325783] INFO: Scheduler instance shutting down
-2017-06-30 08:03:49,789 luigi.scheduler[3325783] INFO: Saved state in /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
-2017-06-30 08:06:10,529 luigi.server[3326969] INFO: Checking pid file
-2017-06-30 08:06:10,529 luigi.server[3326969] INFO: Writing pid file
-2017-06-30 08:06:10,550 luigi-interface[3326969] INFO: Loaded ['luigi.cfg']
-2017-06-30 08:06:10,558 luigi.scheduler[3326969] INFO: Attempting to load state from /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
-2017-06-30 08:06:10,621 luigi.server[3326969] INFO: Scheduler starting up
-2017-06-30 08:06:50,254 luigi.server[3326969] INFO: Scheduler instance shutting down
-2017-06-30 08:06:50,257 luigi.scheduler[3326969] INFO: Saved state in /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
-2017-06-30 08:06:50,257 luigi.server[3326969] INFO: Scheduler instance shutting down
-2017-06-30 08:06:50,260 luigi.scheduler[3326969] INFO: Saved state in /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
-2017-06-30 08:11:46,580 luigi.server[3327833] INFO: Checking pid file
-2017-06-30 08:11:46,580 luigi.server[3327833] INFO: Writing pid file
-2017-06-30 08:11:46,584 luigi-interface[3327833] INFO: Loaded ['luigi.cfg']
-2017-06-30 08:11:46,592 luigi.scheduler[3327833] INFO: Attempting to load state from /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
-2017-06-30 08:11:46,598 luigi.server[3327833] INFO: Scheduler starting up
-2017-06-30 08:12:17,025 luigi.server[3327833] INFO: Scheduler instance shutting down
-2017-06-30 08:12:17,027 luigi.scheduler[3327833] INFO: Saved state in /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
-2017-06-30 08:12:17,028 luigi.server[3327833] INFO: Scheduler instance shutting down
-2017-06-30 08:12:17,030 luigi.scheduler[3327833] INFO: Saved state in /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
-2017-06-30 08:21:15,409 luigi.server[3332200] INFO: Checking pid file
-2017-06-30 08:21:15,410 luigi.server[3332200] INFO: Writing pid file
-2017-06-30 08:21:15,414 luigi-interface[3332200] INFO: Loaded ['luigi.cfg']
-2017-06-30 08:21:15,421 luigi.scheduler[3332200] INFO: Attempting to load state from /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
-2017-06-30 08:21:15,427 luigi.server[3332200] INFO: Scheduler starting up
-2017-06-30 08:21:55,032 luigi.server[3332200] INFO: Scheduler instance shutting down
-2017-06-30 08:21:55,035 luigi.scheduler[3332200] INFO: Saved state in /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
-2017-06-30 08:21:55,036 luigi.server[3332200] INFO: Scheduler instance shutting down
-2017-06-30 08:21:55,038 luigi.scheduler[3332200] INFO: Saved state in /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle
+2017-07-05 11:28:55,508 luigi.server[26814] INFO: Checking pid file
+2017-07-05 11:28:55,509 luigi.server[26814] INFO: Writing pid file
+2017-07-05 11:28:55,512 luigi-interface[26814] INFO: Loaded ['luigi.cfg']
+2017-07-05 11:28:55,522 luigi.scheduler[26814] INFO: No prior state file exists at /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle. Starting with empty state
+2017-07-05 11:28:55,556 luigi.server[26814] INFO: Scheduler starting up
+2017-07-05 11:29:06,967 tornado.access[26814] INFO: 200 GET /api/add_task (127.0.0.1) 3.47ms
+2017-07-05 11:29:06,978 tornado.access[26814] INFO: 200 GET /api/add_task (127.0.0.1) 2.90ms
+2017-07-05 11:29:07,005 tornado.access[26814] INFO: 200 GET /api/add_task (127.0.0.1) 2.43ms
+2017-07-05 11:29:07,098 tornado.access[26814] INFO: 200 GET /api/add_worker (127.0.0.1) 1.66ms
+2017-07-05 11:29:07,104 tornado.access[26814] INFO: 200 GET /api/get_work (127.0.0.1) 1.88ms
+2017-07-05 11:29:07,755 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.59ms
+2017-07-05 11:29:08,762 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.52ms
+2017-07-05 11:29:09,766 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 0.99ms
+2017-07-05 11:29:10,772 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.64ms
+2017-07-05 11:29:11,777 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.35ms
+2017-07-05 11:29:12,784 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.36ms
+2017-07-05 11:29:13,790 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.48ms
+2017-07-05 11:29:14,796 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.54ms
+2017-07-05 11:29:15,801 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.27ms
+2017-07-05 11:29:16,807 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.43ms
+2017-07-05 11:29:17,814 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.37ms
+2017-07-05 11:29:18,819 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:29:19,825 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.62ms
+2017-07-05 11:29:20,832 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.55ms
+2017-07-05 11:29:21,838 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.50ms
+2017-07-05 11:29:22,845 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.58ms
+2017-07-05 11:29:23,851 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:29:24,857 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.52ms
+2017-07-05 11:29:25,862 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.38ms
+2017-07-05 11:29:26,868 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:29:27,874 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.33ms
+2017-07-05 11:29:28,880 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.45ms
+2017-07-05 11:29:29,886 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.54ms
+2017-07-05 11:29:30,891 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.26ms
+2017-07-05 11:29:31,898 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.33ms
+2017-07-05 11:29:32,905 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.39ms
+2017-07-05 11:29:33,911 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:29:34,918 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.56ms
+2017-07-05 11:29:35,923 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.33ms
+2017-07-05 11:29:36,928 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.26ms
+2017-07-05 11:29:37,935 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.38ms
+2017-07-05 11:29:38,942 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.70ms
+2017-07-05 11:29:39,949 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.73ms
+2017-07-05 11:29:40,953 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 0.67ms
+2017-07-05 11:29:41,956 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 0.89ms
+2017-07-05 11:29:42,960 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 0.71ms
+2017-07-05 11:29:43,963 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 0.71ms
+2017-07-05 11:29:44,967 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.00ms
+2017-07-05 11:29:45,971 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.04ms
+2017-07-05 11:29:46,975 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 0.98ms
+2017-07-05 11:29:47,982 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.73ms
+2017-07-05 11:29:48,989 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.48ms
+2017-07-05 11:29:49,994 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.01ms
+2017-07-05 11:29:50,999 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.54ms
+2017-07-05 11:29:52,005 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.37ms
+2017-07-05 11:29:53,013 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.45ms
+2017-07-05 11:29:54,019 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.53ms
+2017-07-05 11:29:55,024 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.01ms
+2017-07-05 11:29:55,556 luigi.scheduler[26814] INFO: Starting pruning of task graph
+2017-07-05 11:29:55,557 luigi.scheduler[26814] INFO: Done pruning task graph
+2017-07-05 11:29:56,030 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.60ms
+2017-07-05 11:29:57,036 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.62ms
+2017-07-05 11:29:58,044 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.39ms
+2017-07-05 11:29:59,050 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.36ms
+2017-07-05 11:30:00,056 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.69ms
+2017-07-05 11:30:01,063 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.38ms
+2017-07-05 11:30:02,079 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.72ms
+2017-07-05 11:30:03,087 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.70ms
+2017-07-05 11:30:04,094 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.65ms
+2017-07-05 11:30:05,101 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.72ms
+2017-07-05 11:30:06,108 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.45ms
+2017-07-05 11:30:07,113 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:30:08,121 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.48ms
+2017-07-05 11:30:09,127 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.41ms
+2017-07-05 11:30:10,134 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.68ms
+2017-07-05 11:30:11,140 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:30:12,146 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.35ms
+2017-07-05 11:30:13,153 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.44ms
+2017-07-05 11:30:14,159 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.36ms
+2017-07-05 11:30:15,166 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.70ms
+2017-07-05 11:30:16,173 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.74ms
+2017-07-05 11:30:17,180 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.76ms
+2017-07-05 11:30:18,188 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.38ms
+2017-07-05 11:30:19,194 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.39ms
+2017-07-05 11:30:20,201 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.71ms
+2017-07-05 11:30:21,207 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:30:22,213 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:30:23,220 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.39ms
+2017-07-05 11:30:24,226 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:30:25,233 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.68ms
+2017-07-05 11:30:26,238 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.33ms
+2017-07-05 11:30:27,244 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:30:28,252 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.39ms
+2017-07-05 11:30:29,258 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:30:30,264 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.68ms
+2017-07-05 11:30:31,270 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.33ms
+2017-07-05 11:30:32,276 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.36ms
+2017-07-05 11:30:33,283 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.39ms
+2017-07-05 11:30:34,289 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:30:35,296 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.73ms
+2017-07-05 11:30:36,302 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.35ms
+2017-07-05 11:30:37,308 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:30:38,315 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.39ms
+2017-07-05 11:30:39,321 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:30:40,328 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.72ms
+2017-07-05 11:30:41,335 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.48ms
+2017-07-05 11:30:42,341 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:30:43,348 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.54ms
+2017-07-05 11:30:44,354 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:30:45,361 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.71ms
+2017-07-05 11:30:46,367 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.35ms
+2017-07-05 11:30:47,373 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.39ms
+2017-07-05 11:30:48,380 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.37ms
+2017-07-05 11:30:49,386 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.35ms
+2017-07-05 11:30:50,393 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.69ms
+2017-07-05 11:30:51,399 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.36ms
+2017-07-05 11:30:52,405 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.37ms
+2017-07-05 11:30:53,198 tornado.access[26814] INFO: 200 GET /api/add_task (127.0.0.1) 2.16ms
+2017-07-05 11:30:53,204 tornado.access[26814] INFO: 200 GET /api/get_work (127.0.0.1) 1.69ms
+2017-07-05 11:30:53,312 tornado.access[26814] INFO: 200 GET /api/add_task (127.0.0.1) 2.10ms
+2017-07-05 11:30:53,319 tornado.access[26814] INFO: 200 GET /api/get_work (127.0.0.1) 1.63ms
+2017-07-05 11:30:53,342 tornado.access[26814] INFO: 200 GET /api/add_task (127.0.0.1) 1.78ms
+2017-07-05 11:30:53,347 tornado.access[26814] INFO: 200 GET /api/get_work (127.0.0.1) 1.43ms
+2017-07-05 11:30:55,558 luigi.scheduler[26814] INFO: Starting pruning of task graph
+2017-07-05 11:30:55,559 luigi.scheduler[26814] INFO: Done pruning task graph
+2017-07-05 11:31:49,667 tornado.access[26814] INFO: 200 GET /api/add_task (127.0.0.1) 2.39ms
+2017-07-05 11:31:49,677 tornado.access[26814] INFO: 200 GET /api/add_task (127.0.0.1) 1.87ms
+2017-07-05 11:31:49,704 tornado.access[26814] INFO: 200 GET /api/add_task (127.0.0.1) 1.71ms
+2017-07-05 11:31:49,790 tornado.access[26814] INFO: 200 GET /api/add_worker (127.0.0.1) 1.65ms
+2017-07-05 11:31:49,796 tornado.access[26814] INFO: 200 GET /api/get_work (127.0.0.1) 1.86ms
+2017-07-05 11:31:50,392 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.65ms
+2017-07-05 11:31:51,398 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:31:52,403 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.27ms
+2017-07-05 11:31:53,409 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:31:54,414 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:31:55,420 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.54ms
+2017-07-05 11:31:55,556 luigi.scheduler[26814] INFO: Starting pruning of task graph
+2017-07-05 11:31:55,556 luigi.scheduler[26814] INFO: Done pruning task graph
+2017-07-05 11:31:56,425 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:31:57,431 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:31:58,436 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:32:55,612 luigi.scheduler[26814] INFO: Starting pruning of task graph
+2017-07-05 11:32:55,613 luigi.scheduler[26814] INFO: Done pruning task graph
+2017-07-05 11:33:55,615 luigi.scheduler[26814] INFO: Starting pruning of task graph
+2017-07-05 11:33:55,616 luigi.scheduler[26814] INFO: Task u'AnalyzerTask_DYJetsToLL_M_800_0_5faf2e53d4' is marked as running by disconnected worker u'Worker(salt=718357701, workers=1, host=vmps12, username=teaguedo, pid=29429)' -> marking as FAILED with retry delay of 900.0s
+2017-07-05 11:33:55,616 luigi.scheduler[26814] INFO: Done pruning task graph
+2017-07-05 11:34:28,780 tornado.access[26814] INFO: 200 GET /api/add_task (127.0.0.1) 2.30ms
+2017-07-05 11:34:28,790 tornado.access[26814] INFO: 200 GET /api/add_task (127.0.0.1) 1.78ms
+2017-07-05 11:34:28,816 tornado.access[26814] INFO: 200 GET /api/add_task (127.0.0.1) 1.73ms
+2017-07-05 11:34:28,904 tornado.access[26814] INFO: 200 GET /api/add_worker (127.0.0.1) 1.57ms
+2017-07-05 11:34:28,910 tornado.access[26814] INFO: 200 GET /api/get_work (127.0.0.1) 1.71ms
+2017-07-05 11:34:29,568 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.47ms
+2017-07-05 11:34:30,574 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.46ms
+2017-07-05 11:34:31,581 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.65ms
+2017-07-05 11:34:32,587 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.36ms
+2017-07-05 11:34:33,593 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.38ms
+2017-07-05 11:34:34,600 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.41ms
+2017-07-05 11:34:35,606 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.35ms
+2017-07-05 11:34:36,613 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.65ms
+2017-07-05 11:34:37,619 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.37ms
+2017-07-05 11:34:38,625 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.43ms
+2017-07-05 11:34:39,632 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.41ms
+2017-07-05 11:34:40,638 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:34:41,645 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.67ms
+2017-07-05 11:34:42,651 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.37ms
+2017-07-05 11:34:43,657 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.36ms
+2017-07-05 11:34:44,666 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.70ms
+2017-07-05 11:34:45,673 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.73ms
+2017-07-05 11:34:46,680 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.74ms
+2017-07-05 11:34:47,687 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.48ms
+2017-07-05 11:34:48,693 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.36ms
+2017-07-05 11:34:49,701 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.65ms
+2017-07-05 11:34:50,707 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.36ms
+2017-07-05 11:34:51,716 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.73ms
+2017-07-05 11:34:52,722 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.41ms
+2017-07-05 11:34:53,739 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.36ms
+2017-07-05 11:34:54,747 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.44ms
+2017-07-05 11:34:55,556 luigi.scheduler[26814] INFO: Starting pruning of task graph
+2017-07-05 11:34:55,557 luigi.scheduler[26814] INFO: Done pruning task graph
+2017-07-05 11:34:55,754 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:34:56,761 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.73ms
+2017-07-05 11:34:57,767 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.35ms
+2017-07-05 11:34:58,776 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.72ms
+2017-07-05 11:34:59,782 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.02ms
+2017-07-05 11:35:00,790 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 2.27ms
+2017-07-05 11:35:01,799 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.73ms
+2017-07-05 11:35:02,806 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.05ms
+2017-07-05 11:35:03,810 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 0.95ms
+2017-07-05 11:35:04,815 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 0.97ms
+2017-07-05 11:35:05,819 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 0.98ms
+2017-07-05 11:35:06,823 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 0.96ms
+2017-07-05 11:35:07,830 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.60ms
+2017-07-05 11:35:08,835 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.36ms
+2017-07-05 11:35:09,841 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:35:10,847 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.71ms
+2017-07-05 11:35:11,853 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.27ms
+2017-07-05 11:35:12,858 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:35:13,863 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.27ms
+2017-07-05 11:35:14,870 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.46ms
+2017-07-05 11:35:15,876 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.57ms
+2017-07-05 11:35:16,882 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:35:17,887 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:35:18,892 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.26ms
+2017-07-05 11:35:19,897 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.27ms
+2017-07-05 11:35:20,906 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.62ms
+2017-07-05 11:35:21,912 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.62ms
+2017-07-05 11:35:22,918 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.26ms
+2017-07-05 11:35:23,923 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:35:24,928 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:35:25,934 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:35:26,939 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.26ms
+2017-07-05 11:35:27,945 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.27ms
+2017-07-05 11:35:28,953 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.64ms
+2017-07-05 11:35:29,957 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 0.96ms
+2017-07-05 11:35:30,961 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 0.96ms
+2017-07-05 11:35:31,964 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 0.67ms
+2017-07-05 11:35:32,967 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 0.66ms
+2017-07-05 11:35:33,969 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 0.69ms
+2017-07-05 11:35:34,973 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 0.79ms
+2017-07-05 11:35:35,979 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.65ms
+2017-07-05 11:35:36,985 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:35:37,989 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 0.97ms
+2017-07-05 11:35:38,994 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:35:39,998 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.01ms
+2017-07-05 11:35:41,005 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.64ms
+2017-07-05 11:35:42,013 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.65ms
+2017-07-05 11:35:43,017 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 0.83ms
+2017-07-05 11:35:44,023 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.64ms
+2017-07-05 11:35:45,032 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.62ms
+2017-07-05 11:35:46,039 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.65ms
+2017-07-05 11:35:47,044 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.27ms
+2017-07-05 11:35:48,050 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:35:49,055 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:35:50,060 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.26ms
+2017-07-05 11:35:51,066 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.57ms
+2017-07-05 11:35:52,072 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.26ms
+2017-07-05 11:35:53,077 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:35:54,083 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:35:55,090 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.61ms
+2017-07-05 11:35:55,556 luigi.scheduler[26814] INFO: Starting pruning of task graph
+2017-07-05 11:35:55,557 luigi.scheduler[26814] INFO: Done pruning task graph
+2017-07-05 11:35:56,097 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.58ms
+2017-07-05 11:35:57,102 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:35:58,107 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.26ms
+2017-07-05 11:35:59,112 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.26ms
+2017-07-05 11:36:00,117 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.27ms
+2017-07-05 11:36:01,125 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.60ms
+2017-07-05 11:36:02,132 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.64ms
+2017-07-05 11:36:03,138 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:36:04,146 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 4.00ms
+2017-07-05 11:36:05,152 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:36:06,158 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.60ms
+2017-07-05 11:36:07,165 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.38ms
+2017-07-05 11:36:08,170 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.27ms
+2017-07-05 11:36:09,176 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:36:10,181 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:36:11,187 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.54ms
+2017-07-05 11:36:12,192 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.26ms
+2017-07-05 11:36:13,197 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.26ms
+2017-07-05 11:36:14,204 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.36ms
+2017-07-05 11:36:15,210 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.49ms
+2017-07-05 11:36:16,216 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.53ms
+2017-07-05 11:36:17,222 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.27ms
+2017-07-05 11:36:18,227 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.39ms
+2017-07-05 11:36:19,232 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.27ms
+2017-07-05 11:36:20,240 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.65ms
+2017-07-05 11:36:20,968 tornado.access[26814] INFO: 200 GET /api/add_task (127.0.0.1) 2.08ms
+2017-07-05 11:36:20,985 tornado.access[26814] INFO: 200 GET /api/get_work (127.0.0.1) 1.72ms
+2017-07-05 11:36:21,248 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.60ms
+2017-07-05 11:36:22,257 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.64ms
+2017-07-05 11:36:23,263 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.65ms
+2017-07-05 11:36:24,269 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:36:25,272 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 0.65ms
+2017-07-05 11:36:26,278 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.64ms
+2017-07-05 11:36:27,284 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.45ms
+2017-07-05 11:36:28,289 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.26ms
+2017-07-05 11:36:29,295 tornado.access[26814] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:36:29,408 tornado.access[26814] INFO: 200 GET /api/add_task (127.0.0.1) 1.82ms
+2017-07-05 11:36:29,414 tornado.access[26814] INFO: 200 GET /api/get_work (127.0.0.1) 1.63ms
+2017-07-05 11:36:29,440 tornado.access[26814] INFO: 200 GET /api/add_task (127.0.0.1) 1.81ms
+2017-07-05 11:36:29,446 tornado.access[26814] INFO: 200 GET /api/get_work (127.0.0.1) 1.44ms
+2017-07-05 11:36:55,581 luigi.scheduler[26814] INFO: Starting pruning of task graph
+2017-07-05 11:36:55,582 luigi.scheduler[26814] INFO: Done pruning task graph
+2017-07-05 11:37:17,285 luigi.server[26814] INFO: Scheduler instance shutting down
+2017-07-05 11:37:17,285 luigi.scheduler[26814] WARNING: Failed saving scheduler state
+Traceback (most recent call last):
+  File "/home/teaguedo/.local/lib/python2.7/site-packages/luigi/scheduler.py", line 445, in dump
+    with open(self._state_path, 'wb') as fobj:
+IOError: [Errno 2] No such file or directory: '/uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle'
+2017-07-05 11:37:17,318 luigi.server[26814] INFO: Scheduler instance shutting down
+2017-07-05 11:37:17,318 luigi.scheduler[26814] WARNING: Failed saving scheduler state
+Traceback (most recent call last):
+  File "/home/teaguedo/.local/lib/python2.7/site-packages/luigi/scheduler.py", line 445, in dump
+    with open(self._state_path, 'wb') as fobj:
+IOError: [Errno 2] No such file or directory: '/uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle'
+2017-07-05 11:38:06,348 luigi.server[31484] INFO: Checking pid file
+2017-07-05 11:38:06,349 luigi.server[31484] INFO: Writing pid file
+2017-07-05 11:38:06,351 luigi-interface[31484] INFO: Loaded ['luigi.cfg']
+2017-07-05 11:38:06,360 luigi.scheduler[31484] INFO: No prior state file exists at /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle. Starting with empty state
+2017-07-05 11:38:06,387 luigi.server[31484] INFO: Scheduler starting up
+2017-07-05 11:38:20,557 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 3.50ms
+2017-07-05 11:38:20,592 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.51ms
+2017-07-05 11:38:20,714 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 3.21ms
+2017-07-05 11:38:20,721 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.77ms
+2017-07-05 11:38:20,729 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.72ms
+2017-07-05 11:38:20,736 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.76ms
+2017-07-05 11:38:20,742 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.69ms
+2017-07-05 11:38:20,749 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.68ms
+2017-07-05 11:38:20,756 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.73ms
+2017-07-05 11:38:20,762 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.69ms
+2017-07-05 11:38:20,769 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.70ms
+2017-07-05 11:38:20,775 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.68ms
+2017-07-05 11:38:20,902 tornado.access[31484] INFO: 200 GET /api/add_worker (127.0.0.1) 1.58ms
+2017-07-05 11:38:20,907 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.14ms
+2017-07-05 11:38:21,339 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.38ms
+2017-07-05 11:38:22,345 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.33ms
+2017-07-05 11:38:29,266 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.36ms
+2017-07-05 11:38:29,301 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.82ms
+2017-07-05 11:38:29,310 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.97ms
+2017-07-05 11:38:29,317 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.83ms
+2017-07-05 11:38:29,324 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.76ms
+2017-07-05 11:38:29,331 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.78ms
+2017-07-05 11:38:29,337 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.80ms
+2017-07-05 11:38:29,344 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.79ms
+2017-07-05 11:38:29,351 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.78ms
+2017-07-05 11:38:29,357 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.77ms
+2017-07-05 11:38:29,364 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.75ms
+2017-07-05 11:38:29,372 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.73ms
+2017-07-05 11:38:29,449 tornado.access[31484] INFO: 200 GET /api/add_worker (127.0.0.1) 1.61ms
+2017-07-05 11:38:29,455 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.04ms
+2017-07-05 11:38:30,122 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.57ms
+2017-07-05 11:38:31,128 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:38:32,134 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.46ms
+2017-07-05 11:38:33,140 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.60ms
+2017-07-05 11:38:34,146 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:38:35,153 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.59ms
+2017-07-05 11:38:36,159 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:38:37,164 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:38:38,171 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.62ms
+2017-07-05 11:38:39,176 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:38:40,183 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.42ms
+2017-07-05 11:38:41,189 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.41ms
+2017-07-05 11:38:42,194 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:38:43,201 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.58ms
+2017-07-05 11:38:44,207 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.44ms
+2017-07-05 11:38:45,214 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.41ms
+2017-07-05 11:38:46,219 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:38:47,225 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.37ms
+2017-07-05 11:38:48,231 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.59ms
+2017-07-05 11:38:49,236 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:38:50,243 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.40ms
+2017-07-05 11:38:51,249 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.41ms
+2017-07-05 11:38:52,254 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:38:53,260 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.54ms
+2017-07-05 11:38:54,267 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.61ms
+2017-07-05 11:38:55,274 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.51ms
+2017-07-05 11:38:56,280 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.35ms
+2017-07-05 11:38:57,286 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.59ms
+2017-07-05 11:38:58,291 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:38:59,298 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.58ms
+2017-07-05 11:39:00,305 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.56ms
+2017-07-05 11:39:01,311 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.33ms
+2017-07-05 11:39:02,317 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.64ms
+2017-07-05 11:39:03,324 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.64ms
+2017-07-05 11:39:04,331 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.60ms
+2017-07-05 11:39:05,338 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.54ms
+2017-07-05 11:39:06,344 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.45ms
+2017-07-05 11:39:06,387 luigi.scheduler[31484] INFO: Starting pruning of task graph
+2017-07-05 11:39:06,388 luigi.scheduler[31484] INFO: Done pruning task graph
+2017-07-05 11:39:07,350 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.46ms
+2017-07-05 11:39:08,355 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:39:09,362 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.50ms
+2017-07-05 11:39:10,368 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:39:11,374 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.37ms
+2017-07-05 11:39:12,380 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:39:13,386 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:39:14,391 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:39:15,397 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.62ms
+2017-07-05 11:39:16,403 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:39:17,409 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.41ms
+2017-07-05 11:39:18,416 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.44ms
+2017-07-05 11:39:19,422 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.51ms
+2017-07-05 11:39:20,427 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:39:21,433 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.43ms
+2017-07-05 11:39:22,438 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:39:23,443 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:39:24,451 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.50ms
+2017-07-05 11:39:25,457 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.35ms
+2017-07-05 11:39:26,463 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.60ms
+2017-07-05 11:39:27,469 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.48ms
+2017-07-05 11:39:28,474 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:39:29,479 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:39:30,485 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.42ms
+2017-07-05 11:39:31,492 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.44ms
+2017-07-05 11:39:32,499 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.58ms
+2017-07-05 11:39:33,504 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.42ms
+2017-07-05 11:39:34,512 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.60ms
+2017-07-05 11:39:35,519 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.64ms
+2017-07-05 11:39:36,526 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.53ms
+2017-07-05 11:39:37,536 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.44ms
+2017-07-05 11:39:38,541 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.97ms
+2017-07-05 11:39:39,547 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.64ms
+2017-07-05 11:39:40,555 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:39:41,559 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.95ms
+2017-07-05 11:39:42,564 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.00ms
+2017-07-05 11:39:43,572 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.66ms
+2017-07-05 11:39:44,597 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.64ms
+2017-07-05 11:39:45,602 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.99ms
+2017-07-05 11:39:46,606 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.76ms
+2017-07-05 11:39:47,609 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.97ms
+2017-07-05 11:39:48,618 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.70ms
+2017-07-05 11:39:49,623 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.02ms
+2017-07-05 11:39:50,631 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.69ms
+2017-07-05 11:39:51,636 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.99ms
+2017-07-05 11:39:52,642 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.38ms
+2017-07-05 11:39:53,648 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.38ms
+2017-07-05 11:39:54,654 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.48ms
+2017-07-05 11:39:55,660 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:39:56,668 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.62ms
+2017-07-05 11:39:57,675 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.57ms
+2017-07-05 11:39:58,680 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.27ms
+2017-07-05 11:39:59,685 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.25ms
+2017-07-05 11:40:00,691 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.37ms
+2017-07-05 11:40:01,697 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.36ms
+2017-07-05 11:40:02,707 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.61ms
+2017-07-05 11:40:03,713 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.61ms
+2017-07-05 11:40:04,720 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.61ms
+2017-07-05 11:40:05,725 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:40:06,387 luigi.scheduler[31484] INFO: Starting pruning of task graph
+2017-07-05 11:40:06,388 luigi.scheduler[31484] INFO: Task u'AnalyzerTask_DY1JetsToLL_M_50_2_098e695ca1' is marked as running by disconnected worker u'Worker(salt=574572504, workers=1, host=vmps12, username=teaguedo, pid=31498)' -> marking as FAILED with retry delay of 900.0s
+2017-07-05 11:40:06,388 luigi.scheduler[31484] INFO: Done pruning task graph
+2017-07-05 11:40:06,733 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.57ms
+2017-07-05 11:40:07,739 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.60ms
+2017-07-05 11:40:08,747 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.52ms
+2017-07-05 11:40:09,751 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.96ms
+2017-07-05 11:40:10,756 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:40:11,762 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.55ms
+2017-07-05 11:40:12,768 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.52ms
+2017-07-05 11:40:13,774 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:40:14,779 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:40:15,785 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.58ms
+2017-07-05 11:40:16,791 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.49ms
+2017-07-05 11:40:17,797 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:40:18,803 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.42ms
+2017-07-05 11:40:19,808 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.39ms
+2017-07-05 11:40:20,814 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.54ms
+2017-07-05 11:40:21,819 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.98ms
+2017-07-05 11:40:22,314 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.20ms
+2017-07-05 11:40:22,318 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.01ms
+2017-07-05 11:40:22,823 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.74ms
+2017-07-05 11:40:23,826 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.70ms
+2017-07-05 11:40:24,830 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.86ms
+2017-07-05 11:40:25,833 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.67ms
+2017-07-05 11:40:26,836 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.70ms
+2017-07-05 11:40:27,840 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.99ms
+2017-07-05 11:40:28,847 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.65ms
+2017-07-05 11:40:29,854 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.58ms
+2017-07-05 11:40:30,861 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.76ms
+2017-07-05 11:40:31,866 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.00ms
+2017-07-05 11:40:32,872 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.66ms
+2017-07-05 11:40:33,878 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.42ms
+2017-07-05 11:40:34,887 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 2.01ms
+2017-07-05 11:40:35,896 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 2.42ms
+2017-07-05 11:40:36,904 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.99ms
+2017-07-05 11:40:37,910 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.64ms
+2017-07-05 11:40:38,916 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.33ms
+2017-07-05 11:40:39,923 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.46ms
+2017-07-05 11:40:40,930 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.65ms
+2017-07-05 11:40:41,937 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:40:42,944 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.51ms
+2017-07-05 11:40:43,950 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.36ms
+2017-07-05 11:40:44,955 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:40:45,961 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.35ms
+2017-07-05 11:40:46,969 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.50ms
+2017-07-05 11:40:47,976 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.66ms
+2017-07-05 11:40:48,982 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.36ms
+2017-07-05 11:40:49,988 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.35ms
+2017-07-05 11:40:50,994 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.33ms
+2017-07-05 11:40:52,000 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:40:53,007 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.50ms
+2017-07-05 11:40:54,014 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.61ms
+2017-07-05 11:40:55,030 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.68ms
+2017-07-05 11:40:56,040 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.70ms
+2017-07-05 11:40:57,046 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.66ms
+2017-07-05 11:40:58,052 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:40:59,058 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.46ms
+2017-07-05 11:41:00,067 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.61ms
+2017-07-05 11:41:01,072 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:41:02,079 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.65ms
+2017-07-05 11:41:03,086 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:41:04,091 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:41:05,096 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:41:06,104 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.62ms
+2017-07-05 11:41:06,387 luigi.scheduler[31484] INFO: Starting pruning of task graph
+2017-07-05 11:41:06,388 luigi.scheduler[31484] INFO: Done pruning task graph
+2017-07-05 11:41:07,111 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.62ms
+2017-07-05 11:41:08,117 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:41:09,123 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:41:10,128 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:41:11,134 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.57ms
+2017-07-05 11:41:12,141 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.56ms
+2017-07-05 11:41:13,147 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:41:14,152 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:41:15,158 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:41:16,164 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.53ms
+2017-07-05 11:41:17,171 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.46ms
+2017-07-05 11:41:18,177 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.33ms
+2017-07-05 11:41:19,182 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:41:20,187 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:41:21,193 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.54ms
+2017-07-05 11:41:22,200 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.55ms
+2017-07-05 11:41:23,206 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:41:24,211 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:41:25,216 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:41:26,222 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:41:27,229 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.62ms
+2017-07-05 11:41:28,235 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:41:29,240 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:41:30,245 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:41:31,251 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.33ms
+2017-07-05 11:41:32,258 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:41:33,264 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:41:34,270 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:41:35,275 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:41:36,280 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:41:37,288 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:41:38,293 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:41:39,299 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:41:40,304 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:41:41,309 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:41:42,317 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.62ms
+2017-07-05 11:41:43,323 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:41:44,328 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:41:45,333 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:41:46,338 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:41:47,346 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.66ms
+2017-07-05 11:41:48,352 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:41:49,357 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:41:50,362 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:41:51,368 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:41:52,375 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.60ms
+2017-07-05 11:41:53,382 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.44ms
+2017-07-05 11:41:54,387 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:41:55,392 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:41:56,398 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:41:57,404 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.61ms
+2017-07-05 11:41:58,412 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.52ms
+2017-07-05 11:41:59,417 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:42:00,422 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:42:01,428 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:42:02,436 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.66ms
+2017-07-05 11:42:03,444 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.65ms
+2017-07-05 11:42:04,449 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:42:05,455 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.52ms
+2017-07-05 11:42:06,388 luigi.scheduler[31484] INFO: Starting pruning of task graph
+2017-07-05 11:42:06,389 luigi.scheduler[31484] INFO: Done pruning task graph
+2017-07-05 11:42:06,461 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:42:07,467 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.62ms
+2017-07-05 11:42:08,475 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:42:09,480 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:42:10,486 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:42:11,491 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:42:12,497 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.58ms
+2017-07-05 11:42:13,505 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.61ms
+2017-07-05 11:42:14,510 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:42:15,516 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.33ms
+2017-07-05 11:42:16,521 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:42:17,527 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.58ms
+2017-07-05 11:42:18,535 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.60ms
+2017-07-05 11:42:19,540 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:42:20,545 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:42:21,551 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:42:22,558 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.58ms
+2017-07-05 11:42:23,318 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.11ms
+2017-07-05 11:42:23,324 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.92ms
+2017-07-05 11:42:23,565 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.39ms
+2017-07-05 11:42:24,572 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:42:25,577 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:42:26,583 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.60ms
+2017-07-05 11:42:27,588 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.99ms
+2017-07-05 11:42:28,595 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.61ms
+2017-07-05 11:42:29,601 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:42:30,606 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:42:31,611 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:42:32,618 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.37ms
+2017-07-05 11:42:33,626 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.61ms
+2017-07-05 11:42:34,631 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:42:35,636 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:42:36,642 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:42:37,648 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.59ms
+2017-07-05 11:42:38,656 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:42:39,661 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:42:40,667 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:42:41,672 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.33ms
+2017-07-05 11:42:42,677 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:42:43,685 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:42:44,690 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:42:45,696 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:42:46,701 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:42:47,706 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:42:48,717 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.62ms
+2017-07-05 11:42:49,722 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.35ms
+2017-07-05 11:42:50,727 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:42:51,733 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:42:52,738 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:42:53,744 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.59ms
+2017-07-05 11:42:54,751 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.37ms
+2017-07-05 11:42:55,757 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:42:56,762 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:42:57,768 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.39ms
+2017-07-05 11:42:58,774 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.61ms
+2017-07-05 11:42:59,781 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.41ms
+2017-07-05 11:43:00,787 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:43:01,792 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.33ms
+2017-07-05 11:43:02,798 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.64ms
+2017-07-05 11:43:03,805 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.65ms
+2017-07-05 11:43:04,812 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.42ms
+2017-07-05 11:43:05,818 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.37ms
+2017-07-05 11:43:06,388 luigi.scheduler[31484] INFO: Starting pruning of task graph
+2017-07-05 11:43:06,388 luigi.scheduler[31484] INFO: Done pruning task graph
+2017-07-05 11:43:06,823 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:43:07,828 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:43:08,834 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.37ms
+2017-07-05 11:43:09,840 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:43:10,846 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:43:11,852 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.60ms
+2017-07-05 11:43:12,858 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.33ms
+2017-07-05 11:43:13,863 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:43:14,868 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:43:15,873 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:43:16,879 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.36ms
+2017-07-05 11:43:17,886 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.50ms
+2017-07-05 11:43:18,891 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:43:19,898 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.57ms
+2017-07-05 11:43:20,903 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:43:21,908 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:43:22,914 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:43:23,919 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:43:24,926 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.44ms
+2017-07-05 11:43:25,933 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:43:26,940 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:43:27,945 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:43:28,950 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:43:29,955 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:43:30,961 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:43:31,968 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.42ms
+2017-07-05 11:43:32,974 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.66ms
+2017-07-05 11:43:33,980 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:43:34,985 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:43:35,990 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:43:36,995 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:43:38,003 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.47ms
+2017-07-05 11:43:39,009 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.54ms
+2017-07-05 11:43:40,014 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:43:41,019 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:43:42,025 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:43:43,030 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:43:44,037 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.43ms
+2017-07-05 11:43:45,043 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.61ms
+2017-07-05 11:43:46,049 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:43:47,054 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:43:48,059 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:43:49,064 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:43:50,071 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.50ms
+2017-07-05 11:43:51,080 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:43:52,086 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.46ms
+2017-07-05 11:43:53,091 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.29ms
+2017-07-05 11:43:54,097 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:43:55,102 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.35ms
+2017-07-05 11:43:56,109 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.37ms
+2017-07-05 11:43:57,116 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.60ms
+2017-07-05 11:43:58,122 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.64ms
+2017-07-05 11:43:59,129 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.62ms
+2017-07-05 11:44:00,134 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:44:01,139 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:44:02,146 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.64ms
+2017-07-05 11:44:03,154 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:44:04,160 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.62ms
+2017-07-05 11:44:05,166 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.32ms
+2017-07-05 11:44:06,171 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:44:06,387 luigi.scheduler[31484] INFO: Starting pruning of task graph
+2017-07-05 11:44:06,388 luigi.scheduler[31484] INFO: Done pruning task graph
+2017-07-05 11:44:07,176 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:44:08,182 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.35ms
+2017-07-05 11:44:09,189 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.53ms
+2017-07-05 11:44:10,199 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.43ms
+2017-07-05 11:44:10,326 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.16ms
+2017-07-05 11:44:10,333 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.95ms
+2017-07-05 11:44:11,209 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.46ms
+2017-07-05 11:44:12,215 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.33ms
+2017-07-05 11:44:13,220 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:44:14,225 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:44:15,230 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:44:16,237 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.64ms
+2017-07-05 11:44:17,245 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.56ms
+2017-07-05 11:44:18,252 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.52ms
+2017-07-05 11:44:19,257 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.38ms
+2017-07-05 11:44:20,263 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:44:21,268 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.43ms
+2017-07-05 11:44:22,275 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.42ms
+2017-07-05 11:44:23,282 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.59ms
+2017-07-05 11:44:24,288 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.59ms
+2017-07-05 11:44:25,293 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.28ms
+2017-07-05 11:44:26,302 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:44:27,309 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.64ms
+2017-07-05 11:44:28,318 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.65ms
+2017-07-05 11:44:29,323 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.99ms
+2017-07-05 11:44:30,338 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.55ms
+2017-07-05 11:44:31,346 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.54ms
+2017-07-05 11:44:32,350 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.99ms
+2017-07-05 11:44:33,356 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.64ms
+2017-07-05 11:44:34,364 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.62ms
+2017-07-05 11:44:35,372 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.68ms
+2017-07-05 11:44:36,379 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.65ms
+2017-07-05 11:44:37,384 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.03ms
+2017-07-05 11:44:38,388 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.95ms
+2017-07-05 11:44:39,393 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.48ms
+2017-07-05 11:44:40,404 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:44:41,408 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.97ms
+2017-07-05 11:44:42,414 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.49ms
+2017-07-05 11:44:43,419 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:44:44,424 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.27ms
+2017-07-05 11:44:45,430 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:44:46,437 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.41ms
+2017-07-05 11:44:47,443 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:44:48,449 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.49ms
+2017-07-05 11:44:49,454 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.98ms
+2017-07-05 11:44:50,459 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.97ms
+2017-07-05 11:44:51,463 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.98ms
+2017-07-05 11:44:52,468 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.52ms
+2017-07-05 11:44:53,479 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.57ms
+2017-07-05 11:44:54,485 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.98ms
+2017-07-05 11:44:55,488 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.78ms
+2017-07-05 11:44:56,492 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.87ms
+2017-07-05 11:44:57,496 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.03ms
+2017-07-05 11:44:58,499 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.95ms
+2017-07-05 11:44:59,504 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.97ms
+2017-07-05 11:45:00,508 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.93ms
+2017-07-05 11:45:01,512 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.95ms
+2017-07-05 11:45:02,516 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.04ms
+2017-07-05 11:45:03,520 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.98ms
+2017-07-05 11:45:04,523 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.93ms
+2017-07-05 11:45:05,528 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.96ms
+2017-07-05 11:45:06,388 luigi.scheduler[31484] INFO: Starting pruning of task graph
+2017-07-05 11:45:06,388 luigi.scheduler[31484] INFO: Done pruning task graph
+2017-07-05 11:45:06,532 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.92ms
+2017-07-05 11:45:07,536 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.91ms
+2017-07-05 11:45:08,540 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.95ms
+2017-07-05 11:45:09,543 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.90ms
+2017-07-05 11:46:06,443 luigi.scheduler[31484] INFO: Starting pruning of task graph
+2017-07-05 11:46:06,444 luigi.scheduler[31484] INFO: Done pruning task graph
+2017-07-05 11:47:06,447 luigi.scheduler[31484] INFO: Starting pruning of task graph
+2017-07-05 11:47:06,447 luigi.scheduler[31484] INFO: Task u'AnalyzerTask_DY1JetsToLL_M_50_8_efeecce0bd' is marked as running by disconnected worker u'Worker(salt=192863059, workers=1, host=vmps12, username=teaguedo, pid=31673)' -> marking as FAILED with retry delay of 900.0s
+2017-07-05 11:47:06,448 luigi.scheduler[31484] INFO: Done pruning task graph
+2017-07-05 11:48:06,398 luigi.scheduler[31484] INFO: Starting pruning of task graph
+2017-07-05 11:48:06,399 luigi.scheduler[31484] INFO: Done pruning task graph
+2017-07-05 11:49:06,446 luigi.scheduler[31484] INFO: Starting pruning of task graph
+2017-07-05 11:49:06,447 luigi.scheduler[31484] INFO: Done pruning task graph
+2017-07-05 11:50:06,447 luigi.scheduler[31484] INFO: Starting pruning of task graph
+2017-07-05 11:50:06,447 luigi.scheduler[31484] INFO: Done pruning task graph
+2017-07-05 11:51:06,447 luigi.scheduler[31484] INFO: Starting pruning of task graph
+2017-07-05 11:51:06,448 luigi.scheduler[31484] INFO: Done pruning task graph
+2017-07-05 11:52:04,965 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.30ms
+2017-07-05 11:52:04,997 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.11ms
+2017-07-05 11:52:05,004 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.73ms
+2017-07-05 11:52:05,011 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.84ms
+2017-07-05 11:52:05,021 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.71ms
+2017-07-05 11:52:05,028 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.75ms
+2017-07-05 11:52:05,035 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.72ms
+2017-07-05 11:52:05,041 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.74ms
+2017-07-05 11:52:05,048 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.73ms
+2017-07-05 11:52:05,054 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.73ms
+2017-07-05 11:52:05,061 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.73ms
+2017-07-05 11:52:05,068 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.73ms
+2017-07-05 11:52:05,202 tornado.access[31484] INFO: 200 GET /api/add_worker (127.0.0.1) 1.74ms
+2017-07-05 11:52:05,208 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.00ms
+2017-07-05 11:52:06,388 luigi.scheduler[31484] INFO: Starting pruning of task graph
+2017-07-05 11:52:06,388 luigi.scheduler[31484] INFO: Done pruning task graph
+2017-07-05 11:52:06,773 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.17ms
+2017-07-05 11:52:06,780 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.96ms
+2017-07-05 11:52:12,621 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.19ms
+2017-07-05 11:52:12,628 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.94ms
+2017-07-05 11:52:14,631 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.55ms
+2017-07-05 11:52:23,948 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.17ms
+2017-07-05 11:52:23,955 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.92ms
+2017-07-05 11:52:24,641 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:52:29,874 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.14ms
+2017-07-05 11:52:29,881 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.91ms
+2017-07-05 11:52:34,650 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:52:36,668 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.18ms
+2017-07-05 11:52:36,675 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.89ms
+2017-07-05 11:52:36,807 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.96ms
+2017-07-05 11:52:36,814 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.81ms
+2017-07-05 11:52:44,658 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:52:47,995 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.16ms
+2017-07-05 11:52:48,002 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.83ms
+2017-07-05 11:52:54,029 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.18ms
+2017-07-05 11:52:54,036 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.81ms
+2017-07-05 11:52:54,667 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.62ms
+2017-07-05 11:52:54,776 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.80ms
+2017-07-05 11:52:54,782 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.79ms
+2017-07-05 11:53:00,044 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.17ms
+2017-07-05 11:53:00,051 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.75ms
+2017-07-05 11:53:00,086 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.16ms
+2017-07-05 11:53:00,104 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.08ms
+2017-07-05 11:53:00,111 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.71ms
+2017-07-05 11:53:00,118 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.72ms
+2017-07-05 11:53:00,124 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.73ms
+2017-07-05 11:53:00,130 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.75ms
+2017-07-05 11:53:00,137 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.71ms
+2017-07-05 11:53:00,143 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.72ms
+2017-07-05 11:53:00,150 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.72ms
+2017-07-05 11:53:00,156 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.73ms
+2017-07-05 11:53:00,162 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.74ms
+2017-07-05 11:53:00,169 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.73ms
+2017-07-05 11:53:00,175 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.92ms
+2017-07-05 11:53:04,676 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:53:06,389 luigi.scheduler[31484] INFO: Starting pruning of task graph
+2017-07-05 11:53:06,389 luigi.scheduler[31484] INFO: Done pruning task graph
+2017-07-05 11:53:06,993 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.17ms
+2017-07-05 11:53:07,001 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.34ms
+2017-07-05 11:53:13,387 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 3.20ms
+2017-07-05 11:53:13,394 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.13ms
+2017-07-05 11:53:13,484 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.15ms
+2017-07-05 11:53:13,490 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.94ms
+2017-07-05 11:53:13,593 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.04ms
+2017-07-05 11:53:13,601 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.47ms
+2017-07-05 11:53:13,676 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.92ms
+2017-07-05 11:53:13,684 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.89ms
+2017-07-05 11:53:13,759 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.93ms
+2017-07-05 11:53:13,767 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.91ms
+2017-07-05 11:53:13,842 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.91ms
+2017-07-05 11:53:13,849 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.34ms
+2017-07-05 11:53:13,925 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.86ms
+2017-07-05 11:53:13,931 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.78ms
+2017-07-05 11:53:14,005 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.91ms
+2017-07-05 11:53:14,012 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.80ms
+2017-07-05 11:53:14,087 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 1.92ms
+2017-07-05 11:53:14,094 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.81ms
+2017-07-05 11:53:14,129 tornado.access[31484] INFO: 200 GET /api/add_task (127.0.0.1) 2.20ms
+2017-07-05 11:53:14,135 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.59ms
+2017-07-05 11:53:14,682 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:53:18,238 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.31ms
+2017-07-05 11:53:20,683 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.01ms
+2017-07-05 11:53:24,637 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.04ms
+2017-07-05 11:53:24,688 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.33ms
+2017-07-05 11:53:27,154 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.71ms
+2017-07-05 11:53:29,995 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.04ms
+2017-07-05 11:53:31,159 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.70ms
+2017-07-05 11:53:34,695 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.75ms
+2017-07-05 11:53:36,245 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.05ms
+2017-07-05 11:53:38,848 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.02ms
+2017-07-05 11:53:44,145 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.07ms
+2017-07-05 11:53:44,702 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.48ms
+2017-07-05 11:53:49,507 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.04ms
+2017-07-05 11:53:54,709 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.68ms
+2017-07-05 11:53:55,374 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.74ms
+2017-07-05 11:53:56,415 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.00ms
+2017-07-05 11:53:58,756 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.88ms
+2017-07-05 11:53:59,991 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.02ms
+2017-07-05 11:54:02,152 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.06ms
+2017-07-05 11:54:04,718 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.70ms
+2017-07-05 11:54:04,881 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.71ms
+2017-07-05 11:54:06,387 luigi.scheduler[31484] INFO: Starting pruning of task graph
+2017-07-05 11:54:06,388 luigi.scheduler[31484] INFO: Done pruning task graph
+2017-07-05 11:54:06,987 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.97ms
+2017-07-05 11:54:12,946 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.04ms
+2017-07-05 11:54:14,727 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 2.93ms
+2017-07-05 11:54:18,923 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.06ms
+2017-07-05 11:54:24,281 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.01ms
+2017-07-05 11:54:24,735 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 2.58ms
+2017-07-05 11:54:26,317 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 3.39ms
+2017-07-05 11:54:28,810 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.34ms
+2017-07-05 11:54:30,812 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.20ms
+2017-07-05 11:54:34,739 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.99ms
+2017-07-05 11:54:36,785 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.20ms
+2017-07-05 11:54:38,987 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.16ms
+2017-07-05 11:54:42,657 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.19ms
+2017-07-05 11:54:44,743 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.97ms
+2017-07-05 11:54:48,051 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.20ms
+2017-07-05 11:54:50,840 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.23ms
+2017-07-05 11:54:51,922 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.16ms
+2017-07-05 11:54:54,747 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 0.99ms
+2017-07-05 11:54:55,855 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.05ms
+2017-07-05 11:54:58,680 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.85ms
+2017-07-05 11:55:01,440 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.00ms
+2017-07-05 11:55:02,666 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.80ms
+2017-07-05 11:55:04,752 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:55:06,388 luigi.scheduler[31484] INFO: Starting pruning of task graph
+2017-07-05 11:55:06,389 luigi.scheduler[31484] INFO: Done pruning task graph
+2017-07-05 11:55:08,504 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.04ms
+2017-07-05 11:55:14,488 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.04ms
+2017-07-05 11:55:14,758 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.31ms
+2017-07-05 11:55:16,853 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.99ms
+2017-07-05 11:55:20,237 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.15ms
+2017-07-05 11:55:22,130 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.68ms
+2017-07-05 11:55:24,764 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 11:55:27,880 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.74ms
+2017-07-05 11:55:30,953 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.90ms
+2017-07-05 11:55:34,770 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.34ms
+2017-07-05 11:55:35,559 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.69ms
+2017-07-05 11:55:37,198 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.72ms
+2017-07-05 11:55:41,884 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.06ms
+2017-07-05 11:55:44,775 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.30ms
+2017-07-05 11:55:46,349 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.05ms
+2017-07-05 11:55:51,147 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.04ms
+2017-07-05 11:55:53,050 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.02ms
+2017-07-05 11:55:54,316 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 1.71ms
+2017-07-05 11:55:54,780 tornado.access[31484] INFO: 200 GET /api/ping (127.0.0.1) 1.27ms
+2017-07-05 11:55:58,437 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.04ms
+2017-07-05 11:56:00,220 tornado.access[31484] INFO: 200 GET /api/get_work (127.0.0.1) 2.06ms
+2017-07-05 11:56:06,389 luigi.scheduler[31484] INFO: Starting pruning of task graph
+2017-07-05 11:56:06,390 luigi.scheduler[31484] INFO: Done pruning task graph
+2017-07-05 11:56:39,250 luigi.server[31484] INFO: Scheduler instance shutting down
+2017-07-05 11:56:39,251 luigi.scheduler[31484] WARNING: Failed saving scheduler state
+Traceback (most recent call last):
+  File "/home/teaguedo/.local/lib/python2.7/site-packages/luigi/scheduler.py", line 445, in dump
+    with open(self._state_path, 'wb') as fobj:
+IOError: [Errno 2] No such file or directory: '/uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle'
+2017-07-05 11:56:39,252 luigi.server[31484] INFO: Scheduler instance shutting down
+2017-07-05 11:56:39,252 luigi.scheduler[31484] WARNING: Failed saving scheduler state
+Traceback (most recent call last):
+  File "/home/teaguedo/.local/lib/python2.7/site-packages/luigi/scheduler.py", line 445, in dump
+    with open(self._state_path, 'wb') as fobj:
+IOError: [Errno 2] No such file or directory: '/uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle'
+2017-07-05 12:03:29,581 luigi.server[42148] INFO: Checking pid file
+2017-07-05 12:03:29,581 luigi.server[42148] INFO: Writing pid file
+2017-07-05 12:03:29,584 luigi-interface[42148] INFO: Loaded ['luigi.cfg']
+2017-07-05 12:03:29,592 luigi.scheduler[42148] INFO: No prior state file exists at /uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle. Starting with empty state
+2017-07-05 12:03:29,619 luigi.server[42148] INFO: Scheduler starting up
+2017-07-05 12:04:05,346 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 3.55ms
+2017-07-05 12:04:05,381 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.59ms
+2017-07-05 12:04:05,390 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.87ms
+2017-07-05 12:04:05,403 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.82ms
+2017-07-05 12:04:05,412 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.75ms
+2017-07-05 12:04:05,422 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.75ms
+2017-07-05 12:04:05,430 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.72ms
+2017-07-05 12:04:05,439 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.74ms
+2017-07-05 12:04:05,448 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.73ms
+2017-07-05 12:04:05,457 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.76ms
+2017-07-05 12:04:05,467 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.77ms
+2017-07-05 12:04:05,475 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.81ms
+2017-07-05 12:04:05,592 tornado.access[42148] INFO: 200 GET /api/add_worker (127.0.0.1) 1.74ms
+2017-07-05 12:04:05,600 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 2.19ms
+2017-07-05 12:04:10,906 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 3.23ms
+2017-07-05 12:04:10,914 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 3.08ms
+2017-07-05 12:04:15,129 tornado.access[42148] INFO: 200 GET /api/ping (127.0.0.1) 1.72ms
+2017-07-05 12:04:16,261 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.32ms
+2017-07-05 12:04:16,268 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.94ms
+2017-07-05 12:04:21,157 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.18ms
+2017-07-05 12:04:21,164 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 2.02ms
+2017-07-05 12:04:25,138 tornado.access[42148] INFO: 200 GET /api/ping (127.0.0.1) 1.71ms
+2017-07-05 12:04:27,594 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.20ms
+2017-07-05 12:04:27,601 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.89ms
+2017-07-05 12:04:27,696 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.11ms
+2017-07-05 12:04:27,702 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.79ms
+2017-07-05 12:04:27,785 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.05ms
+2017-07-05 12:04:27,791 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.82ms
+2017-07-05 12:04:29,620 luigi.scheduler[42148] INFO: Starting pruning of task graph
+2017-07-05 12:04:29,621 luigi.scheduler[42148] INFO: Done pruning task graph
+2017-07-05 12:04:35,148 tornado.access[42148] INFO: 200 GET /api/ping (127.0.0.1) 1.83ms
+2017-07-05 12:04:39,382 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.17ms
+2017-07-05 12:04:39,388 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.80ms
+2017-07-05 12:04:45,157 tornado.access[42148] INFO: 200 GET /api/ping (127.0.0.1) 1.71ms
+2017-07-05 12:04:45,820 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.78ms
+2017-07-05 12:04:45,825 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.44ms
+2017-07-05 12:04:51,987 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.40ms
+2017-07-05 12:04:51,991 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 0.98ms
+2017-07-05 12:04:55,165 tornado.access[42148] INFO: 200 GET /api/ping (127.0.0.1) 1.63ms
+2017-07-05 12:05:29,650 luigi.scheduler[42148] INFO: Starting pruning of task graph
+2017-07-05 12:05:29,650 luigi.scheduler[42148] INFO: Done pruning task graph
+2017-07-05 12:06:29,679 luigi.scheduler[42148] INFO: Starting pruning of task graph
+2017-07-05 12:06:29,679 luigi.scheduler[42148] INFO: Done pruning task graph
+2017-07-05 12:07:29,678 luigi.scheduler[42148] INFO: Starting pruning of task graph
+2017-07-05 12:07:29,679 luigi.scheduler[42148] INFO: Task u'AnalyzerTask_DY1JetsToLL_M_50_5_1911687f19' is marked as running by disconnected worker u'Worker(salt=864941923, workers=1, host=vmps12, username=teaguedo, pid=42377)' -> marking as FAILED with retry delay of 120.0s
+2017-07-05 12:07:29,679 luigi.scheduler[42148] INFO: Done pruning task graph
+2017-07-05 12:07:57,854 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.32ms
+2017-07-05 12:07:57,888 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.45ms
+2017-07-05 12:07:57,896 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.72ms
+2017-07-05 12:07:57,905 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.73ms
+2017-07-05 12:07:57,912 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.74ms
+2017-07-05 12:07:57,918 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.73ms
+2017-07-05 12:07:57,925 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.75ms
+2017-07-05 12:07:57,932 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.74ms
+2017-07-05 12:07:57,939 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.74ms
+2017-07-05 12:07:57,945 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.75ms
+2017-07-05 12:07:57,952 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.74ms
+2017-07-05 12:07:57,959 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.75ms
+2017-07-05 12:07:58,088 tornado.access[42148] INFO: 200 GET /api/add_worker (127.0.0.1) 1.49ms
+2017-07-05 12:07:58,095 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.96ms
+2017-07-05 12:08:07,518 tornado.access[42148] INFO: 200 GET /api/ping (127.0.0.1) 1.59ms
+2017-07-05 12:08:17,525 tornado.access[42148] INFO: 200 GET /api/ping (127.0.0.1) 1.57ms
+2017-07-05 12:08:22,492 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.01ms
+2017-07-05 12:08:22,498 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.95ms
+2017-07-05 12:08:22,653 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.84ms
+2017-07-05 12:08:22,659 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.89ms
+2017-07-05 12:08:22,732 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.75ms
+2017-07-05 12:08:22,738 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.86ms
+2017-07-05 12:08:22,836 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.88ms
+2017-07-05 12:08:22,843 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.85ms
+2017-07-05 12:08:22,915 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.76ms
+2017-07-05 12:08:22,921 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.84ms
+2017-07-05 12:08:23,060 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.77ms
+2017-07-05 12:08:23,066 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.80ms
+2017-07-05 12:08:23,140 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.78ms
+2017-07-05 12:08:23,147 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.81ms
+2017-07-05 12:08:23,226 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.82ms
+2017-07-05 12:08:23,232 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.76ms
+2017-07-05 12:08:23,306 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.80ms
+2017-07-05 12:08:23,312 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.74ms
+2017-07-05 12:08:23,387 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.79ms
+2017-07-05 12:08:23,393 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.74ms
+2017-07-05 12:08:23,427 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.20ms
+2017-07-05 12:08:23,444 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.10ms
+2017-07-05 12:08:23,450 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.74ms
+2017-07-05 12:08:23,456 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.75ms
+2017-07-05 12:08:23,462 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.75ms
+2017-07-05 12:08:23,468 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.76ms
+2017-07-05 12:08:23,474 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.77ms
+2017-07-05 12:08:23,480 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.76ms
+2017-07-05 12:08:23,486 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.75ms
+2017-07-05 12:08:23,492 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.76ms
+2017-07-05 12:08:23,499 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.74ms
+2017-07-05 12:08:23,505 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.74ms
+2017-07-05 12:08:23,510 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.94ms
+2017-07-05 12:08:23,582 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.76ms
+2017-07-05 12:08:23,588 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.93ms
+2017-07-05 12:08:23,663 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.73ms
+2017-07-05 12:08:23,669 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 2.31ms
+2017-07-05 12:08:23,742 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.78ms
+2017-07-05 12:08:23,749 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.86ms
+2017-07-05 12:08:23,848 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.78ms
+2017-07-05 12:08:23,854 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.85ms
+2017-07-05 12:08:23,930 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.75ms
+2017-07-05 12:08:23,936 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.84ms
+2017-07-05 12:08:24,013 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.91ms
+2017-07-05 12:08:24,020 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.84ms
+2017-07-05 12:08:24,097 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.77ms
+2017-07-05 12:08:24,103 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.78ms
+2017-07-05 12:08:24,176 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.82ms
+2017-07-05 12:08:24,183 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.84ms
+2017-07-05 12:08:24,257 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.86ms
+2017-07-05 12:08:24,263 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.75ms
+2017-07-05 12:08:24,337 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.75ms
+2017-07-05 12:08:24,343 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.74ms
+2017-07-05 12:08:24,384 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 9.42ms
+2017-07-05 12:08:24,390 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.57ms
+2017-07-05 12:08:29,624 luigi.scheduler[42148] INFO: Starting pruning of task graph
+2017-07-05 12:08:29,624 luigi.scheduler[42148] INFO: Done pruning task graph
+2017-07-05 12:09:29,678 luigi.scheduler[42148] INFO: Starting pruning of task graph
+2017-07-05 12:09:29,679 luigi.scheduler[42148] INFO: Done pruning task graph
+2017-07-05 12:09:40,711 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.28ms
+2017-07-05 12:09:40,728 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.16ms
+2017-07-05 12:09:40,735 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 0.95ms
+2017-07-05 12:09:40,740 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 0.97ms
+2017-07-05 12:09:40,746 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.21ms
+2017-07-05 12:09:40,750 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 0.89ms
+2017-07-05 12:09:40,753 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 0.92ms
+2017-07-05 12:09:40,757 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 0.91ms
+2017-07-05 12:09:40,760 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 0.92ms
+2017-07-05 12:09:40,764 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 0.87ms
+2017-07-05 12:09:40,767 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 0.88ms
+2017-07-05 12:09:40,771 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 0.89ms
+2017-07-05 12:09:40,874 tornado.access[42148] INFO: 200 GET /api/add_worker (127.0.0.1) 0.90ms
+2017-07-05 12:09:40,878 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.05ms
+2017-07-05 12:09:40,950 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.10ms
+2017-07-05 12:09:40,954 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 0.97ms
+2017-07-05 12:09:41,041 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.01ms
+2017-07-05 12:09:41,044 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 0.91ms
+2017-07-05 12:09:41,091 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 0.96ms
+2017-07-05 12:09:41,094 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 0.87ms
+2017-07-05 12:09:41,168 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 0.93ms
+2017-07-05 12:09:41,171 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 0.86ms
+2017-07-05 12:09:41,218 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 0.94ms
+2017-07-05 12:09:41,221 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 0.87ms
+2017-07-05 12:09:41,272 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.00ms
+2017-07-05 12:09:41,275 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 0.92ms
+2017-07-05 12:09:41,323 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.75ms
+2017-07-05 12:09:41,330 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.63ms
+2017-07-05 12:09:41,678 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.82ms
+2017-07-05 12:09:41,684 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.62ms
+2017-07-05 12:09:42,017 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.83ms
+2017-07-05 12:09:42,023 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.65ms
+2017-07-05 12:09:42,094 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.83ms
+2017-07-05 12:09:42,100 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.53ms
+2017-07-05 12:10:29,666 luigi.scheduler[42148] INFO: Starting pruning of task graph
+2017-07-05 12:10:29,667 luigi.scheduler[42148] INFO: Done pruning task graph
+2017-07-05 12:11:29,678 luigi.scheduler[42148] INFO: Starting pruning of task graph
+2017-07-05 12:11:29,680 luigi.scheduler[42148] INFO: Done pruning task graph
+2017-07-05 12:12:29,678 luigi.scheduler[42148] INFO: Starting pruning of task graph
+2017-07-05 12:12:29,679 luigi.scheduler[42148] INFO: Done pruning task graph
+2017-07-05 12:13:05,613 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.15ms
+2017-07-05 12:13:05,643 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.14ms
+2017-07-05 12:13:05,655 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.83ms
+2017-07-05 12:13:05,665 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.78ms
+2017-07-05 12:13:05,673 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.73ms
+2017-07-05 12:13:05,680 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.76ms
+2017-07-05 12:13:05,687 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.72ms
+2017-07-05 12:13:05,693 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.74ms
+2017-07-05 12:13:05,700 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.74ms
+2017-07-05 12:13:05,707 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.73ms
+2017-07-05 12:13:05,713 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.74ms
+2017-07-05 12:13:05,721 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.73ms
+2017-07-05 12:13:05,860 tornado.access[42148] INFO: 200 GET /api/add_worker (127.0.0.1) 1.58ms
+2017-07-05 12:13:05,866 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.91ms
+2017-07-05 12:13:06,863 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.01ms
+2017-07-05 12:13:06,869 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.86ms
+2017-07-05 12:13:07,147 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.85ms
+2017-07-05 12:13:07,153 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.81ms
+2017-07-05 12:13:07,284 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.87ms
+2017-07-05 12:13:07,290 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.80ms
+2017-07-05 12:13:07,393 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.81ms
+2017-07-05 12:13:07,399 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.77ms
+2017-07-05 12:13:07,478 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.81ms
+2017-07-05 12:13:07,484 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.75ms
+2017-07-05 12:13:07,792 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.79ms
+2017-07-05 12:13:07,798 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.72ms
+2017-07-05 12:13:10,886 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.86ms
+2017-07-05 12:13:10,892 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.68ms
+2017-07-05 12:13:10,970 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.82ms
+2017-07-05 12:13:10,977 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.66ms
+2017-07-05 12:13:11,050 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.75ms
+2017-07-05 12:13:11,056 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.63ms
+2017-07-05 12:13:11,133 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.94ms
+2017-07-05 12:13:11,138 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.55ms
+2017-07-05 12:13:29,637 luigi.scheduler[42148] INFO: Starting pruning of task graph
+2017-07-05 12:13:29,638 luigi.scheduler[42148] INFO: Done pruning task graph
+2017-07-05 12:14:29,678 luigi.scheduler[42148] INFO: Starting pruning of task graph
+2017-07-05 12:14:29,682 luigi.scheduler[42148] INFO: Done pruning task graph
+2017-07-05 12:15:29,678 luigi.scheduler[42148] INFO: Starting pruning of task graph
+2017-07-05 12:15:29,679 luigi.scheduler[42148] INFO: Done pruning task graph
+2017-07-05 12:16:29,679 luigi.scheduler[42148] INFO: Starting pruning of task graph
+2017-07-05 12:16:29,679 luigi.scheduler[42148] INFO: Done pruning task graph
+2017-07-05 12:16:51,286 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.18ms
+2017-07-05 12:16:51,320 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 3.07ms
+2017-07-05 12:16:51,329 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.02ms
+2017-07-05 12:16:51,340 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.85ms
+2017-07-05 12:16:51,347 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.78ms
+2017-07-05 12:16:51,354 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.82ms
+2017-07-05 12:16:51,362 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.79ms
+2017-07-05 12:16:51,369 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.78ms
+2017-07-05 12:16:51,376 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.81ms
+2017-07-05 12:16:51,384 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.78ms
+2017-07-05 12:16:51,391 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.79ms
+2017-07-05 12:16:51,399 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.80ms
+2017-07-05 12:16:51,518 tornado.access[42148] INFO: 200 GET /api/add_worker (127.0.0.1) 1.53ms
+2017-07-05 12:16:51,525 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.87ms
+2017-07-05 12:16:51,601 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.86ms
+2017-07-05 12:16:51,607 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.83ms
+2017-07-05 12:16:51,851 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.82ms
+2017-07-05 12:16:51,857 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.81ms
+2017-07-05 12:16:52,033 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.76ms
+2017-07-05 12:16:52,039 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.77ms
+2017-07-05 12:16:52,139 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.80ms
+2017-07-05 12:16:52,145 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.76ms
+2017-07-05 12:16:52,227 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.79ms
+2017-07-05 12:16:52,233 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.74ms
+2017-07-05 12:16:52,335 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.80ms
+2017-07-05 12:16:52,341 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.67ms
+2017-07-05 12:16:52,425 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.68ms
+2017-07-05 12:16:52,431 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.62ms
+2017-07-05 12:16:52,505 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.71ms
+2017-07-05 12:16:52,510 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.60ms
+2017-07-05 12:16:54,433 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.00ms
+2017-07-05 12:16:54,439 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.60ms
+2017-07-05 12:16:54,595 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.83ms
+2017-07-05 12:16:54,601 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.54ms
+2017-07-05 12:17:29,654 luigi.scheduler[42148] INFO: Starting pruning of task graph
+2017-07-05 12:17:29,654 luigi.scheduler[42148] INFO: Done pruning task graph
+2017-07-05 12:18:13,760 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.15ms
+2017-07-05 12:18:14,593 tornado.access[42148] INFO: 200 GET /api/announce_scheduling_failure (127.0.0.1) 1.54ms
+2017-07-05 12:18:14,611 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.98ms
+2017-07-05 12:18:14,690 tornado.access[42148] INFO: 200 GET /api/add_worker (127.0.0.1) 1.48ms
+2017-07-05 12:18:14,696 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.55ms
+2017-07-05 12:18:29,633 luigi.scheduler[42148] INFO: Starting pruning of task graph
+2017-07-05 12:18:29,634 luigi.scheduler[42148] INFO: Done pruning task graph
+2017-07-05 12:18:57,699 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.86ms
+2017-07-05 12:18:57,727 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.23ms
+2017-07-05 12:18:57,734 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.57ms
+2017-07-05 12:18:57,742 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.48ms
+2017-07-05 12:18:57,748 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.56ms
+2017-07-05 12:18:57,754 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.50ms
+2017-07-05 12:18:57,760 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.51ms
+2017-07-05 12:18:57,766 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.51ms
+2017-07-05 12:18:57,772 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.51ms
+2017-07-05 12:18:57,778 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.51ms
+2017-07-05 12:18:57,784 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.52ms
+2017-07-05 12:18:57,791 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.51ms
+2017-07-05 12:18:57,898 tornado.access[42148] INFO: 200 GET /api/add_worker (127.0.0.1) 1.60ms
+2017-07-05 12:18:57,905 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.97ms
+2017-07-05 12:18:57,981 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.93ms
+2017-07-05 12:18:57,987 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.90ms
+2017-07-05 12:18:58,063 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.84ms
+2017-07-05 12:18:58,070 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.80ms
+2017-07-05 12:18:58,142 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.82ms
+2017-07-05 12:18:58,149 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.79ms
+2017-07-05 12:18:58,247 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.84ms
+2017-07-05 12:18:58,253 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.78ms
+2017-07-05 12:18:58,331 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.88ms
+2017-07-05 12:18:58,337 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.78ms
+2017-07-05 12:18:58,403 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.88ms
+2017-07-05 12:18:58,410 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.78ms
+2017-07-05 12:18:58,487 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.97ms
+2017-07-05 12:18:58,494 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.72ms
+2017-07-05 12:18:58,565 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.90ms
+2017-07-05 12:18:58,571 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.68ms
+2017-07-05 12:18:58,639 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.86ms
+2017-07-05 12:18:58,645 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.65ms
+2017-07-05 12:18:58,719 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.87ms
+2017-07-05 12:18:58,725 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.57ms
+2017-07-05 12:19:08,963 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.83ms
+2017-07-05 12:19:08,990 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.55ms
+2017-07-05 12:19:08,999 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.82ms
+2017-07-05 12:19:09,007 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.80ms
+2017-07-05 12:19:09,014 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.79ms
+2017-07-05 12:19:09,021 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.77ms
+2017-07-05 12:19:09,027 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.73ms
+2017-07-05 12:19:09,034 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.26ms
+2017-07-05 12:19:09,041 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.71ms
+2017-07-05 12:19:09,048 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.69ms
+2017-07-05 12:19:09,055 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.72ms
+2017-07-05 12:19:09,062 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.75ms
+2017-07-05 12:19:09,163 tornado.access[42148] INFO: 200 GET /api/add_worker (127.0.0.1) 1.65ms
+2017-07-05 12:19:09,169 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.91ms
+2017-07-05 12:19:09,245 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.98ms
+2017-07-05 12:19:09,252 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.89ms
+2017-07-05 12:19:09,319 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.86ms
+2017-07-05 12:19:09,326 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.81ms
+2017-07-05 12:19:09,400 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.90ms
+2017-07-05 12:19:09,407 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.82ms
+2017-07-05 12:19:09,508 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.86ms
+2017-07-05 12:19:09,515 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.78ms
+2017-07-05 12:19:09,591 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.87ms
+2017-07-05 12:19:09,597 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.76ms
+2017-07-05 12:19:09,674 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.90ms
+2017-07-05 12:19:09,680 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.78ms
+2017-07-05 12:19:12,486 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.00ms
+2017-07-05 12:19:12,492 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.73ms
+2017-07-05 12:19:13,450 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 2.20ms
+2017-07-05 12:19:13,457 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.72ms
+2017-07-05 12:19:17,136 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.84ms
+2017-07-05 12:19:17,142 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.37ms
+2017-07-05 12:19:17,252 tornado.access[42148] INFO: 200 GET /api/add_task (127.0.0.1) 1.83ms
+2017-07-05 12:19:17,258 tornado.access[42148] INFO: 200 GET /api/get_work (127.0.0.1) 1.31ms
+2017-07-05 12:19:29,631 luigi.scheduler[42148] INFO: Starting pruning of task graph
+2017-07-05 12:19:29,632 luigi.scheduler[42148] INFO: Done pruning task graph
+2017-07-05 12:20:18,536 luigi.server[42148] INFO: Scheduler instance shutting down
+2017-07-05 12:20:18,537 luigi.scheduler[42148] WARNING: Failed saving scheduler state
+Traceback (most recent call last):
+  File "/home/teaguedo/.local/lib/python2.7/site-packages/luigi/scheduler.py", line 445, in dump
+    with open(self._state_path, 'wb') as fobj:
+IOError: [Errno 2] No such file or directory: '/uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle'
+2017-07-05 12:20:18,539 luigi.server[42148] INFO: Scheduler instance shutting down
+2017-07-05 12:20:18,539 luigi.scheduler[42148] WARNING: Failed saving scheduler state
+Traceback (most recent call last):
+  File "/home/teaguedo/.local/lib/python2.7/site-packages/luigi/scheduler.py", line 445, in dump
+    with open(self._state_path, 'wb') as fobj:
+IOError: [Errno 2] No such file or directory: '/uscms/home/dteague/nobackup/CMSSW_8_0_10/src/treatmuonastauwork/Generation/Analyze_Grid/work/luigi-state.pickle'

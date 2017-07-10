@@ -1,17 +1,31 @@
 #!/bin/bash
 
 start=$(pwd -P)
-store='store/user/ra2tau/jan2017tuple'
+store='/store/user/ra2tau/jan2017tuple'
 output_dir='new_list'
-cd /eos/uscms
+root_loc="root://cmsxrootd-site2.fnal.gov/"
 
-for first in $(find $store -maxdepth 1 -type d)
+for first in $(xrdfs $root_loc ls $store 2>/dev/null)
 do
-   outname=$(echo $first | sed -rn "s|^"${store}"/(.+)$|\1|p")
-   echo $outname
-   find $first -maxdepth 4 -mindepth 4 -type f -name OutTree*root -printf "%s root://cmseos.fnal.gov/%p \n" | sort -r > ${start}/${output_dir}/${outname}.txt
-   if [ ! -s ${start}/${output_dir}/${outname}.txt ]; then
-       echo "$outname not properly formated!"
-       rm ${start}/${output_dir}/${outname}.txt
-   fi
+    outname=$(echo $first | sed -rn "s|^"${store}"/(.+)$|\1|p")
+    echo $outname
+    if [ -f $output_dir/$outname.txt ]; then
+    	rm $output_dir/$outname.txt
+    fi
+    touch $output_dir/$outname.txt
+    
+    temp=( $(xrdfs $root_loc ls -l $first 2>/dev/null | awk '{if($1 == "dr-x") print $5}') )
+    if [ -z "$(echo $work_var | grep fail)" ]; then
+	xrdfs $root_loc ls -l $first 2>/dev/null | awk '{if($1 == "-r--" && $5 ~ "/root/" ) print $4, $5}' 1>>$output_dir/$outname.txt
+    fi
+
+    while [ ${#temp[@]} -ne 0 ]; do
+	work_var=${temp[0]}
+	if [ -z "$(echo $work_var | grep fail)" ]; then
+	    xrdfs $root_loc ls -l $work_var 2>/dev/null | awk '{if($1 == "-r--" && $5 ~ /root/ ) print $4, "root://cmsxrootd.fnal.gov/" $5}' 1>> $output_dir/$outname.txt
+	fi
+    	unset temp[0]
+	temp=( "${temp[@]}" $(xrdfs $root_loc ls -l $work_var 2>/dev/null | awk '{if($1 == "dr-x") print $5}') )
+    done
+    cat $output_dir/$outname.txt | sort -rg -o $output_dir/$outname.txt
 done
