@@ -13,7 +13,7 @@ class Job_Holder():
     infiles = []
     all_jobs = {}
     jobs_overview = {} # [state, id, max_run]
-    colors = {"COMPLETED": 3, "ERROR": 2, "RUNNING": 1, "COMPLETING": 1}
+    colors = {"COMPLETED": 3, "FAILED": 2, "RUNNING": 1, "COMPLETING": 1}
 
     
     def __init__(self, sample_list="SAMPLES_LIST.txt", stdscr = None):
@@ -30,7 +30,7 @@ class Job_Holder():
             if filename.strip() == "" or filename[0] == '#' or filename[:2] == '//':
                 continue
 
-            filename += "_log.txt"
+            filename += "/log.txt"
             self.infiles.append(filename)
 
     def set_stdscr(self, stdscr):

@@ -4,10 +4,11 @@ import time
 import subprocess
 import pyslurm
 import re
+import os
 
 good_flags = [ 'array_task_id', 'job_state', 'run_time', 'time_limit' ]
 
-def bins(input_file, bin_size, bin_num):
+def bins(input_file, bin_size):
 
     binning_list = []
     size_list = []
@@ -34,14 +35,8 @@ def bins(input_file, bin_size, bin_num):
             binning_size.append(sizer)
             tmp_list = [name]
             binning_list.append(tmp_list)
-
-    if bin_num == "bins":
-        return len(binning_list)
-
-    else:
-        nbin_num = int(bin_num)
-        return binning_list[nbin_num]
-
+            
+    return binning_list
 
 
 
@@ -50,22 +45,33 @@ class SampleTask(mp.Process):
     split = 0
     num_bins = 0
     job_num = "-1"
+    binning_list=[]
 
     def __init__(self, files, split):
         self.files = files
         self.split = split
-        self.num_bins = bins(self.files, self.split, 'bins')
+        self.binning_list = bins(self.files, self.split)
+        self.num_bins = len(self.binning_list)
         super(SampleTask, self).__init__()
 
     def AnalyzerTask(self):
-
-
-        sbatch_out = subprocess.check_output("sbatch --array=1-" + str(self.num_bins) + " run_slurm.slurm", shell=True)
+        if not os.path.exists(self.files):
+            os.makedirs(self.files)
+        bin_file=open(self.files + "/bins.txt",'w')
+        input_string=""
+        for jobarray_input in self.binning_list:
+            for files in jobarray_input:
+                input_string+=files+" "
+            input_string +="|"
+        bin_file.write(input_string)
+        bin_file.close()
+        
+        sbatch_out = subprocess.check_output("sbatch --array=1-" + str(self.num_bins) + ' -D ' + self.files + ' run_slurm.slurm "' + self.files + '"', shell=True)
         m = re.search('\w+(\d+)', sbatch_out)
         self.job_num = m.group(0)
         running_array = [i for i in xrange(self.num_bins)]
         
-        f = open(self.files+"_log.txt", 'w')
+        f = open(self.files+"/log.txt", 'w')
         f.write("Job ID : %s\n" % (self.job_num))
         while True:
             if len(running_array) == 0:
