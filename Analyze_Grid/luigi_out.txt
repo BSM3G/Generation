@@ -1,6 +1,0 @@
-[AnalyzerTask(iteration=0, input_file=DYJetsToLL_M-800to1000_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8)]
-DONER
-[AnalyzerTask(iteration=0, input_file=DYJetsToLL_M-800to1000_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8)]
-[AnalyzerTask(iteration=0, input_file=DYJetsToLL_M-800to1000_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8)]
-DONER
-[AnalyzerTask(iteration=0, input_file=DYJetsToLL_M-800to1000_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8)]

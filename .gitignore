@@ -9,6 +9,6 @@ Analyze_Grid/addingRoot.sh
 Analyze_Grid/deleteEOSAnalysisRootFiles.csh
 Analyze_Grid/run_adding.sh
 Analyze_Grid/tntAnalyze.sh
-Analyze_Grid/list_Samples/*txt
+Analyze_Grid/new_list/*txt
 Fastsim_Grid/*~
 nTuple_Grid/*~

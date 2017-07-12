@@ -1,0 +1,10 @@
+root://cmsxrootd.fnal.gov//store/user/ra2tau/jan2017tuple/ZZ_TuneCUETP8M1_13TeV-pythia8/ZZ_TuneCUETP8M1_13TeV_RunIISummer16MiniAODv2_PUMoriond17_80X_mcRun2/170125_161901/0000/OutTree_60.root
+root://cmsxrootd.fnal.gov//store/user/ra2tau/jan2017tuple/ZZ_TuneCUETP8M1_13TeV-pythia8/ZZ_TuneCUETP8M1_13TeV_RunIISummer16MiniAODv2_PUMoriond17_80X_mcRun2/170125_161901/0000/OutTree_33.root
+root://cmsxrootd.fnal.gov//store/user/ra2tau/jan2017tuple/ZZ_TuneCUETP8M1_13TeV-pythia8/ZZ_TuneCUETP8M1_13TeV_RunIISummer16MiniAODv2_PUMoriond17_80X_mcRun2/170125_161901/0000/OutTree_47.root
+root://cmsxrootd.fnal.gov//store/user/ra2tau/jan2017tuple/ZZ_TuneCUETP8M1_13TeV-pythia8/ZZ_TuneCUETP8M1_13TeV_RunIISummer16MiniAODv2_PUMoriond17_80X_mcRun2/170125_161901/0000/OutTree_27.root
+root://cmsxrootd.fnal.gov//store/user/ra2tau/jan2017tuple/ZZ_TuneCUETP8M1_13TeV-pythia8/ZZ_TuneCUETP8M1_13TeV_RunIISummer16MiniAODv2_PUMoriond17_80X_mcRun2/170125_161901/0000/OutTree_14.root
+root://cmsxrootd.fnal.gov//store/user/ra2tau/jan2017tuple/ZZ_TuneCUETP8M1_13TeV-pythia8/ZZ_TuneCUETP8M1_13TeV_RunIISummer16MiniAODv2_PUMoriond17_80X_mcRun2/170125_161901/0000/OutTree_20.root
+root://cmsxrootd.fnal.gov//store/user/ra2tau/jan2017tuple/ZZ_TuneCUETP8M1_13TeV-pythia8/ZZ_TuneCUETP8M1_13TeV_RunIISummer16MiniAODv2_PUMoriond17_80X_mcRun2/170125_161901/0000/OutTree_50.root
+root://cmsxrootd.fnal.gov//store/user/ra2tau/jan2017tuple/ZZ_TuneCUETP8M1_13TeV-pythia8/ZZ_TuneCUETP8M1_13TeV_RunIISummer16MiniAODv2_PUMoriond17_80X_mcRun2/170125_161901/0000/OutTree_23.root
+root://cmsxrootd.fnal.gov//store/user/ra2tau/jan2017tuple/ZZ_TuneCUETP8M1_13TeV-pythia8/ZZ_TuneCUETP8M1_13TeV_RunIISummer16MiniAODv2_PUMoriond17_80X_mcRun2/170125_161901/0000/OutTree_46.root
+root://cmsxrootd.fnal.gov//store/user/ra2tau/jan2017tuple/ZZ_TuneCUETP8M1_13TeV-pythia8/ZZ_TuneCUETP8M1_13TeV_RunIISummer16MiniAODv2_PUMoriond17_80X_mcRun2/170125_161901/0000/OutTree_53.root

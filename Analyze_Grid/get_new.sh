@@ -2,7 +2,7 @@
 
 start=$(pwd -P)
 store='/store/user/ra2tau/jan2017tuple'
-output_dir='new_list'
+output_dir='list_Samples'
 root_loc="root://cmsxrootd-site2.fnal.gov/"
 
 for first in $(xrdfs $root_loc ls $store 2>/dev/null)
