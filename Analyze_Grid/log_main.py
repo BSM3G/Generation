@@ -14,9 +14,9 @@ class Subscreen():
     maxx = 0
     maxy = 0
     total_jobs = 0
+    prev_updown = 0
     highlight=0
     highlight_p = 0
-    last_p = 0
     py = 0
     colors = {"COMPLETED": 3, "FAILED": 2, "RUNNING": 1, "COMPLETING": 1}
     single_scrolling = False
@@ -28,7 +28,7 @@ class Subscreen():
         self.total_jobs = total_jobs
 
     def correct_highp(self):
-        if self.highlight_p > self.py + self.maxy:
+        if self.highlight_p >= self.py + self.maxy:
             self.py = self.highlight_p
         elif self.highlight_p < self.py:
             self.py = self.highlight_p
@@ -48,8 +48,14 @@ class Subscreen():
                     start += 1
             self.correct_highp()
         else:
+            if self.highlight_p >= len(item_array):
+                self.highlight_p = len(item_array)-1
             m=re.search("\A(\s|-|\w)+\|\s+(\d+)  \|", item_array[self.highlight_p])
             high_id=m.group(1)
+            m=re.search("\A\s*((\w|-)+)  \|", item_array[self.highlight_p])
+            if m is not None:
+                self.highlight += self.prev_updown
+
             
         for i in xrange(self.maxy):
             if i+self.py < len(item_array):
@@ -79,7 +85,9 @@ class Subscreen():
     def single_scroll(self, updown):
         self.single_scrolling = True
         self.highlight_p += updown
-
+        self.prev_updown = updown
+        self.correct_highp()
+        
     def set_job_scroll(self):
         self.single_scrolling = False
         
@@ -206,6 +214,7 @@ class Main_Program():
     prev_size = 0
     maxy = 0
     pad=None
+    start_time= 0
     
     def __init__(self, sample_list="SAMPLES_LIST.txt"):
         self.jobs = Job_Holder(sample_list)
@@ -242,14 +251,16 @@ class Main_Program():
         self.pad = Subscreen(y, x, self.jobs.get_total_jobs())
         self.display_pad()
 
+        start_time = time.time()
         while True:
+            if (time.time() - start_time) >= 5:
+                self.display_pad()
+                start_time = time.time()
+                
             c = stdscr.getch()
             if c == ord('q'):
                 break
             
-            elif c == ord('r'):
-                self.display_pad()
-                
             elif c == ord('n'):
                 self.pad.job_scroll(1)
                 self.display_pad()

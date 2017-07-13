@@ -1,0 +1,12 @@
+* log_main.py
+** fix ->expand positioning
+** make sure remove-complete doesn't crash program
+** auto refresh?
+** make single_scroll faster?
+
+
+* main.py
+** put in adding
+** fix slurm array problems
+** make processes into daemons
+** have klaas/someone test it all
