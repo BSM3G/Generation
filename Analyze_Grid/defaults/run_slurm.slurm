@@ -8,15 +8,11 @@
 # INPUT_SAMPLE=$1; shift
 # outfilename=Output.${1}.root; shift
 iteration=$SLURM_ARRAY_TASK_ID
-eos_area='/cms/store/user/teaguedo'
-analyzer_area='/gpfs23/scratch/teaguedo/workspace/CMSSW_8_0_10/src/Analyzer'
+analyzer_area=ANALYZER_AREA
 
-sample=$1; shift
 options=$@
 
 in_files=$(cat bins.txt | awk -F '|' -v line="$iteration" '{print $line}')
-#out_file="${eos_area}/${sample}/Output.$iteration.root"
-
 out_file="${PWD}/Output.${iteration}.root"
 
 echo "SLURM_JOBID: " $SLURM_JOBID
@@ -33,7 +29,7 @@ if [ ! -z "${options[@]}" ]; then
     run_script="$run_script ${options[@]}"
 fi
 
-export X509_USER_PROXY=/gpfs23/scratch/teaguedo/workspace/CMSSW_8_0_10/src/Generation/Analyze_Grid/test_mp/x509up_u171742
+export X509_USER_PROXY=${HOME}/x509up_u${UID}
 
 cd $analyzer_area
 date

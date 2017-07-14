@@ -46,12 +46,14 @@ class SampleTask(mp.Process):
     num_bins = 0
     job_num = "-1"
     binning_list=[]
+    options=""
 
-    def __init__(self, files, split):
+    def __init__(self, files, split, options=""):
         self.files = files
         self.split = split
         self.binning_list = bins(self.files, self.split)
         self.num_bins = len(self.binning_list)
+        self.options = options
         super(SampleTask, self).__init__()
 
     def AnalyzerTask(self):
@@ -66,10 +68,10 @@ class SampleTask(mp.Process):
         bin_file.write(input_string)
         bin_file.close()
         
-        sbatch_out = subprocess.check_output("sbatch --array=1-" + str(self.num_bins) + ' -D ' + self.files + ' run_slurm.slurm "' + self.files + '"', shell=True)
+        sbatch_out = subprocess.check_output("sbatch --array=1-" + str(self.num_bins) + ' -D ' + self.files + ' run_slurm.slurm "' + self.options + '"', shell=True)
         m = re.search('\w+(\d+)', sbatch_out)
         self.job_num = m.group(0)
-        running_array = [i for i in xrange(self.num_bins)]
+        running_array = [i+1 for i in xrange(self.num_bins)]
         
         f = open(self.files+"/log.txt", 'w')
         f.write("Job ID : %s\n" % (self.job_num))
@@ -86,33 +88,30 @@ class SampleTask(mp.Process):
             if jobs[0]['array_task_id'] is None:
                 time.sleep(1)
                 continue
-
-            for job_array_id in running_array:
-                array = jobs[job_array_id]
-                if array["job_state"] == "COMPLETED":
-                    running_array.remove(job_array_id)
-
+            finished = True
+            for item in jobs:
+                if int(item["array_task_id"]) not in running_array:
+                    continue
+                if item["job_state"] == "COMPLETE":
+                    running_array.remove(item["array_task_id"])
                 for part_key in good_flags:
-                    f.write("\t%-20s : %s\n" % (part_key, array[part_key]))
+                    f.write("\t%-20s : %s\n" % (part_key, item[part_key]))
                 f.write( "-" * 80 + "\n")
             f.flush()
             time.sleep(5)
         f.write("Done")
         f.close()
+        print "DONE, adding", self.files
         return
 
     def run(self):
         print "Starting", self.files
+
         subp = mp.Process(target=self.AnalyzerTask)
+        subp.daemon = True
         subp.start()
         subp.join()
-        # subp = [ mp.Process(target=self.AnalyzerTask, args=(i,)) for i in xrange(self.num_bins)]
-        # for p in subp:
-        #     p.start()
-
-        # for p in subp:
-        #     p.join()
-        print "DONE, adding", self.files
+        ###### need to add adding stuff
 
         return
 
@@ -120,8 +119,13 @@ class SampleTask(mp.Process):
         
 
 if __name__ == '__main__':
+
     condor_jobs = 100
     sample_list = "SAMPLES_LIST.txt"
+    
+    option=""
+    for i in range(1,len(sys.argv)):
+        option+= sys.argv[i] + " "
 
     jobs = []
     input_files = []
@@ -146,7 +150,7 @@ if __name__ == '__main__':
     split = int(1.0*total/(condor_jobs-0.01))
 
     for files in input_files:
-        p = SampleTask(files, split)
+        p = SampleTask(files, split, option)
         run_files.append(p)
         p.start()
 

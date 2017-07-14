@@ -10,17 +10,18 @@ username=$(whoami)
 list_area="new_list"
 eos_area="/cms/store/user/"
 analyzer_area=""
+analyze_grid=$PWD
 
 ## Setup rootfiles to run over
 if [ -z "$(find . -type d -name $list_area)" ]; then
     ./get_files.sh
 fi
 
-# check if can run over eos area
-if [ ! -d $eos_area$username ]; then
-    echo "Can't find your EOS area, consider getting one or changing code to put output files in (adequately sized) file area"
-    exit 1
-fi
+# # check if can run over eos area
+# if [ ! -d $eos_area$username ]; then
+#     echo "Can't find your EOS area, consider getting one or changing code to put output files in (adequately sized) file area"
+#     exit 1
+# fi
 
 
 #### get analyzer area
@@ -42,3 +43,29 @@ else
 	fi
     done
 fi
+
+##### download pyslurm stuff
+git clone https://github.com/PySlurm/pyslurm
+cd pyslurm
+tmp_slurm=$(which sbatch)
+slurm=$(echo $tmp_slurm | sed -rn 's|(.*slurm).*|\1|gp')
+python setup.py build --slurm=$slurm
+python setup.py install --user
+
+IFS=':'
+working_path=''
+for path in $PYTHONPATH; do
+    if [ -d $path/pyslurm ]; then
+	working_path=$path
+	break
+    fi
+done
+
+cd $analyze_grid
+cp defaults/pyslurm_tmp.py $working_path/pyslurm
+
+rm -rf pyslurm
+rm pyslurm_tmp.py
+
+###### move default files to main directory
+sed -e 's@ANALYZER_AREA@'"$analyzer_area"'@g' < default/run_slurm.slurm >run_slurm.slurm

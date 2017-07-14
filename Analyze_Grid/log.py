@@ -2,188 +2,300 @@ import re
 import curses
 import time
 from curses import wrapper
+import sys
 
-
-
-formating="{:>30.30}  | {:>11}  | {:>13}  | {:>11}  |"
-display_option = "id"
-other_option = "sample"
-finished_jobs = {}
+id_format = "{:>30.30}"
+formating= id_format + "  | {:>11}  | {:>13}  | {:>11}  |"
 start_line = 2
 
 
-def redo_spacing(file_complete, need_up):
-    global start_line
-    new_cur_line = -1
-    space = 0
-
-    new_need_up = []
-    found = False
-#    print file_complete
-    for item in need_up:
-        filename = item[0]
-        line = int(item[1])
-        print filename
-        if filename == file_complete:
-            new_need_up.append([filename, str(line)])
-            space = -1*line
-            found = True
-            print "here"
-            continue
-        if found:
-            if space < 0:
-                space = line + space - 1
-            new_need_up.append([filename, str(line - space)])
-        else:
-            new_need_up.append([filename, str(line)])
-            
-
-    return new_need_up
-
-
-
-def get_job_dict(file_name):
-    f = open(file_name, 'r')
-    job = {}
-    tmp = {}
-    fill_dict = False
-    job_num = ""
+class Subscreen():
+    subscr = None
+    maxx = 0
+    maxy = 0
+    total_jobs = 0
+    prev_updown = 0
+    highlight=0
+    highlight_p = 0
+    py = 0
+    colors = {"COMPLETED": 3, "FAILED": 2, "RUNNING": 1, "COMPLETING": 1}
+    single_scrolling = False
     
-    for line in f:
-        line = line.strip()
-        m = re.search("Job ID : (\d+)", line)
-        if m is not None:
-            job_num = m.group(1)
-            continue
+    def __init__(self, y, x, total_jobs):
+        self.maxx = x
+        self.maxy = y
+        self.subscr = curses.newpad(y, x)
+        self.total_jobs = total_jobs
 
-        if line == ("-" * 80) and len(tmp) != 0:
-        
-            job[tmp["array_task_id"]] = tmp
-            tmp = {}
-            continue
-        line_arr = line.split()
-        if len(line_arr) != 3:
-            continue
-        tmp[line_arr[0]] = line_arr[2]
-    job["1"]["job_num"] = job_num
-    return job
-
-def update_jobs(stdscr, need_up, option="none"):
-    global display_option
-    global other_option
-    global finished_jobs
-
-    if option == "switch":
-        display_option, other_option = other_option, display_option
-    for item in need_up:
-        filename = item[0]
-        first = int(item[1])
-
-        if filename not in finished_jobs:
-            print "hoojhadf" 
-            job = get_job_dict(filename)
-            pass_all = True
-            max_time = 0
-            for item in job.itervalues():
-
-                if item["job_state"] != "COMPLETED": 
-                    pass_all = False
-                    break
-                if max_time < item["run_time"]:
-                    max_time = item["run_time"]
-            if pass_all:
-
-                finished_jobs[filename] = [job["1"]["job_num"], job["1"]["array_task_id"], str(max_time)]
-
-        if filename in finished_jobs:
-
-            tmp_array = finished_jobs[filename]
-            job_num = tmp_array[0] 
-            array_num = tmp_array[1]
-            run_time = tmp_array[2]
-
-            if display_option == "id":
-                pass
-            elif display_option == "sample":
-                job_num = filename
+    def correct_highp(self):
+        if self.highlight_p >= self.py + self.maxy:
+            self.py = self.highlight_p
+        elif self.highlight_p < self.py:
+            self.py = self.highlight_p
             
-            write_str = formating.format(job_num, array_num, "COMPLETED", run_time)
-            stdscr.addstr(first, 0, write_str, curses.color_pair(3) | curses.A_BOLD)
-            continue
+    def display_page(self, item_array):
+        start=0
+        position=0
+        high_id=""
+        if not self.single_scrolling:
+            for i, line in enumerate(item_array):
+                m=re.search("\A\s*((\w|-)+)  \|", item_array[i])
+                if m is not None:
+                    if self.highlight == start:
+                        self.highlight_p = i
+                        high_id = m.group(1)
+                        break
+                    start += 1
+            self.correct_highp()
+        else:
+            if self.highlight_p >= len(item_array):
+                self.highlight_p = len(item_array)-1
+            m=re.search("\A(\s|-|\w)+\|\s+(\d+)  \|", item_array[self.highlight_p])
+            high_id=m.group(1)
+            m=re.search("\A\s*((\w|-)+)  \|", item_array[self.highlight_p])
+            if m is not None:
+                self.highlight += self.prev_updown
 
-                
+            
+        for i in xrange(self.maxy):
+            if i+self.py < len(item_array):
+                color = curses.color_pair(1)
+                m = re.search("(COMPLETED|RUNNING|ERROR|COMPLETING)", item_array[i+self.py])
+                if m is not None: color = curses.color_pair(self.colors[m.group(0)])
+                self.subscr.addstr(i, 0, item_array[i+self.py], color)
+            else:
+                self.subscr.addstr(i, 0, " " * 80)
 
-        for i in xrange(len(job)):
-            tmp_array = job[str(i+1)]
-            color = curses.color_pair(1) #green
-            if tmp_array["job_state"] == "COMPLETED":
-                color = curses.color_pair(3)
-            job_num = ""
-            if "job_num" in tmp_array: 
-                if display_option == "id":
-                    job_num = tmp_array["job_num"]
-                elif display_option == "sample":
+            
+        if len(high_id) <= 30:
+            self.subscr.addstr(self.highlight_p-self.py, 30-len(high_id), high_id, curses.A_STANDOUT)
+        else:
+            self.subscr.addstr(self.highlight_p-self.py, 0, id_format.format(high_id), curses.A_STANDOUT)
+        self.subscr.refresh(0,0,start_line, 0, self.maxy-start_line, self.maxx)
+
+    def job_scroll(self, updown):
+        self.single_scrolling = False
+        if self.highlight+updown < 0:
+            return
+        elif self.highlight+updown >= self.total_jobs:
+            return
+        
+        self.highlight += updown
+
+    def single_scroll(self, updown):
+        self.single_scrolling = True
+        self.highlight_p += updown
+        self.prev_updown = updown
+        self.correct_highp()
+        
+    def set_job_scroll(self):
+        self.single_scrolling = False
+        
+        
+class Job_Holder():
+    stdscr = None
+    infiles = []
+    all_jobs = {}
+    jobs_overview = {} # [state, id, max_run]
+    
+    def __init__(self, sample_list="SAMPLES_LIST.txt", stdscr = None):
+        self.stdscr = stdscr
+        try:
+            f = open(sample_list)
+        except IOError as e:
+            print "I/O error({0}): {1}".format(e.errno, e.strerror)
+            print "File:", sample_list
+            exit(1)
+        for filename in f:
+            filename = filename.strip()
+
+            if filename.strip() == "" or filename[0] == '#' or filename[:2] == '//':
+                continue
+
+            filename += "/log.txt"
+            self.infiles.append(filename)
+
+            
+    def get_jobsize(self):
+        return len(self.all_jobs)
+
+    def refresh(self):
+
+        for file_name in self.infiles:
+            if file_name in self.jobs_overview and self.jobs_overview[file_name][0] == "COMPLETED":
+                continue
+            f = open(file_name, 'r')
+            tmp = {}
+            fill_dict = False
+            job = {}
+            # overview variables
+            state = "COMPLETED" 
+            max_time = 0
+            job_id = ""
+            
+            for line in f:
+                line = line.strip()
+                m = re.search("Job ID : (\d+)", line)
+                if m is not None:
+                    job_id = m.group(1)
+                    continue
+
+                if line == ("-" * 80) and len(tmp) != 0:
+        
+                    job[tmp["array_task_id"]] = tmp
+                    tmp = {}
+                    continue
+                line_arr = line.split()
+                if len(line_arr) != 3:
+                    continue
+                tmp[line_arr[0]] = line_arr[2]
+                if line_arr[0] == "run_time" and max_time < int(line_arr[2]):
+                    max_time = int(line_arr[2])
+            for item in job.values():
+                tmp_state = item["job_state"]
+                if tmp_state == "RUNNING" and state != "ERROR":
+                    state = "RUNNING"
+                elif tmp_state != "COMPLETED":
+                    state = "ERROR"
+
+            self.jobs_overview[file_name] = [state, job_id, max_time]
+            self.all_jobs[file_name] = job
+
+            
+    def overview_array(self, use_id):
+        return_array = []
+        for filename, tmp_array in self.jobs_overview.iteritems():
+            job_num = filename
+            if use_id:
+                job_num = tmp_array[1]
+            array_num = "----"
+            if tmp_array[0] != "COMPLETED":
+                array_num = str(len(self.all_jobs[filename]))
+            write_str = formating.format(job_num, array_num, tmp_array[0], tmp_array[2])
+            return_array.append(write_str)
+        return return_array
+
+    def all_array(self, use_id, show_complete):
+        return_array = []
+        for filename, job_array in self.all_jobs.iteritems():
+            if self.jobs_overview[filename][0] == "COMPLETED":
+                tmp_array = self.jobs_overview[filename]
+                job_num = filename
+                if use_id:
+                    job_num = self.jobs_overview[filename][1]
+                write_str = formating.format(job_num, "----", tmp_array[0], tmp_array[2])
+                return_array.append(write_str)
+                continue
+
+            first = True
+            for array_id, tmp_array in job_array.iteritems():
+                write_str = ""
+                if not show_complete and tmp_array["job_state"] == "COMPLETED":
+                    continue
+                if first:
                     job_num = filename
-            write_str = formating.format(job_num, tmp_array["array_task_id"], tmp_array["job_state"], tmp_array["run_time"])
-            stdscr.addstr(i+first, 0, write_str, color | curses.A_BOLD)
+                    if use_id:
+                        job_num = self.jobs_overview[filename][1]
+                    write_str = formating.format(job_num, array_id, tmp_array["job_state"], tmp_array["run_time"])
+                    first = False
+                else:
+                    write_str = formating.format("", array_id, tmp_array["job_state"], tmp_array["run_time"])
+                return_array.append(write_str)
+        return return_array
+
+    def get_total_jobs(self):
+        return len(self.jobs_overview)
+    
+class Main_Program():
+    max_line = 2
+    expandall = False
+    use_id = False
+    show_complete = True
+    prev_size = 0
+    maxy = 0
+    pad=None
+    start_time= 0
+    
+    def __init__(self, sample_list="SAMPLES_LIST.txt"):
+        self.jobs = Job_Holder(sample_list)
 
 
+    def header_footer(self,stdscr):
+        title = formating.format("Job ID", "Array ID", "State", "Run Time")
+        stdscr.addstr(0,0, title, curses.color_pair(4))
+        stdscr.addstr(1,0, formating.format("","","",""), curses.A_UNDERLINE)
+        options = "    q - quit    |    r - refresh    |    e - expand/contract    |    w - swap ID/Sample"
 
+        stdscr.addstr(self.maxy-1, 0, options, curses.color_pair(4))
+        stdscr.refresh()    
 
-def wrapping(stdscr):
-    stdscr.clear()
-    curses.start_color()
-    curses.init_pair(1, curses.COLOR_GREEN, curses.COLOR_BLACK)
-    curses.init_pair(2, curses.COLOR_RED, curses.COLOR_BLACK)
-    curses.init_pair(3, curses.COLOR_BLUE, curses.COLOR_BLACK)
-    curses.init_pair(4, curses.COLOR_WHITE, curses.COLOR_BLACK)
+    def display_pad(self):
+        self.jobs.refresh()
+        if self.expandall:
+            self.pad.display_page(self.jobs.all_array(self.use_id, self.show_complete))
+        else:
+            self.pad.display_page(self.jobs.overview_array(self.use_id))
+        
+    def main(self, stdscr):
+        curses.start_color()
+        curses.init_pair(1, curses.COLOR_GREEN, curses.COLOR_BLACK)
+        curses.init_pair(2, curses.COLOR_RED, curses.COLOR_BLACK)
+        curses.init_pair(3, curses.COLOR_BLUE, curses.COLOR_BLACK)
+        curses.init_pair(4, curses.COLOR_WHITE, curses.COLOR_BLACK)
+        y, x = stdscr.getmaxyx()
+        self.maxy = y
+        stdscr.clear()
 
-    sample_list = "SAMPLES_LIST.txt"
+        self.header_footer(stdscr)
+        self.jobs.refresh()
+        self.pad = Subscreen(y, x, self.jobs.get_total_jobs())
+        self.display_pad()
 
-    need_up =[]
-    global start_line
-    cur_line = start_line
-    f = open(sample_list)
-    for filename in f:
-        filename = filename.strip()
+        start_time = time.time()
+        while True:
+            if (time.time() - start_time) >= 5:
+                self.display_pad()
+                start_time = time.time()
+                
+            c = stdscr.getch()
+            if c == ord('q'):
+                break
+            
+            elif c == ord('n'):
+                self.pad.job_scroll(1)
+                self.display_pad()
+                
+            elif c == ord('p'):
+                self.pad.job_scroll(-1)
+                self.display_pad()
+                
+            elif c == ord('e'):
+                self.expandall = not self.expandall
+                if not self.expandall:
+                    self.pad.set_job_scroll()
+                self.display_pad()
+                
+            elif c == ord('w'):
+                self.use_id = not self.use_id
+                self.display_pad()
 
-        if filename.strip() == "" or filename[0] == '#' or filename[:2] == '//':
-            continue
-        print filename
-        filename += "_log.txt"
-        tot_job = len(get_job_dict(filename))
-        need_up.append([filename, str(cur_line), str(cur_line+tot_job)])
-        cur_line += tot_job
-                        
-    time.sleep(5)
-    title = formating.format("Job ID", "Array ID", "State", "Run Time")
-    stdscr.addstr(0,0, title, curses.color_pair(4))
-    stdscr.addstr(1,0, "-"*(80), curses.color_pair(4))
-    options = "    q - quit    |    r - refresh    |    w - switch ID with Sample"
-    stdscr.addstr(cur_line+2, 0, options, curses.color_pair(4))
-    update_jobs(stdscr, need_up)
-    stdscr.refresh()
-    global finished_jobs
+            elif c == ord('h'):
+                self.show_complete = not self.show_complete
+                self.display_pad()
 
-    while True:
-        c = stdscr.getch()
-        if c == ord('q'):
-            break
-        elif c == ord('r'):
-            for filenames in finished_jobs:
-
-                need_up = redo_spacing(filename, need_up)
-            update_jobs(stdscr, need_up)
-            stdscr.refresh()
-        elif c == ord('w'):
-            update_jobs(stdscr, need_up, "switch")
-            stdscr.refresh()
-
-
-
-
-wrapper(wrapping)
-
-
-
+            elif c == ord('j'):
+                self.pad.single_scroll(1)
+                self.display_pad()
+            elif c == ord('k'):
+                self.pad.single_scroll(-1)
+                self.display_pad()
+            
+if len(sys.argv) > 1:
+    main = Main_Program(sys.argv[1])
+else:
+    main = Main_Program()
+    
+wrapper(main.main)
+    
+    
 
