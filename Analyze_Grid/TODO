@@ -1,3 +1,5 @@
+* setup pip??
+
 * log_main.py
 ** fix ->expand positioning
 ** make sure remove-complete doesn't crash program
