@@ -13,7 +13,7 @@ analyzer_area=""
 analyze_grid=$PWD
 
 ## Setup rootfiles to run over
-if [ -z "$(find . -type d -name $list_area)" ]; then
+if [ -z "$(find $list_area -type f -name '*.txt')" ]; then
     ./get_files.sh
 fi
 
@@ -44,28 +44,47 @@ else
     done
 fi
 
+#### download pip
+if [ -z "$CMSSW_RELEASE_BASE" ]; then
+    echo "CMSSW must be sourced!"
+    exit 1
+fi
+
+PYTHON="$CMSSW_RELEASE_BASE/external/$SCRAM_ARCH/bin/python"
+PYTHONVERSION=$($PYTHON -V 2>&1)
+echo "Found $PYTHONVERSION at $PYTHON"
+
+PIP="$PYTHON -m pip"
+$PIP -V 2>&1 >/dev/null
+if [ $? -ne 0 ]; then
+    echo "Pip not found, installing..."
+    curl https://bootstrap.pypa.io/get-pip.py | python - --user
+fi
+
+
 ##### download pyslurm stuff
-git clone https://github.com/PySlurm/pyslurm
-cd pyslurm
-tmp_slurm=$(which sbatch)
-slurm=$(echo $tmp_slurm | sed -rn 's|(.*slurm).*|\1|gp')
-python setup.py build --slurm=$slurm
-python setup.py install --user
+if [ -z "$($PIP list | grep pyslurm)" ]; then
+    git clone https://github.com/PySlurm/pyslurm
+    cd pyslurm
+    tmp_slurm=$(which sbatch)
+    slurm=$(echo $tmp_slurm | sed -rn 's|(.*slurm).*|\1|gp')
+    python setup.py build --slurm=$slurm
+    python setup.py install --user
 
-IFS=':'
-working_path=''
-for path in $PYTHONPATH; do
-    if [ -d $path/pyslurm ]; then
-	working_path=$path
-	break
-    fi
-done
+    IFS=':'
+    working_path=''
+    for path in $PYTHONPATH; do
+	if [ -d $path/pyslurm ]; then
+	    working_path=$path
+	    break
+	fi
+    done
 
-cd $analyze_grid
-cp defaults/pyslurm_tmp.py $working_path/pyslurm
+    cd $analyze_grid
+    cp defaults/pyslurm_tmp.py $working_path/pyslurm
 
-rm -rf pyslurm
-rm pyslurm_tmp.py
+    rm -rf pyslurm
+fi
 
 ###### move default files to main directory
-sed -e 's@ANALYZER_AREA@'"$analyzer_area"'@g' < default/run_slurm.slurm >run_slurm.slurm
+sed -e 's@ANALYZER_AREA@'"$analyzer_area"'@g' < defaults/run_slurm.slurm >run_slurm.slurm
