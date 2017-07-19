@@ -1,11 +1,7 @@
-* setup pip??
-
 * log_main.py
 ** fix ->expand positioning
 ** make sure remove-complete doesn't crash program
 ** auto refresh?
-** make single_scroll faster?
-
 
 * main.py
 ** put in adding
@@ -13,4 +9,7 @@
 ** make processes into daemons
 ** have klaas/someone test it all
 ** get x509 stuff
-** add options
+** add options autocomplete?
+** time estimation and put max time to stop timeouts
+** files and configs at runtime (with date/time)
+** only do hadd?

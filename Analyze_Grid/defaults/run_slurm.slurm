@@ -9,8 +9,10 @@
 # outfilename=Output.${1}.root; shift
 iteration=$SLURM_ARRAY_TASK_ID
 analyzer_area=ANALYZER_AREA
+sample_area=$(pwd | xargs basename)
 
 options=$@
+part_det=$(echo ${options[@]} | sed -nr 's|.*-C ([A-Za-z0-9/]+).*|\1|p')
 
 in_files=$(cat bins.txt | awk -F '|' -v line="$iteration" '{print $line}')
 out_file="${PWD}/Output.${iteration}.root"
@@ -33,6 +35,14 @@ export X509_USER_PROXY=${HOME}/.x509up_u${UID}
 
 cd $analyzer_area
 date
+
+sed -r -i 's/(ApplyGenWeight\s+)(0|false)/\1true/' $part_det/Run_info.in
+if [ ! -z "$(echo $sample_area | grep -e 'Tau\.' -e 'HTMHT\.' -e 'SingleMuon\.' -e 'MET\.' )" ] ; then
+    ### data
+   sed -r -i -e 's/(isData\s+)(0|false)/\1true/' -e 's/(CalculatePUS[a-z]+\s+)(1|true)/\1false/' $part_det/Run_info.in
+else
+    sed -r -i -e 's/(isData\s+)(1|true)/\1false/' -e 's/(CalculatePUS[a-z]+\s+)(0|false)/\1true/' $part_det/Run_info.in
+fi
 $run_script
 date
 
