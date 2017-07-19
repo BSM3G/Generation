@@ -263,12 +263,10 @@ class Main_Program():
         self.pad = Subscreen(self.maxy - lower_line_size + 1, self.maxx, self.jobs.get_total_jobs())
         self.display_pad()
 
-        start_time = time.time()
+        curses.halfdelay(5)
         while True:
-            if (time.time() - start_time) >= 5:
-                self.display_pad()
-                start_time = time.time()
-                
+            self.display_pad()
+            
             c = stdscr.getch()
             if c == ord('q'):
                 break
@@ -301,7 +299,7 @@ class Main_Program():
             elif c == ord('k'):
                 self.pad.single_scroll(-1)
                 self.display_pad()
-            
+        
 if len(sys.argv) > 1:
     main = Main_Program(sys.argv[1])
 else:
