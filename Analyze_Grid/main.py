@@ -5,6 +5,8 @@ import subprocess
 import pyslurm
 import re
 import os
+import shutil
+import glob
 
 good_flags = [ 'array_task_id', 'job_state', 'run_time', 'time_limit' ]
 
@@ -47,12 +49,15 @@ class SampleTask(mp.Process):
     job_num = "-1"
     binning_list=[]
     options=""
-
+    log_out= []
+    reruns = 5
+    
     def __init__(self, files, split, options=""):
         self.files = files
         self.split = split
         self.binning_list = bins(self.files, self.split)
         self.num_bins = len(self.binning_list)
+        self.log_out = [ ["PENDING", "0"] for i in xrange(self.num_bins)]
         self.options = options
         super(SampleTask, self).__init__()
 
@@ -67,18 +72,35 @@ class SampleTask(mp.Process):
             input_string +="|"
         bin_file.write(input_string)
         bin_file.close()
+
         
-        sbatch_out = subprocess.check_output("sbatch --array=1-" + str(self.num_bins) + ' -D ' + self.files + ' run_slurm.slurm "' + self.options + '"', shell=True)
+        if self.options == "":
+            sbatch_out = subprocess.check_output("sbatch --array=1-" + str(self.num_bins) + ' -D ' + self.files + ' run_slurm.slurm', shell=True)
+        else:
+            sbatch_out = subprocess.check_output("sbatch --array=1-" + str(self.num_bins) + ' -D ' + self.files + ' run_slurm.slurm "' + self.options + '"', shell=True)
         m = re.search('\w+(\d+)', sbatch_out)
         self.job_num = m.group(0)
         running_array = [i+1 for i in xrange(self.num_bins)]
+        error_array = [ 0 for i in xrange(self.num_bins)]
         
         f = open(self.files+"/log.txt", 'w')
         f.write("Job ID : %s\n" % (self.job_num))
-        while True:
-            if len(running_array) == 0:
-                break
+        for i, line in enumerate(self.log_out):
+            f.write(str(i) + " " + line[0] + " " + line[1] + "\n")
+        f.close()
+            
 
+
+        time.sleep(5)
+        while True:
+            f = open(self.files+"/tmplog.txt", 'w')
+            f.write("Job ID : %s\n" % (self.job_num))
+            if len(running_array) == 0:
+                for i, line in enumerate(self.log_out):
+                    f.write(str(i) + " " + line[0] + " " + line[1] + "\n")
+                f.close()
+                shutil.move(self.files + "/tmplog.txt", self.files + "/log.txt")
+                break
             try:
                 jobs = pyslurm.job().find_id(self.job_num)
             except ValueError:
@@ -90,17 +112,34 @@ class SampleTask(mp.Process):
                 continue
             finished = True
             for item in jobs:
-                if int(item["array_task_id"]) not in running_array:
+                array_num = item["array_task_id"]
+                if array_num not in running_array:
                     continue
-                if item["job_state"] == "COMPLETE":
-                    running_array.remove(item["array_task_id"])
-                for part_key in good_flags:
-                    f.write("\t%-20s : %s\n" % (part_key, item[part_key]))
-                f.write( "-" * 80 + "\n")
-            f.flush()
+                if item["job_state"] == "COMPLETED":
+                    running_array.remove(array_num)
+                elif item["job_state"] == "FAILED":
+                    if error_array[array_num-1] == self.reruns:
+                        print str(array_num) + " for the job " + str(self.job_num) + " Failed after resubmissions"
+                        running_array.remove(array_num)
+                    else:
+                        subprocess.call("scontrol requeue " + str(self.job_num)+"_"+str(array_num), shell=True)
+                        error_array[array_num-1] += 1
+                elif item["job_state"] == "TIMEOUT":
+                        print str(array_num) + " for the job " + str(self.job_num) + " timed out"
+                        running_array.remove(array_num)
+               
+                self.log_out[array_num - 1] = [ item["job_state"], str(item["run_time"]) ]
+                # for part_key in good_flags:
+                #     f.write("\t%-20s : %s\n" % (part_key, item[part_key]))
+                #     log
+                # f.write( "-" * 80 + "\n")
+            for i, line in enumerate(self.log_out):
+                f.write(str(i) + " " + line[0] + " " + line[1] + "\n")
+            f.close()
+            shutil.move(self.files + "/tmplog.txt", self.files + "/log.txt")
             time.sleep(5)
-        f.write("Done")
-        f.close()
+
+
         print "DONE, adding", self.files
         return
 
@@ -111,18 +150,57 @@ class SampleTask(mp.Process):
         subp.daemon = True
         subp.start()
         subp.join()
+
+        infiles = glob.glob(self.files+"/*.root")
+        outfile = self.files
+
+        hadd_output = self.hadd([outfile, infiles])
+        if hadd_output[1] != "":
+            print "ERROR in hadd for " + self.files
+            print hadd_output[1]
+
         ###### need to add adding stuff
 
         return
 
 
+    def hadd(self, item):
+        tag,filesToAdd=item
+        #time.sleep(float(randint(0,10))/10)
+        out, err="",""
+        doneGood=True
+        if (not os.path.exists(item[0]+".root")):
+            calling="hadd -f9 "+tag+".root "+" ".join(filesToAdd)
+            print(calling)
+            p = subprocess.Popen(calling,shell=True, stdout = subprocess.PIPE, stderr = subprocess.STDOUT )
+            out, err = p.communicate()
+            if ("Zombie" in out) or ("Error" in out):
+                print("------------------------------------")
+                print(calling)
+                print("------------------------------------")
+                doneGood=False
+            # log.debug(out)
+            # log.debug(err)
+            # if doneGood:
+            #     for f in filesToAdd:
+            #         os.remove(f)
+
+        return [out, err]
         
 
 if __name__ == '__main__':
 
-    condor_jobs = 100
+    condor_jobs = 500
     sample_list = "SAMPLES_LIST.txt"
-    
+
+    timeleft = -1
+    try:
+        timeleft = subprocess.check_output("voms-proxy-info -file ${HOME}/.x509up_u${UID} -timeleft", shell=True)
+    except subprocess.CalledProcessError:
+        subprocess.call("voms-proxy-init -voms cms -out ${HOME}/.x509up_u${UID}", shell=True)
+    if int(timeleft) == 0:
+        subprocess.call("voms-proxy-init -voms cms -out ${HOME}/.x509up_u${UID}", shell=True)
+
     option=""
     for i in range(1,len(sys.argv)):
         option+= sys.argv[i] + " "

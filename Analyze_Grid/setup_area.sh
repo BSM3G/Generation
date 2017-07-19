@@ -25,7 +25,7 @@ fi
 
 
 #### get analyzer area
-analyzer_list=$(find $CMSSW_BASE -type d -name Analyzer | sed -n "s|$CMSSW_BASE||pg")
+analyzer_list=$(find $CMSSW_BASE -type d -name Analyzer | sed -n "s|$CMSSW_BASE/||pg")
 n_analyzer_list=$(echo $analyzer_list | wc -w)
 if [ $n_analyzer_list -eq 0 ]; then
     echo "No Analyzer in your CMSSW area, move code there or specify in code"
@@ -43,6 +43,8 @@ else
 	fi
     done
 fi
+
+analyzer_area=$CMSSW_BASE/$analyzer_area
 
 #### download pip
 if [ -z "$CMSSW_RELEASE_BASE" ]; then

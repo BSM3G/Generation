@@ -18,7 +18,7 @@ class Subscreen():
     highlight=0
     highlight_p = 0
     py = 0
-    colors = {"COMPLETED": 3, "FAILED": 2, "RUNNING": 1, "COMPLETING": 1}
+    colors = {"COMPLETED": 3, "FAILED": 2, "ERROR": 2,  "RUNNING": 1, "COMPLETING": 1, "PENDING": 5, "TIMEOUT": 2}
     single_scrolling = False
     
     def __init__(self, y, x, total_jobs):
@@ -60,7 +60,7 @@ class Subscreen():
         for i in xrange(self.maxy):
             if i+self.py < len(item_array):
                 color = curses.color_pair(1)
-                m = re.search("(COMPLETED|RUNNING|ERROR|COMPLETING)", item_array[i+self.py])
+                m = re.search(r'\b([A-Z]+)\b', item_array[i+self.py])
                 if m is not None: color = curses.color_pair(self.colors[m.group(0)])
                 self.subscr.addstr(i, 0, item_array[i+self.py], color)
             else:
@@ -95,7 +95,7 @@ class Subscreen():
 class Job_Holder():
     stdscr = None
     infiles = []
-    all_jobs = {}
+    all_jobs = {} #  [ state, time ]
     jobs_overview = {} # [state, id, max_run]
     
     def __init__(self, sample_list="SAMPLES_LIST.txt", stdscr = None):
@@ -125,42 +125,34 @@ class Job_Holder():
             if file_name in self.jobs_overview and self.jobs_overview[file_name][0] == "COMPLETED":
                 continue
             f = open(file_name, 'r')
-            tmp = {}
-            fill_dict = False
-            job = {}
-            # overview variables
-            state = "COMPLETED" 
+
+            job_id = -1
             max_time = 0
-            job_id = ""
-            
+            job_array = []
             for line in f:
                 line = line.strip()
-                m = re.search("Job ID : (\d+)", line)
-                if m is not None:
-                    job_id = m.group(1)
-                    continue
-
-                if line == ("-" * 80) and len(tmp) != 0:
-        
-                    job[tmp["array_task_id"]] = tmp
-                    tmp = {}
+                if job_id == -1:
+                    m = re.search("Job ID : (\d+)", line)
+                    if m is not None:
+                        job_id = int(m.group(1))
+                        continue
                     continue
                 line_arr = line.split()
                 if len(line_arr) != 3:
                     continue
-                tmp[line_arr[0]] = line_arr[2]
-                if line_arr[0] == "run_time" and max_time < int(line_arr[2]):
+                job_array.append( [ line_arr[1], line_arr[2] ])
+                if int(line_arr[2]) > max_time:
                     max_time = int(line_arr[2])
-            for item in job.values():
-                tmp_state = item["job_state"]
-                if tmp_state == "RUNNING" and state != "ERROR":
-                    state = "RUNNING"
-                elif tmp_state != "COMPLETED":
-                    state = "ERROR"
-
-            self.jobs_overview[file_name] = [state, job_id, max_time]
-            self.all_jobs[file_name] = job
-
+            overall_state = "COMPLETED"
+            for item in job_array:
+                tmp_state = item[0]
+                if tmp_state == "FAILED":
+                    overall_state = "ERROR"
+                    break
+                if tmp_state != "COMPLETED":
+                    overall_state = "RUNNING"
+            self.all_jobs[file_name] = job_array
+            self.jobs_overview[file_name]  = [overall_state, str(job_id), str(max_time)]
             
     def overview_array(self, use_id):
         return_array = []
@@ -188,18 +180,19 @@ class Job_Holder():
                 continue
 
             first = True
-            for array_id, tmp_array in job_array.iteritems():
+            for array_id, tmp_array in enumerate(job_array):
+                array_id += 1
                 write_str = ""
-                if not show_complete and tmp_array["job_state"] == "COMPLETED":
+                if not show_complete and tmp_array[0] == "COMPLETED":
                     continue
                 if first:
                     job_num = filename
                     if use_id:
                         job_num = self.jobs_overview[filename][1]
-                    write_str = formating.format(job_num, array_id, tmp_array["job_state"], tmp_array["run_time"])
+                    write_str = formating.format(job_num, array_id, tmp_array[0], tmp_array[1])
                     first = False
                 else:
-                    write_str = formating.format("", array_id, tmp_array["job_state"], tmp_array["run_time"])
+                    write_str = formating.format("", array_id, tmp_array[0], tmp_array[1])
                 return_array.append(write_str)
         return return_array
 
@@ -213,6 +206,7 @@ class Main_Program():
     show_complete = True
     prev_size = 0
     maxy = 0
+    maxx = 0
     pad=None
     start_time= 0
     
@@ -224,11 +218,28 @@ class Main_Program():
         title = formating.format("Job ID", "Array ID", "State", "Run Time")
         stdscr.addstr(0,0, title, curses.color_pair(4))
         stdscr.addstr(1,0, formating.format("","","",""), curses.A_UNDERLINE)
-        options = "    q - quit    |    r - refresh    |    e - expand/contract    |    w - swap ID/Sample"
+        options = ["q - quit", "r - refresh", "e - expand", "w - swap ID/Sample", "h - toggle complete", "j/k - move individual", "n/p - move job" ] 
+        First = True
+        footer_line = []
+        tmp_footer=""
+        spacer = 3
+        for line in options:
+            line = " "*spacer + line + " "*spacer
+            if len(tmp_footer)+len(line) < self.maxx:
+                if not First:
+                    tmp_footer += "|"
+                else: First = False
+                tmp_footer += line
+            else:
+                footer_line.append(tmp_footer)
+                tmp_footer = line
+        footer_line.append(tmp_footer)
+        for i, line in enumerate(footer_line):
+            stdscr.addstr(self.maxy-len(footer_line)+i, 0, line, curses.color_pair(4))
 
-        stdscr.addstr(self.maxy-1, 0, options, curses.color_pair(4))
         stdscr.refresh()    
-
+        return len(footer_line)
+        
     def display_pad(self):
         self.jobs.refresh()
         if self.expandall:
@@ -242,13 +253,14 @@ class Main_Program():
         curses.init_pair(2, curses.COLOR_RED, curses.COLOR_BLACK)
         curses.init_pair(3, curses.COLOR_BLUE, curses.COLOR_BLACK)
         curses.init_pair(4, curses.COLOR_WHITE, curses.COLOR_BLACK)
-        y, x = stdscr.getmaxyx()
-        self.maxy = y
+        curses.init_pair(5, curses.COLOR_YELLOW, curses.COLOR_BLACK)
+        self.maxy, self.maxx = stdscr.getmaxyx()
         stdscr.clear()
 
-        self.header_footer(stdscr)
+        
+        lower_line_size = self.header_footer(stdscr)
         self.jobs.refresh()
-        self.pad = Subscreen(y, x, self.jobs.get_total_jobs())
+        self.pad = Subscreen(self.maxy - lower_line_size + 1, self.maxx, self.jobs.get_total_jobs())
         self.display_pad()
 
         start_time = time.time()

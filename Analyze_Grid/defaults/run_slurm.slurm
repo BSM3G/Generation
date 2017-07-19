@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --ntasks=1
-#SBATCH --time=1:00:00
+#SBATCH --time=0:30:00
 #SBATCH --mem=4G
 #SBATCH --output=output_%A_%a.out
 
@@ -29,7 +29,7 @@ if [ ! -z "${options[@]}" ]; then
     run_script="$run_script ${options[@]}"
 fi
 
-export X509_USER_PROXY=${HOME}/x509up_u${UID}
+export X509_USER_PROXY=${HOME}/.x509up_u${UID}
 
 cd $analyzer_area
 date
