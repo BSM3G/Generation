@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import multiprocessing as mp
 import sys
 import time
@@ -127,12 +129,11 @@ class SampleTask(mp.Process):
                 elif item["job_state"] == "TIMEOUT":
                         print str(array_num) + " for the job " + str(self.job_num) + " timed out"
                         running_array.remove(array_num)
-               
+                
                 self.log_out[array_num - 1] = [ item["job_state"], str(item["run_time"]) ]
-                # for part_key in good_flags:
-                #     f.write("\t%-20s : %s\n" % (part_key, item[part_key]))
-                #     log
-                # f.write( "-" * 80 + "\n")
+                if item["run_time"] > 150 and os.stat(self.files + "/output_" + str(self.job_num) + "_" + str(array_num) + ".out").st_size == 0:
+                    subprocess.call("scontrol requeue " + str(self.job_num)+"_"+str(array_num), shelnl=True)
+
             for i, line in enumerate(self.log_out):
                 f.write(str(i) + " " + line[0] + " " + line[1] + "\n")
             f.close()
@@ -190,7 +191,7 @@ class SampleTask(mp.Process):
 
 if __name__ == '__main__':
 
-    condor_jobs = 500
+    condor_jobs = 300
     sample_list = "SAMPLES_LIST.txt"
 
     timeleft = -1

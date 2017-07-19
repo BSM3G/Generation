@@ -13,6 +13,9 @@ sample_area=$(pwd | xargs basename)
 
 options=$@
 part_det=$(echo ${options[@]} | sed -nr 's|.*-C ([A-Za-z0-9/]+).*|\1|p')
+if [ -z "$part_det" ]; then
+    part_det="PartDet"
+fi
 
 in_files=$(cat bins.txt | awk -F '|' -v line="$iteration" '{print $line}')
 out_file="${PWD}/Output.${iteration}.root"
@@ -44,6 +47,10 @@ else
     sed -r -i -e 's/(isData\s+)(1|true)/\1false/' -e 's/(CalculatePUS[a-z]+\s+)(0|false)/\1true/' $part_det/Run_info.in
 fi
 $run_script
+if [ $? -ne 0 ]; then
+    exit 1
+fi
+
 date
 
 
