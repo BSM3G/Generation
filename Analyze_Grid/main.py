@@ -241,6 +241,7 @@ if __name__ == '__main__':
             hadd_files.append(p)
             p.start()
     else:
+        subprocess.call("make")
     ### Submission
         for files in input_files:
             p = SampleTask(files, split, config_files, option)

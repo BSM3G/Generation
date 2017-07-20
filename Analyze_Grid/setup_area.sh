@@ -45,6 +45,8 @@ else
 fi
 
 analyzer_area=$CMSSW_BASE/$analyzer_area
+sed -ri 's|(ANALYZERDIR=).+|\1'"$analyzer_area"'|' Makefile
+
 
 #### download pip
 if [ -z "$CMSSW_RELEASE_BASE" ]; then
