@@ -4,12 +4,11 @@
 ** auto refresh?
 
 * main.py
-** put in adding
+
 ** fix slurm array problems
 ** make processes into daemons
 ** have klaas/someone test it all
-** get x509 stuff
 ** add options autocomplete?
 ** time estimation and put max time to stop timeouts
 ** files and configs at runtime (with date/time)
-** only do hadd?
+
